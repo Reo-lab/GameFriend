@@ -1,0 +1,296 @@
+Started GET "/" for 192.168.65.1 at 2024-05-26 21:44:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 27.0ms | Allocations: 636)
+Completed 200 OK in 441ms (Views: 96.4ms | ActiveRecord: 0.0ms | Allocations: 7114)
+
+
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:32:15 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.9ms | Allocations: 527)
+Completed 200 OK in 31ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 4490)
+
+
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:32:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 296)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1083)
+
+
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (17.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUser (20240527103715)
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `gender` varchar(255) NOT NULL, `age` int, `icon_image` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20240527103715')[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2024-05-27 10:41:01.104163', '2024-05-27 10:41:01.104163')[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:41:05 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 311)
+
+
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:44:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.0.8.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 295)
+Completed 200 OK in 11ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1078)
+
+
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:45:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+NoMatchingPatternError ("/": "users#index" === "/" does not return true):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:45:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 916.6ms | Allocations: 79661)
+Completed 200 OK in 929ms (Views: 924.1ms | ActiveRecord: 0.0ms | Allocations: 80729)
+
+
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:48:05 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 4824)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 4912)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 5834)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<ActionView::Base:0x00000000015978>
+
+'.freeze;@output_buffer.append=( link_to "User_index", users_path );@output_buffer.safe_append='
+                                                       ^^^^^^^^^^
+Did you mean?  users_new_path):
+    1: <h1>Users#index</h1>
+    2: <p>Find me in app/views/users/index.html.erb</p>
+    3: <%= link_to "User_index", users_path %>
+    4: <%= link_to "User New", new_user_path %>
+  
+app/views/users/index.html.erb:3
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:48:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+  resourses: users
+           ^
+):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:48:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+NoMethodError (undefined method `resourse' for #<ActionDispatch::Routing::Mapper:0x00007f09fdbbc7f0 @set=#<ActionDispatch::Routing::RouteSet:0x00007f09ffb334f8>, @draw_paths=[#<Pathname:/app/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f09fdbbc7a0 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f09ff7714c8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  resourse :users
+  ^^^^^^^^
+Did you mean?  resources
+               resource):
+  
+config/routes.rb:3:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 192.168.65.1 at 2024-05-27 10:49:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 15887)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 16906)
+
+
+Started GET "/users/new" for 192.168.65.1 at 2024-05-27 10:49:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 1737)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 2077)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:49:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1717)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 1984)
+
+
+Started GET "/users/new" for 192.168.65.1 at 2024-05-27 10:49:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1649)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 1916)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:51:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2502)
+
+
+  
+NameError (uninitialized constant UsersController::User
+
+    @users = User.all
+             ^^^^):
+  
+app/controllers/users_controller.rb:3:in `index'
+Started GET "/users/new" for 192.168.65.1 at 2024-05-27 10:51:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2487)
+
+
+  
+NameError (uninitialized constant UsersController::User
+
+    @user = User.new
+            ^^^^):
+  
+app/controllers/users_controller.rb:12:in `new'
+Started GET "/users/new" for 192.168.65.1 at 2024-05-27 10:53:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 35.4ms | Allocations: 3858)
+  Rendered layout layouts/application.html.erb (Duration: 78.3ms | Allocations: 19080)
+Completed 200 OK in 120ms (Views: 81.6ms | ActiveRecord: 7.0ms | Allocations: 26190)
+
+
+Started POST "/users" for 192.168.65.1 at 2024-05-27 10:54:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"333", "gender"=>"Male", "age"=>"1", "icon_image"=>""}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `gender`, `age`, `icon_image`, `created_at`, `updated_at`) VALUES ('333', 'Male', 1, '', '2024-05-27 10:54:03.720051', '2024-05-27 10:54:03.720051')[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:17:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 15ms (ActiveRecord: 4.2ms | Allocations: 4030)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-05-27 10:54:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.4ms | Allocations: 7398)
+
+
+  
+NoMethodError (undefined method `realtime_boards' for #<User id: 1, name: "333", gender: "Male", age: 1, icon_image: "", created_at: "2024-05-27 10:54:03.720051000 +0000", updated_at: "2024-05-27 10:54:03.720051000 +0000">):
+  
+app/controllers/users_controller.rb:8:in `show'
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:54:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 1988)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 2359)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:54:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1748)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 2027)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:54:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1712)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1995)
+
+
+Started GET "/users/new" for 192.168.65.1 at 2024-05-27 10:54:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1558)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2894)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3183)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:55:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3182)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 4097)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:56:16 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3074)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 0.4ms | Allocations: 4019)
+
+
+Started GET "/users" for 192.168.65.1 at 2024-05-27 10:56:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1031)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3103)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 0.5ms | Allocations: 4048)
+
+

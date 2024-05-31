@@ -1,0 +1,28 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_with(model: @user, local: true) do |form| %>
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div>
+      <%= form.label :gender %>
+      <%= form.select :gender, ['Male', 'Female'] %>
+    </div>
+  
+    <div>
+      <%= form.label :age %>
+      <%= form.number_field :age %>
+    </div>
+  
+    <div>
+      <%= form.label :icon_image %>
+      <%= form.text_field :icon_image %>
+    </div>
+  
+    <div>
+      <%= form.submit "Create User" %>
+    </div>
+  <% end %>

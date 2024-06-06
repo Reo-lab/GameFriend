@@ -382,3 +382,1647 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 679ms (Views: 619.3ms | ActiveRecord: 0.8ms | Allocations: 37211)
 
 
+Started GET "/" for 192.168.65.1 at 2024-06-06 04:14:25 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 335)
+  Rendered layout layouts/application.html.erb (Duration: 213.9ms | Allocations: 33392)
+Completed 200 OK in 242ms (Views: 221.4ms | ActiveRecord: 0.0ms | Allocations: 37546)
+
+
+Started GET "/" for 192.168.65.1 at 2024-06-06 04:16:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 7207)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 8173)
+
+
+  
+ActionView::Template::Error (Missing partial tops/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/app/app/views"
+  * "/usr/local/bundle/gems/turbo-rails-2.0.5/app/views"
+  * "/usr/local/bundle/gems/actiontext-7.0.8.3/app/views"
+  * "/usr/local/bundle/gems/actionmailbox-7.0.8.3/app/views"
+
+Did you mean?  action_text/attachables/remote_image
+               action_text/contents/content
+               layouts/action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable
+               active_storage/blobs/blob):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= render "header"%>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 192.168.65.1 at 2024-06-06 04:17:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4150)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 5056)
+
+
+  
+ActionView::Template::Error (Missing partial tops/_header, application/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/app/app/views"
+  * "/usr/local/bundle/gems/turbo-rails-2.0.5/app/views"
+  * "/usr/local/bundle/gems/actiontext-7.0.8.3/app/views"
+  * "/usr/local/bundle/gems/actionmailbox-7.0.8.3/app/views"
+
+Did you mean?  layouts/header
+               action_text/attachables/remote_image
+               action_text/contents/content
+               layouts/action_text/contents/content
+               action_text/attachment_galleries/attachment_gallery
+               action_text/attachables/missing_attachable):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= render "header"%>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 192.168.65.1 at 2024-06-06 04:17:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2488)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 3420)
+
+
+Started GET "/" for 192.168.65.1 at 2024-06-06 04:19:09 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 741)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3110)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 4049)
+
+
+Started GET "/" for 192.168.65.1 at 2024-06-06 04:19:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2512)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 3445)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:19:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1762)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 2050)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:19:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:19:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2521)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 3458)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:20:31 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2514)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 3447)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:20:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2563)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 3496)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:24:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 1206)
+  Rendered layout layouts/application.html.erb (Duration: 192.9ms | Allocations: 5998)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms | Allocations: 6907)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= link_to "GameFriend","tops/index",class = "GameFriend" %>
+<%= link_to "login", "user/login",class = "login"%>
+):
+1:    <%= link_to "GameFriend","tops/index",class = "GameFriend" %>
+2:    <%= link_to "login", "user/login",class = "login"%>
+  
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/application.html.erb:14
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:24:31 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3579)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 4480)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= link_to "GameFriend","tops/index", class = "GameFriend" %>
+<%= link_to "login", "user/login", class = "login" %>
+):
+1:    <%= link_to "GameFriend","tops/index", class = "GameFriend" %>
+2:    <%= link_to "login", "user/login", class = "login" %>
+  
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:1: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:2: syntax error, unexpected '='
+app/views/layouts/application.html.erb:14
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:24:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3568)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 4469)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= link_to "GameFriend","tops/index", class : "GameFriend" %>
+<%= link_to "login", "user/login", class : "login" %>
+):
+1:    <%= link_to "GameFriend","tops/index", class : "GameFriend" %>
+2:    <%= link_to "login", "user/login", class : "login" %>
+  
+app/views/layouts/_header.html.erb:1: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:2: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:1: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:2: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:1: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:2: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:1: syntax error, unexpected ':'
+app/views/layouts/_header.html.erb:2: syntax error, unexpected ':'
+app/views/layouts/application.html.erb:14
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:25:04 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2579)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 3508)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:25:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 3215)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 0.0ms | Allocations: 3500)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:25:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:25:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 3125)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 3390)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:25:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:25:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 3117)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.0ms | Allocations: 3382)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:25:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:25:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.4ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2595)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 3463)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:26:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:26:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2568)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 3452)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:26:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:26:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 126)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2580)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 3468)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:26:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 124)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 210)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 2594)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 3527)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:26:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 1844)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 2130)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:26:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 3203)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.0ms | Allocations: 3468)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:27:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:27:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 3152)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.0ms | Allocations: 3417)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:27:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1816)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 2081)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:28:27 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 3126)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.0ms | Allocations: 3391)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:29:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 4029)
+Completed 200 OK in 77ms (Views: 71.2ms | ActiveRecord: 0.0ms | Allocations: 4935)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:31:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 3137)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 3422)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:31:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | Allocations: 3127)
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.0ms | Allocations: 3392)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:31:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 3144)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms | Allocations: 3410)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:31:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:31:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 1786)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 2051)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:31:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 3151)
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 0.0ms | Allocations: 3416)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:32:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 3144)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.0ms | Allocations: 3409)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:32:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 2624)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 3533)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:32:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 1857)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 2142)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:32:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 63.4ms | Allocations: 3212)
+Completed 200 OK in 98ms (Views: 65.5ms | ActiveRecord: 0.0ms | Allocations: 3477)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:33:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:33:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 3168)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 3433)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:33:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 3123)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.0ms | Allocations: 3388)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:34:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:34:23 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 3146)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.0ms | Allocations: 3411)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:34:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:34:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 3141)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.0ms | Allocations: 3406)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:34:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 3153)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.0ms | Allocations: 3418)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:34:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:34:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 3173)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 0.0ms | Allocations: 3438)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:35:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:35:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 91.2ms | Allocations: 3144)
+Completed 200 OK in 111ms (Views: 107.7ms | ActiveRecord: 0.0ms | Allocations: 3409)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:35:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:35:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 3140)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 3405)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:35:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 3147)
+Completed 200 OK in 77ms (Views: 74.1ms | ActiveRecord: 0.0ms | Allocations: 3412)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:35:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1789)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 2054)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:35:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 1824)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 2089)
+
+
+Started GET "/tops/user/login" for 192.168.65.1 at 2024-06-06 04:35:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/user/login"):
+  
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:36:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:36:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 3146)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.0ms | Allocations: 3411)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:36:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 3131)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 3396)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:36:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 3152)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.0ms | Allocations: 3417)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:37:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:37:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 3143)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms | Allocations: 3408)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:37:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:37:12 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:38:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 3135)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.0ms | Allocations: 3400)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:38:15 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 3132)
+Completed 200 OK in 81ms (Views: 78.4ms | ActiveRecord: 0.0ms | Allocations: 3397)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:38:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 3141)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.0ms | Allocations: 3406)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:38:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 3128)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 3393)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:38:52 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:38:52 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 3165)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 3430)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:39:14 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 3145)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.0ms | Allocations: 3410)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:40:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 3133)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.0ms | Allocations: 3398)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:40:15 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:40:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:40:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 3156)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.0ms | Allocations: 3421)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:40:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 3139)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 3404)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:40:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:40:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 3151)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms | Allocations: 3416)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:42:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:42:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 3125)
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.0ms | Allocations: 3390)
+
+
+Started GET "/tops/user/login" for 192.168.65.1 at 2024-06-06 04:44:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/user/login"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:44:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 3135)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.0ms | Allocations: 3400)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:44:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 3149)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms | Allocations: 3414)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:45:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:45:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 3154)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.0ms | Allocations: 3419)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:45:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 3141)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms | Allocations: 3406)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:45:49 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 73.7ms | Allocations: 3125)
+Completed 200 OK in 81ms (Views: 77.0ms | ActiveRecord: 0.0ms | Allocations: 3390)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:46:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 3156)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 3421)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:47:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 3159)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.0ms | Allocations: 3424)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:47:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:47:24 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:47:24 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 3145)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 3410)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:48:10 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:48:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 3158)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 3423)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:48:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 124.3ms | Allocations: 3153)
+Completed 200 OK in 129ms (Views: 126.6ms | ActiveRecord: 0.0ms | Allocations: 3418)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:48:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 3135)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.0ms | Allocations: 3400)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:48:47 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 3144)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.0ms | Allocations: 3409)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:48:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 3152)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms | Allocations: 3417)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:51:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 124)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 229)
+  Rendered layout layouts/application.html.erb (Duration: 66.6ms | Allocations: 4060)
+Completed 200 OK in 84ms (Views: 78.6ms | ActiveRecord: 0.0ms | Allocations: 4969)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:51:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 3125)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.0ms | Allocations: 3410)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:51:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 131.8ms | Allocations: 3155)
+Completed 200 OK in 159ms (Views: 156.3ms | ActiveRecord: 0.0ms | Allocations: 3420)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:52:24 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 3148)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.0ms | Allocations: 3413)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:52:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 3146)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.0ms | Allocations: 3411)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:52:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 3141)
+Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.0ms | Allocations: 3406)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:53:03 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 3144)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.0ms | Allocations: 3410)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:53:16 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 3151)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 3416)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:53:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 3137)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.0ms | Allocations: 3402)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:54:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 1836)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 2101)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:54:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 3146)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms | Allocations: 3411)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 04:54:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:54:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 3143)
+Completed 200 OK in 57ms (Views: 53.9ms | ActiveRecord: 0.0ms | Allocations: 3408)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:54:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 3139)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.0ms | Allocations: 3404)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:54:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 3143)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms | Allocations: 3408)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:59:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 3135)
+Completed 200 OK in 99ms (Views: 92.7ms | ActiveRecord: 0.0ms | Allocations: 3400)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 04:59:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 3143)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.0ms | Allocations: 3408)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:00:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 3135)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms | Allocations: 3400)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:01:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 3144)
+Completed 200 OK in 76ms (Views: 72.8ms | ActiveRecord: 0.0ms | Allocations: 3409)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:01:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 3138)
+Completed 200 OK in 77ms (Views: 73.5ms | ActiveRecord: 0.0ms | Allocations: 3403)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:02:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 174.6ms | Allocations: 3132)
+Completed 200 OK in 183ms (Views: 178.4ms | ActiveRecord: 0.0ms | Allocations: 3397)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:02:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 74.0ms | Allocations: 3128)
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 0.0ms | Allocations: 3393)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:02:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 3137)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.0ms | Allocations: 3402)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:02:25 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 3123)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.0ms | Allocations: 3388)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:02:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 3147)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 3412)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:02:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 3131)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.0ms | Allocations: 3397)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:03:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 99.1ms | Allocations: 3132)
+Completed 200 OK in 108ms (Views: 104.1ms | ActiveRecord: 0.0ms | Allocations: 3397)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:04:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 110.0ms | Allocations: 3137)
+Completed 200 OK in 119ms (Views: 113.3ms | ActiveRecord: 0.0ms | Allocations: 3402)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:04:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 3128)
+Completed 200 OK in 80ms (Views: 77.1ms | ActiveRecord: 0.0ms | Allocations: 3393)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:04:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 3143)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.0ms | Allocations: 3408)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:06:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 3184)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms | Allocations: 3449)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:07:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 3155)
+Completed 200 OK in 67ms (Views: 63.9ms | ActiveRecord: 0.0ms | Allocations: 3421)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:08:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 3126)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 3391)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:08:23 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 3127)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.0ms | Allocations: 3392)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:08:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 1780)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 2045)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:08:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 3149)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 3414)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 05:09:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:09:14 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 3140)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.0ms | Allocations: 3405)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:10:01 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 3133)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.0ms | Allocations: 3398)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:10:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 57.7ms | Allocations: 3149)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.0ms | Allocations: 3414)
+
+
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 05:10:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  
+Started GET "/tops/user/login" for 192.168.65.1 at 2024-06-06 05:10:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/user/login"):
+  
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:11:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 3156)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 3421)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:12:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 3107)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.0ms | Allocations: 3372)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:12:38 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1792)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 2057)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:14:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 1832)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 2097)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:14:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 3134)
+Completed 200 OK in 62ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 3399)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:15:25 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 3139)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 0.0ms | Allocations: 3404)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:16:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 3128)
+Completed 200 OK in 91ms (Views: 87.8ms | ActiveRecord: 0.0ms | Allocations: 3393)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:17:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 3131)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.0ms | Allocations: 3396)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:17:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 3140)
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.0ms | Allocations: 3405)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:17:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 3114)
+Completed 200 OK in 61ms (Views: 57.6ms | ActiveRecord: 0.0ms | Allocations: 3379)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:18:02 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 1824)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 2089)
+
+
+Started GET "/tops/index" for 192.168.65.1 at 2024-06-06 05:18:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 1811)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.0ms | Allocations: 2077)
+
+
+Started GET "/tops/user/login" for 192.168.65.1 at 2024-06-06 05:18:24 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/user/login"):
+  
+Started GET "/tops/tops/index" for 192.168.65.1 at 2024-06-06 05:20:15 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/tops/tops/index"):
+  

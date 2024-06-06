@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "/" => 'users#index'
+  get 'tops/index'
+  get "/" => 'tops#index'
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

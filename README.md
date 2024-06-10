@@ -2,9 +2,6 @@
 # 画面遷移図
 https://www.figma.com/design/ZamX8I47EiBqaJx7EYuRao/Reo's-team-library?node-id=2331-2&t=y65jO756HAS5tYlG-1
 
-# ER図
-https://drive.google.com/file/d/1PAuCEfaVNKZDHcNVUgEJmQouFgiSywZs/view?usp=sharing
-
 # 使用予定の技術一覧
 <img src="https://img.shields.io/badge/-Ruby-CC342D.svg?logo=ruby&style=flat">
 <img src="https://img.shields.io/badge/-Rails-D30001.svg?logo=ruby-on-rails&style=flat">

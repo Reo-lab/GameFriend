@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  board: one
+  user: one
+  playtime: 2024-06-25 23:47:21
+  freetext: MyText
+
+two:
+  board: two
+  user: two
+  playtime: 2024-06-25 23:47:21
+  freetext: MyText

@@ -4,8 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @user_realtime_boards = @user.realtime_boards
   end
 
   def new

@@ -1,32 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+   margin: 0;
+   padding: 0;
  }
- .header_body{
-    display: flex;
-    justify-content: center;
-    position: relative; 
-    width: 100vw;
-    height: 100px;
-    background-color: black;
+ 
+ .header_body {
+   display: flex;
+   align-items: center;
+   width: 100vw;
+   height: 100px;
+   background-color: black;
+   padding: 0 20px;
+   position: relative;
  }
-
- .GameFriend_box{
-    margin-top: 10px;
+ 
+ .left_icons {
+   display: flex;
+   gap: 20px;
+   flex: 0 0 auto;
  }
-
- .login_box{
-    position: absolute; 
-    right: 0;
+ 
+ .setup_icon_box,
+ .bell_icon_box,
+ .chat_icon_box {
+   flex: 0 0 auto;
  }
-
- .GameFriend{
-    color: aliceblue;
-    font-size: 50px;
+ 
+ .GameFriend_box {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
  }
-
-
- .login{
-    color: aliceblue;
-    font-size: 25px;
+ 
+ .login_box {
+   flex: 0 0 auto;
+   margin-left: auto;
+   margin-right: 20px;
+ }
+ 
+ .GameFriend {
+   color: aliceblue;
+   font-size: 50px;
+ }
+ 
+ .login {
+   color: aliceblue;
+   font-size: 25px;
+ }
+ 
+ /* bootstrapアイコン */
+ .bi-gear-wide,
+ .bi-bell,
+ .bi-chat-left-text {
+   font-size: 70px;
+   color: aliceblue;
  }

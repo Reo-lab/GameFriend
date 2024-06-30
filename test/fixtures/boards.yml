@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  boards_gametitle_id: 1
+  playstyle: MyString
+  number_of_people: 1
+  openchanger: false
+  boards_tag_id: 1
+  playtime: 2024-06-25 23:50:14
+  freetext: MyText
+
+two:
+  user: two
+  boards_gametitle_id: 1
+  playstyle: MyString
+  number_of_people: 1
+  openchanger: false
+  boards_tag_id: 1
+  playtime: 2024-06-25 23:50:14
+  freetext: MyText

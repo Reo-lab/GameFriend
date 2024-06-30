@@ -3,7 +3,7 @@
 
 <%= link_to "User_index", users_path %>
 <%= link_to "User New", new_user_path %>
-
+<%= link_to "Board index", boards_path%>
 <% @users.each do |user| %>
   <li><%= link_to user.name, user_path(user) %></li>
 <% end %>

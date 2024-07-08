@@ -1,0 +1,5 @@
+# Ignore Bootsnap cache
+/tmp/cache/bootsnap/
+
+# Ignore Sprockets cache
+/tmp/cache/assets/sprockets/

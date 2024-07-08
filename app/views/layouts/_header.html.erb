@@ -1,12 +1,29 @@
-<div class = "header_body">
-  <div class = "GameFriend_box">
-  <%= link_to "GameFriend","tops/index", class: "GameFriend" %>
+<div class="header_body">
+  <div class="left_icons">
+    <div class="setup_icon_box">
+      <%= link_to "/" do %>
+        <i class="bi bi-gear-wide"></i>
+      <% end %>
+    </div>
+    <div class="bell_icon_box">
+      <%= link_to "/" do %>
+        <i class="bi bi-bell"></i>
+      <% end %>
+    </div>
+    <div class="chat_icon_box">
+      <%= link_to "/" do %>
+        <i class="bi bi-chat-left-text"></i>
+      <% end %>
+    </div>
+  </div>
+  <div class="GameFriend_box">
+    <%= link_to "GameFriend", "/", class: "GameFriend" %>
   </div>
   <div class="login_box">
-  <% if user_signed_in? %>
-    <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
-  <% else %>
-    <%= link_to "ログイン", new_user_session_path, class: "login" %>
-  <% end %>
-</div>
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "login" %>
+    <% end %>
+  </div>
 </div>

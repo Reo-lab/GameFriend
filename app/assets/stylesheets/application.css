@@ -54,3 +54,39 @@
    font-size: 70px;
    color: aliceblue;
  }
+
+ /* サイドメニューレイアウト*/
+ .sidemenu {
+  float: left;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-right: 1px solid #dee2e6;
+  height: 100vh; /* ビューポートの高さに合わせる */
+  width: 15vh;
+}
+
+.sidemenu a {
+  display: block;
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidemenu a:hover {
+  background-color: #e9ecef;
+}
+
+/* ユーザーアイコンのレイアウト*/
+
+.user-icon {
+  width: 150px; /* 画像の幅を指定 */
+  height: 150px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像を切り取るようにフィット */
+}
+
+.user_icon_box{
+  float: left;
+}
+.profile_text_box{
+  float: left;
+}

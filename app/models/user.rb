@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_one_attached :icon_image
   has_many :boards
   has_many :boards_requests
   has_many :boards_chatrooms_users

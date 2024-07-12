@@ -9754,3 +9754,75 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 25ms (Views: 16.0ms | ActiveRecord: 2.1ms | Allocations: 5466)
 
 
+Started GET "/" for 192.168.65.1 at 2024-07-12 07:20:23 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (7.1ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 105.9ms | Allocations: 19991)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 8.2ms | Allocations: 1660)
+  Rendered layout layouts/application.html.erb (Duration: 910.1ms | Allocations: 61289)
+Completed 200 OK in 1008ms (Views: 895.2ms | ActiveRecord: 23.7ms | Allocations: 69068)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-12 07:20:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1935)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4445)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 1.6ms | Allocations: 4771)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-12 07:20:27 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1931)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 4464)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 1.4ms | Allocations: 4753)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-12 07:20:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.9ms | Allocations: 1703)
+  Rendered setups/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1977)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3727)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.4ms | Allocations: 4535)
+
+

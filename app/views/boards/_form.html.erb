@@ -1,7 +1,8 @@
 <%= form_with(model: @board, local: true) do |form| %>
+  <div class="form_container">
     <% if @board.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@board.errors.count, "error") %> prohibited this board from being saved:</h2>
+        <h2><%= pluralize(@board.errors.count, "件のエラーが発生しました") %>:</h2>
   
         <ul>
           <% @board.errors.full_messages.each do |message| %>
@@ -12,41 +13,42 @@
     <% end %>
   
     <div class="field">
-      <%= form.label :boards_gametitle_id %>
-      <%= form.number_field :boards_gametitle_id %>
+      <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id') %>
+      <%= form.number_field :boards_gametitle_id, class: 'custom-input' %>
     </div>
   
     <div class="field">
-      <%= form.label :playstyle %>
-      <%= form.text_field :playstyle %>
+      <%= form.label :playstyle, t('activerecord.attributes.board.playstyle') %>
+      <%= form.text_field :playstyle, class: 'custom-input' %>
     </div>
   
     <div class="field">
-      <%= form.label :number_of_people %>
-      <%= form.number_field :number_of_people %>
+      <%= form.label :number_of_people, t('activerecord.attributes.board.number_of_people') %>
+      <%= form.number_field :number_of_people, class: 'custom-input' %>
     </div>
   
     <div class="field">
-      <%= form.label :openchanger %>
-      <%= form.check_box :openchanger %>
+      <%= form.label :openchanger, t('activerecord.attributes.board.openchanger') %>
+      <%= form.select :openchanger, options_for_select([['公開', true], ['非公開', false]]), {}, class: 'custom-input' %>
     </div>
   
     <div class="field">
-      <%= form.label :boards_tag_id %>
-      <%= form.number_field :boards_tag_id %>
+      <%= form.label :boards_tag_id, t('activerecord.attributes.board.boards_tag_id') %>
+      <%= form.number_field :boards_tag_id, class: 'custom-input' %>
     </div>
   
     <div class="field">
-      <%= form.label :playtime %>
-      <%= form.datetime_select :playtime %>
+      <%= form.label :playtime, t('activerecord.attributes.board.playtime') %>
+      <%= form.time_field :playtime, class: 'custom-input' %>
     </div>
   
     <div class="field">
-      <%= form.label :freetext %>
-      <%= form.text_area :freetext %>
+      <%= form.label :freetext, t('activerecord.attributes.board.freetext') %>
+      <%= form.text_area :freetext, class: 'custom-textarea' %>
     </div>
   
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit t('helpers.submit.create'), class:'submit_button' %>
     </div>
-  <% end %>
+  </div>
+<% end %>

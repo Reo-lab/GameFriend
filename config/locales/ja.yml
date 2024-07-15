@@ -1,0 +1,28 @@
+ja:
+  date:
+    order:
+      - :year
+      - :month
+      - :day
+  activerecord:
+    models:
+      board: ボード
+    attributes:
+      board:
+        boards_gametitle_id: ゲームタイトルID
+        playstyle: プレイスタイル
+        number_of_people: 人数
+        openchanger: オープンチェンジャー
+        boards_tag_id: タグID
+        playtime: 何時まで
+        freetext: フリーテキスト
+  helpers:
+    submit:
+      create: 作成
+      update: 更新
+  errors:
+    template:
+      header:
+        one: 1件のエラーが発生しました
+        other: "%{count} 件のエラーが発生しました"
+      body: "次の項目を確認してください"

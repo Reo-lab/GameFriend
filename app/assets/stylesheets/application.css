@@ -90,3 +90,55 @@
 .profile_text_box{
   float: left;
 }
+
+/* 募集版作成レイアウト*/
+.boards_new_title {
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-right: 200px;
+  background-color: rgb(226, 226, 226);
+}
+
+/* 募集フォームレイアウト*/
+.form_container{
+  display: inline-block;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-right: 0px;
+  background-color: rgb(226, 226, 226);
+}
+
+.custom-input {
+  font-size: 80%;
+  width: 300px;
+  height: 35px;
+}
+.field {
+  display: flex;
+  align-items: flex-start;
+  padding:5px 0px;
+}
+
+.field label {
+  margin-right: 10px; /* ラベルとフィールドの間に少しスペースを追加 */
+}
+
+.custom-textarea {
+  width: 60%;
+  min-height: 100px; /* 必要に応じて高さを調整 */
+  box-sizing: border-box; /* パディングとボーダーを含めてサイズを計算 */
+  font-size: 70%;
+}
+
+.submit_button{
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 600px;
+}

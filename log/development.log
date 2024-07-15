@@ -14798,3 +14798,2117 @@ Processing by BoardsController#edit as HTML
 Completed 200 OK in 64ms (Views: 27.8ms | ActiveRecord: 2.3ms | Allocations: 4840)
 
 
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 06:40:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 34.5ms | Allocations: 10198)
+  Rendered boards/_form.html.erb (Duration: 14.3ms | Allocations: 3543)
+  Rendered boards/new.html.erb within layouts/application (Duration: 54.9ms | Allocations: 14493)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 541)
+  Rendered layout layouts/application.html.erb (Duration: 1085.0ms | Allocations: 57342)
+Completed 200 OK in 1181ms (Views: 1087.8ms | ActiveRecord: 15.8ms | Allocations: 72455)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:40:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (1.8ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 5051)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 1038)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 7931)
+Completed 200 OK in 43ms (Views: 36.1ms | ActiveRecord: 2.9ms | Allocations: 8886)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:41:50 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 9707)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 95.0ms | Allocations: 26092)
+Completed 200 OK in 111ms (Views: 87.1ms | ActiveRecord: 10.6ms | Allocations: 29695)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:42:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 3312)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 6705)
+Completed 200 OK in 42ms (Views: 36.2ms | ActiveRecord: 2.1ms | Allocations: 7703)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:42:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2311)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 6.8ms | Allocations: 1381)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 5776)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 2.7ms | Allocations: 6758)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:43:00 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  Rendered tops/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4390)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4488)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5450)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Tops#index</h1>
+<p>Find me in app/views/tops/index.html.erb</p>
+
+<% @boards.each do |board|%>
+  <%= board.user.name %>
+  <%= board.playstyle %>
+  <%= board.number_of_people %>
+  <%= board.playtime %>
+<% end %>
+
+<%= link_to 'ゲームタイトル一覧' gametitles_path %>
+):
+1:    <h1>Tops#index</h1>
+2:    <p>Find me in app/views/tops/index.html.erb</p>
+3:    
+4:    <% @boards.each do |board|%>
+5:      <%= board.user.name %>
+6:      <%= board.playstyle %>
+7:      <%= board.number_of_people %>
+8:      <%= board.playtime %>
+9:    <% end %>
+10:    
+11:    <%= link_to 'ゲームタイトル一覧' gametitles_path %>
+  
+app/views/tops/index.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+app/views/tops/index.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+app/views/tops/index.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+app/views/tops/index.html.erb:11: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:43:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2408)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 5811)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 1.6ms | Allocations: 6781)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:43:09 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 123)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3133)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.5ms | Allocations: 3938)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:44:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 238)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 3772)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.5ms | Allocations: 4741)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:44:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 98)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2595)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.4ms | Allocations: 2940)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 06:49:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 19.5ms | Allocations: 5260)
+  Rendered setups/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 5532)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 20780)
+Completed 200 OK in 86ms (Views: 71.2ms | ActiveRecord: 6.8ms | Allocations: 22440)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-07-15 06:49:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidemenu.html.erb (Duration: 0.4ms | Allocations: 265)
+  [1m[36mActiveStorage::Attachment Load (3.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'icon_image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 84.3ms | Allocations: 20414)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 91.6ms | Allocations: 22191)
+Completed 200 OK in 105ms (Views: 82.6ms | ActiveRecord: 13.4ms | Allocations: 25336)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:49:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 6712)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 9503)
+Completed 200 OK in 43ms (Views: 27.8ms | ActiveRecord: 3.8ms | Allocations: 12459)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:49:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 106)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.0ms | Allocations: 1128)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3063)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.4ms | Allocations: 3708)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:49:22 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 1083)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2833)
+Completed 200 OK in 40ms (Views: 17.8ms | ActiveRecord: 3.0ms | Allocations: 6203)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:51:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 2408)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 18.6ms | Allocations: 1353)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 5802)
+Completed 200 OK in 79ms (Views: 71.5ms | ActiveRecord: 3.1ms | Allocations: 6782)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:51:17 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 4783)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 1129)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 7478)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.4ms | Allocations: 8180)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 06:51:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 8.5ms | Allocations: 1637)
+  Rendered setups/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1907)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 3642)
+Completed 200 OK in 26ms (Views: 22.6ms | ActiveRecord: 0.5ms | Allocations: 4347)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:52:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1215)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 16.6ms | Allocations: 4581)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 20804)
+Completed 200 OK in 110ms (Views: 75.8ms | ActiveRecord: 10.0ms | Allocations: 25125)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 06:52:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 7.6ms | Allocations: 1440)
+  Rendered setups/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1515)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3273)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.8ms | Allocations: 3918)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:52:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 6491)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 9305)
+Completed 200 OK in 45ms (Views: 30.4ms | ActiveRecord: 4.3ms | Allocations: 12104)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:52:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 187)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2671)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 3032)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:52:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 977)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3278)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 0.7ms | Allocations: 3567)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:53:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2780)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 51.2ms | Allocations: 9826)
+  Rendered layout layouts/application.html.erb (Duration: 296.1ms | Allocations: 45327)
+Completed 200 OK in 369ms (Views: 286.0ms | ActiveRecord: 24.2ms | Allocations: 55965)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:53:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (3.3ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 10786)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 1003)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 13603)
+Completed 200 OK in 65ms (Views: 45.2ms | ActiveRecord: 7.0ms | Allocations: 16785)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 06:53:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 5.4ms | Allocations: 1673)
+  Rendered setups/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1947)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 3703)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.4ms | Allocations: 4512)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-07-15 06:53:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidemenu.html.erb (Duration: 0.3ms | Allocations: 265)
+  [1m[36mActiveStorage::Attachment Load (2.0ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'icon_image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 77.3ms | Allocations: 20404)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 84.8ms | Allocations: 22179)
+Completed 200 OK in 97ms (Views: 76.8ms | ActiveRecord: 11.9ms | Allocations: 25339)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8ca22f7143a39ead3b28331633f1fe8a66a6b994/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png" for 192.168.65.1 at 2024-07-15 06:53:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8ca22f7143a39ead3b28331633f1fe8a66a6b994", "filename"=>"スクリーンショット 2024-05-04 8.38.51"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: hpozgc8sypzelojzwljm2h41pe5x (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSEJ2ZW1kak9ITjVjSHBsYkc5cWVuZHNhbTB5YURReGNHVTFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNScGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXlOQzB3TlMwd05DQTRMak00TGpVeExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVekpUZ3lKVUk1SlVVekpUZ3lKVUZHSlVVekpUZ3pKVUZCSlVVekpUZ3pKVUpESlVVekpUZ3pKVUl6SlVVekpUZ3lKVUkzSlVVekpUZ3pKVUUzSlVVekpUZ3pKVGd6SlVVekpUZ3pKVGc0SlRJd01qQXlOQzB3TlMwd05DVXlNRGd1TXpndU5URXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjQtMDctMTVUMDY6NTg6NTUuOTQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab7ea0b9cc6fa443ec0990358eea7f88346c91a4/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSEJ2ZW1kak9ITjVjSHBsYkc5cWVuZHNhbTB5YURReGNHVTFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNScGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXlOQzB3TlMwd05DQTRMak00TGpVeExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVekpUZ3lKVUk1SlVVekpUZ3lKVUZHSlVVekpUZ3pKVUZCSlVVekpUZ3pKVUpESlVVekpUZ3pKVUl6SlVVekpUZ3lKVUkzSlVVekpUZ3pKVUUzSlVVekpUZ3pKVGd6SlVVekpUZ3pKVGc0SlRJd01qQXlOQzB3TlMwd05DVXlNRGd1TXpndU5URXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjQtMDctMTVUMDY6NTg6NTUuOTQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab7ea0b9cc6fa443ec0990358eea7f88346c91a4/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 3154)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSEJ2ZW1kak9ITjVjSHBsYkc5cWVuZHNhbTB5YURReGNHVTFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNScGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXlOQzB3TlMwd05DQTRMak00TGpVeExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVekpUZ3lKVUk1SlVVekpUZ3lKVUZHSlVVekpUZ3pKVUZCSlVVekpUZ3pKVUpESlVVekpUZ3pKVUl6SlVVekpUZ3lKVUkzSlVVekpUZ3pKVUUzSlVVekpUZ3pKVGd6SlVVekpUZ3pKVGc0SlRJd01qQXlOQzB3TlMwd05DVXlNRGd1TXpndU5URXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjQtMDctMTVUMDY6NTg6NTUuOTQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--ab7ea0b9cc6fa443ec0990358eea7f88346c91a4/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png" for 192.168.65.1 at 2024-07-15 06:53:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"スクリーンショット 2024-05-04 8.38.51"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 339)
+
+
+Started GET "/users/1/edit" for 192.168.65.1 at 2024-07-15 06:53:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2676)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 1111)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 5278)
+Completed 200 OK in 30ms (Views: 23.6ms | ActiveRecord: 1.0ms | Allocations: 6254)
+
+
+Started GET "/users/1/edit" for 192.168.65.1 at 2024-07-15 06:54:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2021)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.3ms | Allocations: 1458)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 5265)
+Completed 200 OK in 40ms (Views: 30.6ms | ActiveRecord: 1.0ms | Allocations: 6774)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 06:54:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 5.6ms | Allocations: 1637)
+  Rendered setups/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1907)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 3642)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.5ms | Allocations: 4326)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:54:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2411)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 5204)
+Completed 200 OK in 31ms (Views: 26.4ms | ActiveRecord: 1.5ms | Allocations: 5902)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:54:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 238)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 1126)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3181)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 3884)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:54:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1213)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3514)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.5ms | Allocations: 3893)
+
+
+Started POST "/gametitles" for 192.168.65.1 at 2024-07-15 06:57:55 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gametitle"=>{"gamename"=>"オーバーウォッチ2", "gametitle_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f680d58a828 @tempfile=#<Tempfile:/tmp/RackMultipart20240715-1-mfay7f.png>, @content_type="image/png", @original_filename="overwatch2-icon (1).png", @headers="Content-Disposition: form-data; name=\"gametitle[gametitle_image]\"; filename=\"overwatch2-icon (1).png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Gametitle"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3090)
+
+
+  
+NameError (uninitialized constant GametitlesController::Gmetitle
+
+    @gametitle=Gmetitle.new(gametitle_params)
+               ^^^^^^^^):
+  
+app/controllers/gametitles_controller.rb:16:in `create'
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:58:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 107)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 17.4ms | Allocations: 4730)
+  Rendered layout layouts/application.html.erb (Duration: 72.0ms | Allocations: 20098)
+Completed 200 OK in 86ms (Views: 67.6ms | ActiveRecord: 6.7ms | Allocations: 21598)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:58:11 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 45)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 2526)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 2814)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 06:58:13 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1108)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 1065)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3637)
+Completed 200 OK in 30ms (Views: 16.3ms | ActiveRecord: 2.9ms | Allocations: 6609)
+
+
+Started POST "/gametitles" for 192.168.65.1 at 2024-07-15 06:58:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gametitle"=>{"gamename"=>"オーバーウォッチ2", "gametitle_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f67e6b5eff0 @tempfile=#<Tempfile:/tmp/RackMultipart20240715-1-7o35e7.png>, @content_type="image/png", @original_filename="overwatch2-icon (1).png", @headers="Content-Disposition: form-data; name=\"gametitle[gametitle_image]\"; filename=\"overwatch2-icon (1).png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Gametitle"}
+[31mUnpermitted parameter: :gametitle_image. Context: { controller: GametitlesController, action: create, request: #<ActionDispatch::Request:0x00007f67e6b59820>, params: {"authenticity_token"=>"[FILTERED]", "gametitle"=>{"gamename"=>"オーバーウォッチ2", "gametitle_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f67e6b5eff0 @tempfile=#<Tempfile:/tmp/RackMultipart20240715-1-7o35e7.png>, @content_type="image/png", @original_filename="overwatch2-icon (1).png", @headers="Content-Disposition: form-data; name=\"gametitle[gametitle_image]\"; filename=\"overwatch2-icon (1).png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Gametitle", "controller"=>"gametitles", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gametitles_controller.rb:17:in `create'
+  [1m[36mGametitle Create (11.9ms)[0m  [1m[32mINSERT INTO `gametitles` (`gamename`, `game_image`, `created_at`, `updated_at`) VALUES ('オーバーウォッチ2', NULL, '2024-07-15 06:58:19.660620', '2024-07-15 06:58:19.660620')[0m
+  ↳ app/controllers/gametitles_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gametitles_controller.rb:17:in `create'
+Redirected to http://localhost:3000/gametitles/1
+Completed 302 Found in 34ms (ActiveRecord: 19.7ms | Allocations: 4120)
+
+
+Started GET "/gametitles/1" for 192.168.65.1 at 2024-07-15 06:58:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/show.html.erb within layouts/application
+  Rendered gametitles/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 116)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2677)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 3065)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 06:58:21 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.3ms | Allocations: 1461)
+  Rendered setups/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1536)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3287)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 3932)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 06:58:23 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 59.2ms | Allocations: 6511)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 9330)
+Completed 200 OK in 85ms (Views: 67.6ms | ActiveRecord: 7.0ms | Allocations: 12118)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 06:58:25 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 45)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2553)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 2844)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:00:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 10025)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.7ms | Allocations: 1486)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 27034)
+Completed 200 OK in 102ms (Views: 77.8ms | ActiveRecord: 8.9ms | Allocations: 31087)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:00:28 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2108)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 2196)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 4214)
+
+
+  
+ActionView::Template::Error (undefined method `icon_image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag(@gametitles.gametitle_image, class: "gametitle-icon") if @gametitle.icon_image.attached? );@output_buffer.safe_append='
+                                                                                                                ^^^^^^^^^^^):
+    5: 
+    6: 
+    7: <div class= "gametitle_icon_box">
+    8:   <%= image_tag(@gametitles.gametitle_image, class: "gametitle-icon") if @gametitle.icon_image.attached? %>
+    9: </div>
+  
+app/views/gametitles/index.html.erb:8
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:01:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2057)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2145)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 3087)
+
+
+  
+ActionView::Template::Error (undefined method `icon_image' for nil:NilClass
+
+  '.freeze;@output_buffer.append=( image_tag(@gametitles.game_image, class: "gametitle-icon") if @gametitle.icon_image.attached? );@output_buffer.safe_append='
+                                                                                                           ^^^^^^^^^^^):
+    5: 
+    6: 
+    7: <div class= "gametitle_icon_box">
+    8:   <%= image_tag(@gametitles.game_image, class: "gametitle-icon") if @gametitle.icon_image.attached? %>
+    9: </div>
+  
+app/views/gametitles/index.html.erb:8
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:02:56 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1203)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1292)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2237)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Gametitles#index</h1>
+<p>Find me in app/views/gametitles/index.html.erb</p>
+
+<%= link_to 'ゲームタイトル作成',new_gametitle_path%>
+
+
+<% @gametitles.each do |@gametitle| %>
+  <div class= "gametitle_icon_box">
+    <%= image_tag(@gametitle.game_image, class: "gametitle-icon") if @gametitle.icon_image.attached? %>
+  </div>
+<% end %>
+):
+1:    <h1>Gametitles#index</h1>
+2:    <p>Find me in app/views/gametitles/index.html.erb</p>
+3:    
+4:    <%= link_to 'ゲームタイトル作成',new_gametitle_path%>
+5:    
+6:    
+7:    <% @gametitles.each do |@gametitle| %>
+8:      <div class= "gametitle_icon_box">
+9:        <%= image_tag(@gametitle.game_image, class: "gametitle-icon") if @gametitle.icon_image.attached? %>
+10:      </div>
+11:    <% end %>
+  
+app/views/gametitles/index.html.erb:7: formal argument cannot be an instance variable
+app/views/gametitles/index.html.erb:7: formal argument cannot be an instance variable
+app/views/gametitles/index.html.erb:7: formal argument cannot be an instance variable
+app/views/gametitles/index.html.erb:7: formal argument cannot be an instance variable
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:03:37 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 7918)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8003)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.9ms | Allocations: 8942)
+
+
+  
+ActionView::Template::Error (undefined method `icon_image' for #<Gametitle id: 1, gamename: "オーバーウォッチ2", game_image: nil, created_at: "2024-07-15 06:58:19.660620000 +0000", updated_at: "2024-07-15 06:58:19.660620000 +0000">):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.icon_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:04:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.6ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 5924)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 6003)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms | Allocations: 6283)
+
+
+  
+ActionView::Template::Error (undefined method `icon_image' for #<Gametitle id: 1, gamename: "オーバーウォッチ2", game_image: nil, created_at: "2024-07-15 06:58:19.660620000 +0000", updated_at: "2024-07-15 06:58:19.660620000 +0000">):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.icon_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:04:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2816)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2901)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms | Allocations: 3812)
+
+
+  
+ActionView::Template::Error (undefined method `attached?' for nil:NilClass
+
+    '.freeze;@output_buffer.append=( image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? );@output_buffer.safe_append='
+                                                                                                                     ^^^^^^^^^^):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles/1" for 192.168.65.1 at 2024-07-15 07:05:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/show.html.erb within layouts/application
+  Rendered gametitles/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 123)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.7ms | Allocations: 1502)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 3730)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 0.7ms | Allocations: 4692)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:05:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 5.8ms | Allocations: 1672)
+  Rendered setups/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1942)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3691)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 4494)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:05:33 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2409)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 5202)
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 1.4ms | Allocations: 5899)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:05:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2651)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2730)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 3081)
+
+
+  
+ActionView::Template::Error (undefined method `attached?' for nil:NilClass
+
+    '.freeze;@output_buffer.append=( image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? );@output_buffer.safe_append='
+                                                                                                                     ^^^^^^^^^^):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+  [1m[36mGametitle Load (0.6ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  [1m[36mGametitle Load (2.6ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles` WHERE `gametitles`.`id` = 1 LIMIT 1[0m
+  [1m[36mGametitle Load (1.0ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles` WHERE `gametitles`.`id` = 1 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'gametitle_image' LIMIT 1[0m
+  [1m[36mGametitle Destroy (8.6ms)[0m  [1m[31mDELETE FROM `gametitles` WHERE `gametitles`.`id` = 1[0m
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGametitle Load (0.8ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:07:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 612)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3106)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.9ms | Allocations: 3386)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 07:07:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1285)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3586)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 3938)
+
+
+Started POST "/gametitles" for 192.168.65.1 at 2024-07-15 07:08:04 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gametitle"=>{"gamename"=>"オーバーウォッチ2", "game_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f680c111018 @tempfile=#<Tempfile:/tmp/RackMultipart20240715-1-5ssq89.png>, @content_type="image/png", @original_filename="overwatch2-icon (1).png", @headers="Content-Disposition: form-data; name=\"gametitle[game_image]\"; filename=\"overwatch2-icon (1).png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Gametitle"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mGametitle Create (0.6ms)[0m  [1m[32mINSERT INTO `gametitles` (`gamename`, `game_image`, `created_at`, `updated_at`) VALUES ('オーバーウォッチ2', '#<ActionDispatch::Http::UploadedFile:0x00007f680c111018>', '2024-07-15 07:08:04.823060', '2024-07-15 07:08:04.823060')[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+Redirected to http://localhost:3000/gametitles/2
+Completed 302 Found in 16ms (ActiveRecord: 4.1ms | Allocations: 2649)
+
+
+Started GET "/gametitles/2" for 192.168.65.1 at 2024-07-15 07:08:04 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/show.html.erb within layouts/application
+  Rendered gametitles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2557)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.4ms | Allocations: 2873)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:08:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1962)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 6.2ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4433)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 1.4ms | Allocations: 4717)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:08:07 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3144)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3223)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 3478)
+
+
+  
+ActionView::Template::Error (undefined method `attached?' for "#<ActionDispatch::Http::UploadedFile:0x00007f680c111018>":String
+
+    '.freeze;@output_buffer.append=( image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? );@output_buffer.safe_append='
+                                                                                                                     ^^^^^^^^^^):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+  [1m[36mGametitle Load (1.1ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:09:48 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.7ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3470)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3555)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms | Allocations: 4466)
+
+
+  
+ActionView::Template::Error (undefined method `attached?' for "#<ActionDispatch::Http::UploadedFile:0x00007f680c111018>":String
+
+    '.freeze;@output_buffer.append=( image_tag(gametitle.game_image) if gametitle.game_image.attached? );@output_buffer.safe_append='
+                                                                                            ^^^^^^^^^^):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image) if gametitle.game_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:09:54 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3115)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3194)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 3474)
+
+
+  
+ActionView::Template::Error (undefined method `attached?' for "#<ActionDispatch::Http::UploadedFile:0x00007f680c111018>":String
+
+    '.freeze;@output_buffer.append=( image_tag(gametitle.game_image) if gametitle.game_image.attached? );@output_buffer.safe_append='
+                                                                                            ^^^^^^^^^^):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image) if gametitle.game_image.attached? %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:09:57 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 3268)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 3353)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms | Allocations: 4266)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.
+):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image)  %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:09:58 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2842)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 2921)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 3201)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.
+):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image)  %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:10:08 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 3255)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3340)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms | Allocations: 4251)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.
+):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= image_tag(gametitle.game_image) %>
+    10:   </div>
+    11: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+  [1m[36mGametitle Load (2.5ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles` WHERE `gametitles`.`id` = 1 LIMIT 1[0m
+  [1m[36mGametitle Load (0.7ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  [1m[36mGametitle Load (1.1ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles` WHERE `gametitles`.`id` = 2 LIMIT 1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 2 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'gametitle_image' LIMIT 1[0m
+  [1m[36mGametitle Destroy (0.7ms)[0m  [1m[31mDELETE FROM `gametitles` WHERE `gametitles`.`id` = 2[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:11:44 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.5ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1007)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 17.2ms | Allocations: 4980)
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | Allocations: 21506)
+Completed 200 OK in 114ms (Views: 87.5ms | ActiveRecord: 5.6ms | Allocations: 24727)
+
+
+Started GET "/gametitles/new" for 192.168.65.1 at 2024-07-15 07:11:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/new.html.erb within layouts/application
+  Rendered gametitles/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1239)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 3539)
+Completed 200 OK in 32ms (Views: 18.6ms | ActiveRecord: 4.2ms | Allocations: 5242)
+
+
+Started POST "/gametitles" for 192.168.65.1 at 2024-07-15 07:11:51 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "gametitle"=>{"gamename"=>"オーバーウォッチ2", "game_image"=>#<ActionDispatch::Http::UploadedFile:0x00007f680e41c210 @tempfile=#<Tempfile:/tmp/RackMultipart20240715-1-5u6jiq.png>, @content_type="image/png", @original_filename="overwatch2-icon (1).png", @headers="Content-Disposition: form-data; name=\"gametitle[game_image]\"; filename=\"overwatch2-icon (1).png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Gametitle"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mGametitle Create (0.6ms)[0m  [1m[32mINSERT INTO `gametitles` (`gamename`, `game_image`, `created_at`, `updated_at`) VALUES ('オーバーウォッチ2', NULL, '2024-07-15 07:11:51.076425', '2024-07-15 07:11:51.076425')[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` INNER JOIN `active_storage_attachments` ON `active_storage_blobs`.`id` = `active_storage_attachments`.`blob_id` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'game_image' LIMIT 1[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'game_image' LIMIT 1[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Blob Create (3.1ms)[0m  [1m[32mINSERT INTO `active_storage_blobs` (`key`, `filename`, `content_type`, `metadata`, `service_name`, `byte_size`, `checksum`, `created_at`) VALUES ('417p18ate9othkyjjcuzx4nofgz5', 'overwatch2-icon (1).png', 'image/webp', '{\"identified\":true}', 'local', 10902, 'qWPDa6decUAca+TtQ3v5KA==', '2024-07-15 07:11:51.115678')[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mActiveStorage::Attachment Create (1.9ms)[0m  [1m[32mINSERT INTO `active_storage_attachments` (`name`, `record_type`, `record_id`, `blob_id`, `created_at`) VALUES ('game_image', 'Gametitle', 3, 3, '2024-07-15 07:11:51.122012')[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mGametitle Update (2.6ms)[0m  [1m[33mUPDATE `gametitles` SET `gametitles`.`updated_at` = '2024-07-15 07:11:51.126853' WHERE `gametitles`.`id` = 3[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gametitles_controller.rb:18:in `create'
+[36m  Disk Storage (3.6ms) [0m[32mUploaded file to key: 417p18ate9othkyjjcuzx4nofgz5 (checksum: qWPDa6decUAca+TtQ3v5KA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 96251e1f-46ce-4801-88a8-c00def303a74) to Async(default) with arguments: #<GlobalID:0x00007f680c064700 @uri=#<URI::GID gid://app/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/gametitles/3
+Completed 302 Found in 106ms (ActiveRecord: 19.5ms | Allocations: 23674)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74] Performing ActiveStorage::AnalyzeJob (Job ID: 96251e1f-46ce-4801-88a8-c00def303a74) from Async(default) enqueued at 2024-07-15T07:11:51Z with arguments: #<GlobalID:0x00007f67e6be8b88 @uri=#<URI::GID gid://app/ActiveStorage::Blob/3>>
+Started GET "/gametitles/3" for 192.168.65.1 at 2024-07-15 07:11:51 +0000
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74] Skipping image analysis because the ruby-vips gem isn't installed
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74]   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74]   [1m[36mActiveStorage::Blob Update (1.8ms)[0m  [1m[33mUPDATE `active_storage_blobs` SET `active_storage_blobs`.`metadata` = '{\"identified\":true,\"analyzed\":true}' WHERE `active_storage_blobs`.`id` = 3[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74]   [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [96251e1f-46ce-4801-88a8-c00def303a74] Performed ActiveStorage::AnalyzeJob (Job ID: 96251e1f-46ce-4801-88a8-c00def303a74) from Async(default) in 35.26ms
+Processing by GametitlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/show.html.erb within layouts/application
+  Rendered gametitles/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 128)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | Allocations: 999)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 2920)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.7ms | Allocations: 3369)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:11:52 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 6716)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 15.5ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 9518)
+Completed 200 OK in 60ms (Views: 44.4ms | ActiveRecord: 4.7ms | Allocations: 12479)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:11:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'game_image' LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:9
+  [1m[36mActiveStorage::Blob Load (3.1ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:9
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 21.2ms | Allocations: 3584)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 6067)
+Completed 200 OK in 47ms (Views: 39.9ms | ActiveRecord: 4.5ms | Allocations: 6372)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a0dc7f6cb131f5995cda08119a7ff999a2d1a17d/overwatch2-icon%20(1).png" for 192.168.65.1 at 2024-07-15 07:11:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a0dc7f6cb131f5995cda08119a7ff999a2d1a17d", "filename"=>"overwatch2-icon (1)"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 417p18ate9othkyjjcuzx4nofgz5 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MTY6NTMuOTU2WiIsInB1ciI6ImJsb2Jfa2V5In19--0e43acb4844f91e5580f5f614160ab83c52685ad/overwatch2-icon%20(1).png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MTY6NTMuOTU2WiIsInB1ciI6ImJsb2Jfa2V5In19--0e43acb4844f91e5580f5f614160ab83c52685ad/overwatch2-icon%20(1).png
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 2567)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MTY6NTMuOTU2WiIsInB1ciI6ImJsb2Jfa2V5In19--0e43acb4844f91e5580f5f614160ab83c52685ad/overwatch2-icon%20(1).png" for 192.168.65.1 at 2024-07-15 07:11:53 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"overwatch2-icon (1)"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:12:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.5ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 6357)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 6442)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.5ms | Allocations: 7418)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Gametitle id: 3, gamename: "オーバーウォッチ2", game_image: nil, created_at: "2024-07-15 07:11:51.076425000 +0000", updated_at: "2024-07-15 07:11:51.126853000 +0000">):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= gametitle.name%>
+    10:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? %>
+    11:   </div>
+    12: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:12:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 6309)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6394)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms | Allocations: 7330)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Gametitle id: 3, gamename: "オーバーウォッチ2", game_image: nil, created_at: "2024-07-15 07:11:51.076425000 +0000", updated_at: "2024-07-15 07:11:51.126853000 +0000">):
+     6: 
+     7: <% @gametitles.each do |gametitle| %>
+     8:   <div class= "gametitle_icon_box">
+     9:     <%= gametitle.name %>
+    10:     <%= image_tag(gametitle.game_image, class: "gametitle-icon") if gametitle.game_image.attached? %>
+    11:   </div>
+    12: <% end %>
+  
+app/views/gametitles/index.html.erb:9
+app/views/gametitles/index.html.erb:7
+  [1m[36mGametitle Load (0.6ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:13:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'game_image' LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:10
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2953)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.0ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 6344)
+Completed 200 OK in 43ms (Views: 36.2ms | ActiveRecord: 2.2ms | Allocations: 7309)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MTY6NTMuOTU2WiIsInB1ciI6ImJsb2Jfa2V5In19--0e43acb4844f91e5580f5f614160ab83c52685ad/overwatch2-icon%20(1).png" for 192.168.65.1 at 2024-07-15 07:13:20 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"overwatch2-icon (1)"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 189)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:14:29 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.4ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'game_image' LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:10
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2953)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 7.4ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 1005.7ms | Allocations: 13733)
+Completed 200 OK in 1014ms (Views: 1006.8ms | ActiveRecord: 3.0ms | Allocations: 14696)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MTY6NTMuOTU2WiIsInB1ciI6ImJsb2Jfa2V5In19--0e43acb4844f91e5580f5f614160ab83c52685ad/overwatch2-icon%20(1).png" for 192.168.65.1 at 2024-07-15 07:14:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"overwatch2-icon (1)"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:14:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2408)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 5228)
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 1.4ms | Allocations: 5919)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:14:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 5.7ms | Allocations: 1646)
+  Rendered setups/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1918)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3667)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.5ms | Allocations: 4471)
+
+
+Started GET "/boards" for 192.168.65.1 at 2024-07-15 07:14:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.5ms | Allocations: 1441)
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/boards/index.html.erb:22
+  Rendered boards/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 2932)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 4680)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 1.2ms | Allocations: 5584)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:14:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.0ms | Allocations: 1191)
+  Rendered boards/_form.html.erb (Duration: 9.7ms | Allocations: 2545)
+  Rendered boards/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 4104)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 5768)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.5ms | Allocations: 6185)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:15:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 6.6ms | Allocations: 1658)
+  Rendered setups/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1913)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 529)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4249)
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.6ms | Allocations: 5233)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:15:19 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 6.8ms | Allocations: 1434)
+  Rendered boards/_form.html.erb (Duration: 8.4ms | Allocations: 3282)
+  Rendered boards/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 5083)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 5168)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.8ms | Allocations: 5853)
+
+
+  
+ActionView::Template::Error (undefined method `select_field' for #<ActionView::Helpers::FormBuilder:0x00007f680d896120 @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false, :local=>true}, @template=#<ActionView::Base:0x00000000022ec0>, @object=#<Board id: nil, user_id: nil, boards_gametitle_id: nil, playstyle: nil, number_of_people: nil, openchanger: nil, boards_tag_id: nil, playtime: nil, freetext: nil, created_at: nil, updated_at: nil>, @object_name="board", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>
+
+      '.freeze;@output_buffer.append=( form.select_field :boards_gametitle, class: 'custom-input' );@output_buffer.safe_append='
+                                           ^^^^^^^^^^^^^
+Did you mean?  search_field):
+    14:   
+    15:     <div class="field">
+    16:       <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id') %>
+    17:       <%= form.select_field :boards_gametitle, class: 'custom-input' %>
+    18:     </div>
+    19:   
+    20:     <div class="field">
+  
+app/views/boards/_form.html.erb:17
+app/views/boards/_form.html.erb:1
+app/views/boards/new.html.erb:5
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:15:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 6.5ms | Allocations: 1652)
+  Rendered boards/_form.html.erb (Duration: 8.0ms | Allocations: 3266)
+  Rendered boards/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 5323)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 5408)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.5ms | Allocations: 6354)
+
+
+  
+ActionView::Template::Error (undefined method `select_field' for #<ActionView::Helpers::FormBuilder:0x00007f680c0816c0 @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false, :local=>true}, @template=#<ActionView::Base:0x000000000230a0>, @object=#<Board id: nil, user_id: nil, boards_gametitle_id: nil, playstyle: nil, number_of_people: nil, openchanger: nil, boards_tag_id: nil, playtime: nil, freetext: nil, created_at: nil, updated_at: nil>, @object_name="board", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>
+
+      '.freeze;@output_buffer.append=( form.select_field :boards_gametitle_id, class: 'custom-input' );@output_buffer.safe_append='
+                                           ^^^^^^^^^^^^^
+Did you mean?  search_field):
+    14:   
+    15:     <div class="field">
+    16:       <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id') %>
+    17:       <%= form.select_field :boards_gametitle_id, class: 'custom-input' %>
+    18:     </div>
+    19:   
+    20:     <div class="field">
+  
+app/views/boards/_form.html.erb:17
+app/views/boards/_form.html.erb:1
+app/views/boards/new.html.erb:5
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:15:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.8ms | Allocations: 1652)
+  Rendered boards/_form.html.erb (Duration: 7.4ms | Allocations: 2076)
+  Rendered boards/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4158)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 6470)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.5ms | Allocations: 7445)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:16:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2407)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.1ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 5815)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 1.6ms | Allocations: 6786)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:16:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 7.5ms | Allocations: 1676)
+  Rendered boards/_form.html.erb (Duration: 6.5ms | Allocations: 2106)
+  Rendered boards/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 4227)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 5934)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.8ms | Allocations: 6640)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:16:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 2407)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 1352)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 5836)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 1.4ms | Allocations: 6807)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:16:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 7.3ms | Allocations: 1691)
+  Rendered boards/_form.html.erb (Duration: 4.9ms | Allocations: 2105)
+  Rendered boards/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 4241)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 5948)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.6ms | Allocations: 6654)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:16:52 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 5.4ms | Allocations: 1661)
+  Rendered boards/_form.html.erb (Duration: 5.5ms | Allocations: 3082)
+  Rendered boards/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5148)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5233)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms | Allocations: 6186)
+
+
+  
+ActionView::Template::Error (undefined method `gamename' for :gametitle:Symbol
+
+      '.freeze;@output_buffer.append=( form.select :gametitle.gamename, class: 'custom-input' );@output_buffer.safe_append='
+                                                             ^^^^^^^^^):
+    14:   
+    15:     <div class="field">
+    16:       <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id') %>
+    17:       <%= form.select :gametitle.gamename, class: 'custom-input' %>
+    18:     </div>
+    19:   
+    20:     <div class="field">
+  
+app/views/boards/_form.html.erb:17
+app/views/boards/_form.html.erb:1
+app/views/boards/new.html.erb:5
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:16:59 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 7.2ms | Allocations: 1661)
+  Rendered boards/_form.html.erb (Duration: 5.2ms | Allocations: 2107)
+  Rendered boards/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 4198)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 6510)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 1.0ms | Allocations: 7485)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:18:36 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  [1m[36mGametitle Pluck (0.6ms)[0m  [1m[34mSELECT `gametitles`.`gamename`, `gametitles`.`id` FROM `gametitles`[0m
+  ↳ app/controllers/boards_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 16.8ms | Allocations: 5125)
+  Rendered boards/_form.html.erb (Duration: 8.1ms | Allocations: 2129)
+  Rendered boards/new.html.erb within layouts/application (Duration: 31.7ms | Allocations: 7687)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 522)
+  Rendered layout layouts/application.html.erb (Duration: 83.6ms | Allocations: 23460)
+Completed 200 OK in 133ms (Views: 86.4ms | ActiveRecord: 12.8ms | Allocations: 32649)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:19:06 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  [1m[36mGametitle Pluck (0.5ms)[0m  [1m[34mSELECT `gametitles`.`gamename`, `gametitles`.`id` FROM `gametitles`[0m
+  ↳ app/controllers/boards_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 19.3ms | Allocations: 4896)
+  Rendered boards/_form.html.erb (Duration: 27.1ms | Allocations: 2760)
+  Rendered boards/new.html.erb within layouts/application (Duration: 48.4ms | Allocations: 7811)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 86.2ms | Allocations: 23017)
+Completed 200 OK in 143ms (Views: 83.1ms | ActiveRecord: 14.1ms | Allocations: 31709)
+
+
+Started GET "/boards" for 192.168.65.1 at 2024-07-15 07:19:18 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.0ms | Allocations: 1198)
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/boards/index.html.erb:22
+  Rendered boards/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2701)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 4219)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 1.0ms | Allocations: 4635)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:19:25 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  [1m[36mGametitle Pluck (0.5ms)[0m  [1m[34mSELECT `gametitles`.`gamename`, `gametitles`.`id` FROM `gametitles`[0m
+  ↳ app/controllers/boards_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 3.6ms | Allocations: 1163)
+  Rendered boards/_form.html.erb (Duration: 2.1ms | Allocations: 1390)
+  Rendered boards/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2697)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4213)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.9ms | Allocations: 5027)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:19:25 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.2ms | Allocations: 1462)
+  Rendered setups/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1662)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3413)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 4284)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-07-15 07:19:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidemenu.html.erb (Duration: 0.4ms | Allocations: 265)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'icon_image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 58.3ms | Allocations: 14480)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 16261)
+Completed 200 OK in 79ms (Views: 63.3ms | ActiveRecord: 6.9ms | Allocations: 19407)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8ca22f7143a39ead3b28331633f1fe8a66a6b994/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png" for 192.168.65.1 at 2024-07-15 07:19:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8ca22f7143a39ead3b28331633f1fe8a66a6b994", "filename"=>"スクリーンショット 2024-05-04 8.38.51"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: hpozgc8sypzelojzwljm2h41pe5x (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSEJ2ZW1kak9ITjVjSHBsYkc5cWVuZHNhbTB5YURReGNHVTFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNScGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXlOQzB3TlMwd05DQTRMak00TGpVeExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVekpUZ3lKVUk1SlVVekpUZ3lKVUZHSlVVekpUZ3pKVUZCSlVVekpUZ3pKVUpESlVVekpUZ3pKVUl6SlVVekpUZ3lKVUkzSlVVekpUZ3pKVUUzSlVVekpUZ3pKVGd6SlVVekpUZ3pKVGc0SlRJd01qQXlOQzB3TlMwd05DVXlNRGd1TXpndU5URXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MjQ6MjYuMzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--47f697bb3b12eb60008407324eaf7606bf547b04/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSEJ2ZW1kak9ITjVjSHBsYkc5cWVuZHNhbTB5YURReGNHVTFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNScGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXlOQzB3TlMwd05DQTRMak00TGpVeExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVekpUZ3lKVUk1SlVVekpUZ3lKVUZHSlVVekpUZ3pKVUZCSlVVekpUZ3pKVUpESlVVekpUZ3pKVUl6SlVVekpUZ3lKVUkzSlVVekpUZ3pKVUUzSlVVekpUZ3pKVGd6SlVVekpUZ3pKVGc0SlRJd01qQXlOQzB3TlMwd05DVXlNRGd1TXpndU5URXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MjQ6MjYuMzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--47f697bb3b12eb60008407324eaf7606bf547b04/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png
+Completed 302 Found in 12ms (ActiveRecord: 0.6ms | Allocations: 2791)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhSEJ2ZW1kak9ITjVjSHBsYkc5cWVuZHNhbTB5YURReGNHVTFlQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpQWNScGJteHBibVU3SUdacGJHVnVZVzFsUFNJbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZbE0wWWxNMFlsTTBZZ01qQXlOQzB3TlMwd05DQTRMak00TGpVeExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVekpUZ3lKVUk1SlVVekpUZ3lKVUZHSlVVekpUZ3pKVUZCSlVVekpUZ3pKVUpESlVVekpUZ3pKVUl6SlVVekpUZ3lKVUkzSlVVekpUZ3pKVUUzSlVVekpUZ3pKVGd6SlVVekpUZ3pKVGc0SlRJd01qQXlOQzB3TlMwd05DVXlNRGd1TXpndU5URXVjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJT2FXMWhaMlV2Y0c1bkJqc0dWRG9SYzJWeWRtbGpaVjl1WVcxbE9ncHNiMk5oYkE9PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MjQ6MjYuMzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--47f697bb3b12eb60008407324eaf7606bf547b04/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-05-04%208.38.51.png" for 192.168.65.1 at 2024-07-15 07:19:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"スクリーンショット 2024-05-04 8.38.51"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 320)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:19:26 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.3ms | Allocations: 1351)
+  Rendered setups/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1421)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3061)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 3377)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-07-15 07:19:27 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidemenu.html.erb (Duration: 0.5ms | Allocations: 195)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'icon_image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2209)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3724)
+Completed 200 OK in 26ms (Views: 16.1ms | ActiveRecord: 2.0ms | Allocations: 5419)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:19:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  [1m[36mGametitle Pluck (0.4ms)[0m  [1m[34mSELECT `gametitles`.`gamename`, `gametitles`.`id` FROM `gametitles`[0m
+  ↳ app/controllers/boards_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 3.6ms | Allocations: 1166)
+  Rendered boards/_form.html.erb (Duration: 2.2ms | Allocations: 1458)
+  Rendered boards/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2768)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4289)
+Completed 200 OK in 21ms (Views: 15.7ms | ActiveRecord: 0.9ms | Allocations: 5105)
+
+
+Started GET "/boards" for 192.168.65.1 at 2024-07-15 07:19:30 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 3.9ms | Allocations: 1158)
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/boards/index.html.erb:22
+  Rendered boards/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2212)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3728)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.9ms | Allocations: 4012)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:19:32 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3886)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 1000)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 6695)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 1.4ms | Allocations: 7517)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:19:34 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1962)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4433)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 1.4ms | Allocations: 4737)
+
+
+Started GET "/gametitles" for 192.168.65.1 at 2024-07-15 07:19:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by GametitlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gametitles/index.html.erb within layouts/application
+  [1m[36mGametitle Load (0.5ms)[0m  [1m[34mSELECT `gametitles`.* FROM `gametitles`[0m
+  ↳ app/views/gametitles/index.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 3 AND `active_storage_attachments`.`record_type` = 'Gametitle' AND `active_storage_attachments`.`name` = 'game_image' LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/gametitles/index.html.erb:10
+  Rendered gametitles/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 4738)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 5.4ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 7524)
+Completed 200 OK in 43ms (Views: 36.5ms | ActiveRecord: 3.0ms | Allocations: 8345)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a0dc7f6cb131f5995cda08119a7ff999a2d1a17d/overwatch2-icon%20(1).png" for 192.168.65.1 at 2024-07-15 07:19:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a0dc7f6cb131f5995cda08119a7ff999a2d1a17d", "filename"=>"overwatch2-icon (1)"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 3 LIMIT 1[0m
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 417p18ate9othkyjjcuzx4nofgz5 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MjQ6MzUuOTc3WiIsInB1ciI6ImJsb2Jfa2V5In19--ed3f5d1faeedb92c8ca7a5dbc19734ed3dd13b75/overwatch2-icon%20(1).png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MjQ6MzUuOTc3WiIsInB1ciI6ImJsb2Jfa2V5In19--ed3f5d1faeedb92c8ca7a5dbc19734ed3dd13b75/overwatch2-icon%20(1).png
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1469)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOREUzY0RFNFlYUmxPVzkwYUd0NWFtcGpkWHA0Tkc1dlptZDZOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWjJGMGRHRmphRzFsYm5RN0lHWnBiR1Z1WVcxbFBTSnZkbVZ5ZDJGMFkyZ3lMV2xqYjI0Z0pUSTRNU1V5T1M1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMjkyWlhKM1lYUmphREl0YVdOdmJpVXlNQ1V5T0RFbE1qa3VjRzVuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2ZDJWaWNBWTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjQtMDctMTVUMDc6MjQ6MzUuOTc3WiIsInB1ciI6ImJsb2Jfa2V5In19--ed3f5d1faeedb92c8ca7a5dbc19734ed3dd13b75/overwatch2-icon%20(1).png" for 192.168.65.1 at 2024-07-15 07:19:35 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"overwatch2-icon (1)"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 185)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:19:39 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1983)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 4500)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 1.4ms | Allocations: 4799)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:19:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.3ms | Allocations: 1161)
+  Rendered setups/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1225)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2744)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 3015)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:19:40 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 3.8ms | Allocations: 1173)
+  Rendered setups/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1237)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2753)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.6ms | Allocations: 3023)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-07-15 07:19:41 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidemenu.html.erb (Duration: 0.4ms | Allocations: 195)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'icon_image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2137)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3652)
+Completed 200 OK in 24ms (Views: 15.1ms | ActiveRecord: 1.9ms | Allocations: 5388)
+
+
+Started GET "/boards/new" for 192.168.65.1 at 2024-07-15 07:19:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#new as HTML
+  [1m[36mGametitle Pluck (0.4ms)[0m  [1m[34mSELECT `gametitles`.`gamename`, `gametitles`.`id` FROM `gametitles`[0m
+  ↳ app/controllers/boards_controller.rb:13:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering boards/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.5ms | Allocations: 1148)
+  Rendered boards/_form.html.erb (Duration: 2.3ms | Allocations: 1455)
+  Rendered boards/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2747)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4268)
+Completed 200 OK in 24ms (Views: 17.8ms | ActiveRecord: 1.0ms | Allocations: 5082)
+
+
+Started GET "/users/1" for 192.168.65.1 at 2024-07-15 07:19:42 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:46:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered layouts/_sidemenu.html.erb (Duration: 0.3ms | Allocations: 195)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT `active_storage_attachments`.* FROM `active_storage_attachments` WHERE `active_storage_attachments`.`record_id` = 1 AND `active_storage_attachments`.`record_type` = 'User' AND `active_storage_attachments`.`name` = 'icon_image' LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT `active_storage_blobs`.* FROM `active_storage_blobs` WHERE `active_storage_blobs`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:5
+  Rendered users/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2136)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3644)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 2.0ms | Allocations: 5330)
+
+
+Started GET "/boards" for 192.168.65.1 at 2024-07-15 07:19:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BoardsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering boards/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.1ms | Allocations: 1179)
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/boards/index.html.erb:22
+  Rendered boards/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2214)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3730)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.9ms | Allocations: 4014)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:19:43 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1962)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 4427)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 1.5ms | Allocations: 4709)
+
+
+Started GET "/setups" for 192.168.65.1 at 2024-07-15 07:19:45 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SetupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering setups/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_sidemenu.html.erb:3
+  Rendered layouts/_sidemenu.html.erb (Duration: 4.0ms | Allocations: 1194)
+  Rendered setups/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1258)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2774)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 3045)
+
+
+Started GET "/" for 192.168.65.1 at 2024-07-15 07:19:46 +0000
+Cannot render console from 192.168.65.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TopsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tops/index.html.erb within layouts/application
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT `boards`.* FROM `boards`[0m
+  ↳ app/views/tops/index.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/views/tops/index.html.erb:5
+  Rendered tops/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1962)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/_header.html.erb:23
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 951)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 4454)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 1.5ms | Allocations: 4736)
+
+

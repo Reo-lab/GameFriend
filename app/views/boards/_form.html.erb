@@ -14,7 +14,7 @@
   
     <div class="field">
       <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id') %>
-      <%= form.number_field :boards_gametitle_id, class: 'custom-input' %>
+      <%= form.select :boards_gametitle_id, options_for_select(@gametitles), {}, class: 'custom-input' %>
     </div>
   
     <div class="field">

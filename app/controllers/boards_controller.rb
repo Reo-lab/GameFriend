@@ -10,6 +10,7 @@ class BoardsController < ApplicationController
 
   def new
     @board = Board.new
+    @gametitles = Gametitle.all.pluck(:gamename, :id)
   end
 
   def edit

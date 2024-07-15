@@ -1,2 +1,18 @@
 <h1>Gametitles#new</h1>
 <p>Find me in app/views/gametitles/new.html.erb</p>
+
+<%= form_with(model: @gametitle, local: true) do |form| %>
+    <div>
+      <%= form.label :gamename %>
+      <%= form.text_field :gamename %>
+    </div>
+
+    <div>
+      <%= form.label :game_image %>
+      <%= form.file_field :game_image %>
+    </div>
+  
+    <div>
+      <%= form.submit "Create Gametitle" %>
+    </div>
+  <% end %>

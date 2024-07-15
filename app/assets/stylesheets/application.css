@@ -142,3 +142,10 @@
   font-size: 20px;
   margin-left: 600px;
 }
+
+/* ゲームアイコンのレイアウト*/
+.game-icon{
+  width: 150px; /* 画像の幅を指定 */
+  height: 150px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像を切り取るようにフィット */
+}

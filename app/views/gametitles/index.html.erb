@@ -1,2 +1,12 @@
 <h1>Gametitles#index</h1>
 <p>Find me in app/views/gametitles/index.html.erb</p>
+
+<%= link_to 'ゲームタイトル作成',new_gametitle_path%>
+
+
+<% @gametitles.each do |gametitle| %>
+  <div class= "gametitle_icon_box">
+    <%= gametitle.gamename %>
+    <%= image_tag(gametitle.game_image, class: "game-icon") if gametitle.game_image.attached? %>
+  </div>
+<% end %>

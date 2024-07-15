@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  get 'gametitles/index'
-  get 'gametitles/show'
-  get 'gametitles/edit'
-  get 'gametitles/new'
-  get 'gametitles/update'
-  get 'gametitles/destroy'
+  resources :gametitles
   resources :setups
   resources :boards
   devise_for :users

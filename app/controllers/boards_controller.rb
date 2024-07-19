@@ -1,5 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_gametitles, only: [:new, :edit, :create, :update]
 
   def index
     @boards = Board.all
@@ -14,6 +15,16 @@ class BoardsController < ApplicationController
   end
 
   def edit
+    @gametitles = Gametitle.all.pluck(:gamename, :id)
+  end
+
+  def update
+    if @board.update(board_params)
+      redirect_to boards_path, notice: 'Board was successfully updated.'
+    else
+      @gametitles = Gametitle.all.pluck(:gamename, :id)
+      render :edit
+    end
   end
 
   def create
@@ -27,9 +38,6 @@ class BoardsController < ApplicationController
     end
   end
 
-  def update
-  end
-
 
   def destroy
   end
@@ -38,6 +46,10 @@ class BoardsController < ApplicationController
 
   def set_board
     @board = Board.find(params[:id])
+  end
+  
+  def set_gametitles
+    @gametitles = Gametitle.pluck(:gamename, :id)
   end
 
   def board_params

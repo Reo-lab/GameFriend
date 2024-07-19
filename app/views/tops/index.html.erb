@@ -1,11 +1,7 @@
-<h1>Tops#index</h1>
-<p>Find me in app/views/tops/index.html.erb</p>
-
-<% @boards.each do |board|%>
-  <%= board.user.name %>
-  <%= board.playstyle %>
-  <%= board.number_of_people %>
-  <%= board.playtime %>
-<% end %>
+<div class="tops_boards_container">
+  <% @boards.each do |board|%>
+    <%= render "boardbox", board: board %>
+  <% end %>
+</div>
 
 <%= link_to 'ゲームタイトル一覧', gametitles_path %>

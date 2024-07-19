@@ -4,4 +4,50 @@
   <% end %>
 </div>
 
+<div class = "tops_search_boards">
+<div class="tops_left_search_boards">
+  <%= form_with(url: tops_path, method: :get, local: true) do %>
+    <div class="tops_search_field">
+      <%= label_tag :playstyle, 'プレイスタイル' %>
+      <%= select_tag :playstyle, options_for_select(@playstyles, params[:playstyle]), include_blank: true, class: 'tops_search_custom-input' %>
+    </div>
+    <div class="tops_search_field">
+      <%= label_tag :playtime, '時間帯' %>
+      <%= time_field_tag :playtime, params[:playtime], class: 'tops_search_custom-input' %>
+    </div>
+    <div class="tops_search_field">
+      <%= label_tag :gametitle, 'ゲームタイトル' %>
+      <%= select_tag :gametitle, options_for_select(@gametitles, params[:gametitle]), include_blank: true, class: 'tops_search_custom-input' %>
+    </div>
+    <div class="tops_search_field">
+      <%= label_tag :query, '検索' %>
+      <%= text_field_tag :query, params[:query], class: 'tops_search_custom-input' %>
+    </div>
+    <div class="tops_search_actions">
+      <%= submit_tag '適用', class: 'tops_search_submit_button' %>
+    </div>
+  <% end %>
+</div>
+
+<div class ="tops_mid_search_box">
+  <div class = "tops_mid_search_boards">
+    <%= form_with(url: tops_path, method: :get, local: true) do %>
+      <div class="tops_mid_search_field">
+        <%= label_tag :query, '' %>
+        <%= text_field_tag :query, params[:query], class: 'tops_mid_search_custom-input' %>
+      </div>
+      <div class="tops_mid_search_actions">
+        <%= submit_tag '検索', class: 'tops_mid_search_submit_button' %>
+      </div>
+    <% end %>
+  </div>
+  
+  
+  <div class="tops_mid_search_boards_container">
+    <% @search_boards.each do |board|%>
+      <%= render "boardbox", board: board %>
+    <% end %>
+  </div>
+</div>
+
 <%= link_to 'ゲームタイトル一覧', gametitles_path %>

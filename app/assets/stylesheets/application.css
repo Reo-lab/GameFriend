@@ -91,6 +91,102 @@
   float: left;
 }
 
+/* トップページのユーザーアイコンのレイアウト*/
+.tops_boards_container{
+  display: flex; /* 横並びに配置 */
+  overflow-x: auto; /* 水平方向のスクロールを有効にする */
+  white-space: nowrap; /* 折り返しを防止 */
+}
+.tops_user_icon{
+  width: 100px; /* 画像の幅を指定 */
+  height: 100px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像を切り取るようにフィット */
+  border-radius: 15%; /* 画像の角を丸くする */
+}
+
+.tops_game_image{
+  width: 100px; /* 画像の幅を指定 */
+  height: 100px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像を切り取るようにフィット */
+  border-radius: 15%; /* 画像の角を丸くする */
+}
+
+.tops_user_name{
+  font-size: 30px;
+  color: #dee2e6;
+  margin-left: 5px;
+  margin-bottom: 50px;
+  overflow: hidden; /* 溢れた部分を隠す */
+  text-overflow: ellipsis; /* 溢れた部分を省略記号で表示 */
+  white-space: nowrap; /* テキストを1行に収める */
+}
+
+.board-link {
+  display: block;
+  text-decoration: none; /* リンクの下線を消す */
+  color: inherit; /* 親要素の色を継承する */
+}
+
+.board-link:hover {
+  cursor: pointer; /* マウスオーバー時にポインタを表示 */
+  background-color: #f0f0f0; /* 任意のホバー効果 */
+}
+.tops_board_box {
+  display: inline-block;
+  position: relative; /* 絶対配置の基準 */
+  width: 300px; /* 必要に応じて幅を調整 */
+  border: 1px solid #ccc; /* デザインのためのボーダー */
+  padding: 0px; /* 内側の余白 */
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+
+.tops_user_info {
+  background-color: #181818;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* 上と下のセクションを分けるためのマージン */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tops_user_icon_box {
+  margin-right: 0px; /* アイコンと名前の間にマージン */
+}
+
+.tops_game_image_box {
+  margin-left: auto; /* ゲームイメージを右に配置 */
+}
+.realtime_notice {
+  position: absolute; /* 絶対配置 */
+  top: 85px; /* 調整可能な位置 */
+  left: 37%;
+  transform: translateX(-0%);
+  background-color: #c4c4c4; /* 背景色 */
+  color: #000000; /* 文字色 */
+  padding: 3px 10px; /* パディング */
+  border-radius: 5px; /* 角を丸くする */
+  font-size: 15px; /* 文字サイズ */
+}
+
+.tops_boards_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tops_boards_playstyle,
+.tops_boards_people {
+  margin-bottom: 0px; /* 各情報の間にマージン */
+  margin-left: 10px;
+  font-size: 20px;
+}
+.tops_boards_time{
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
 /* 募集版作成レイアウト*/
 .boards_new_title {
   display: inline-block;

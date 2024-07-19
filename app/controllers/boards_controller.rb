@@ -1,9 +1,14 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: [:show, :edit, :update, :destroy]
   before_action :set_gametitles, only: [:new, :edit, :create, :update]
+  before_action :set_playstyles, only: [:index, :new, :edit]
 
   def index
     @boards = Board.all
+    @gametitles = Gametitle.pluck(:gamename, :id)
+    if params[:query].present? || params[:playstyle].present? || params[:playtime].present? || params[:gametitle].present?
+      @boards = Board.search(params)
+    end
   end
 
   def show
@@ -47,7 +52,11 @@ class BoardsController < ApplicationController
   def set_board
     @board = Board.find(params[:id])
   end
-  
+
+  def set_playstyles
+    @playstyles = ['カジュアル', 'ランク', 'スーパーカジュアル'] # 適切な選択肢を設定
+  end
+
   def set_gametitles
     @gametitles = Gametitle.pluck(:gamename, :id)
   end

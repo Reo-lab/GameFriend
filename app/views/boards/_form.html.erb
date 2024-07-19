@@ -19,7 +19,7 @@
   
     <div class="field">
       <%= form.label :playstyle, t('activerecord.attributes.board.playstyle') %>
-      <%= form.text_field :playstyle, class: 'custom-input' %>
+      <%= form.select :playstyle, options_for_select(@playstyles, @board.playstyle), {}, class: 'custom-input' %>
     </div>
   
     <div class="field">

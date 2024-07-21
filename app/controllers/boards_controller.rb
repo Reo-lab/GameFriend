@@ -5,10 +5,6 @@ class BoardsController < ApplicationController
 
   def index
     @boards = Board.all
-    @gametitles = Gametitle.pluck(:gamename, :id)
-    if params[:query].present? || params[:playstyle].present? || params[:playtime].present? || params[:gametitle].present?
-      @boards = Board.search(params)
-    end
   end
 
   def show

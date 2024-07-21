@@ -1,38 +1,9 @@
 <%= render "layouts/sidemenu"%>
-<%= link_to 'new', new_board_path %>
-<p>Find me in app/views/boards/index.html.erb</p>
 
-<%= link_to 'New Board', new_board_path %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Gametitle</th>
-      <th>Playstyle</th>
-      <th>Number of People</th>
-      <th>Openchanger</th>
-      <th>Tag</th>
-      <th>Playtime</th>
-      <th>Freetext</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @boards.each do |board| %>
-      <tr>
-        <td><%= board.boards_gametitle_id %></td>
-        <td><%= board.playstyle %></td>
-        <td><%= board.number_of_people %></td>
-        <td><%= board.openchanger %></td>
-        <td><%= board.boards_tag_id %></td>
-        <td><%= board.playtime %></td>
-        <td><%= board.freetext %></td>
-        <td><%= link_to 'Show', board %></td>
-        <td><%= link_to 'Edit', edit_board_path(board) %></td>
-        <td><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="index_boards_box">
+    <% @boards.each do |board|%>
+      <%= render "indexboardbox", board: board %>
     <% end %>
-  </tbody>
-</table>
+</div>
+
 

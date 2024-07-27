@@ -1,40 +1,44 @@
-<h1>Boards#show</h1>
-<p>Find me in app/views/boards/show.html.erb</p>
+<%= render "layouts/sidemenu"%>
 
-<p>
-  <strong>Gametitle:</strong>
-  <%= @board.boards_gametitle_id %>
-</p>
+<div class="boards_show_container">
+  <div class="boards_show_left">
+    <div class="boards_show_left_title">
+      募集版詳細
+    </div>
+    <div class="boards_show_board_box">   
+      <%= render "showboardbox", board: @board %>
+    </div>
+  </div>
 
-<p>
-  <strong>Playstyle:</strong>
-  <%= @board.playstyle %>
-</p>
+  <div class="boards_show_right">
+    <div class="boards_show_right_title">
+     この募集に応募する
+    </div>
+    <div class="board_show_request_box">
+      <%= form_with(model: [@board, BoardsRequest.new], local: true) do |form| %>
+        <% if form.object.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(form.object.errors.count, "error") %> prohibited this board request from being saved:</h2>
+            <ul>
+              <% form.object.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-<p>
-  <strong>Number of People:</strong>
-  <%= @board.number_of_people %>
-</p>
+        <div class="board_show_request_freetext">
+          <%= form.text_area :freetext, class: 'show-custom-textarea' %>
+        </div>
 
-<p>
-  <strong>Openchanger:</strong>
-  <%= @board.openchanger %>
-</p>
+        <div class="board_show_request_playtime">
+          <%= form.time_field :playtime, class: 'custom-input' %>まで
+        </div>
 
-<p>
-  <strong>Tag:</strong>
-  <%= @board.boards_tag_id %>
-</p>
-
-<p>
-  <strong>Playtime:</strong>
-  <%= @board.playtime %>
-</p>
-
-<p>
-  <strong>Freetext:</strong>
-  <%= @board.freetext %>
-</p>
-
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+        <div class="board_show_request_submit">
+          <%= form.submit '応募する',class: 'show_submit_button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

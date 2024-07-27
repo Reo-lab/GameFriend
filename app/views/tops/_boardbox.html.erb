@@ -1,6 +1,6 @@
 <% if board.openchanger %>
 <div class="tops_board_box">
-  <%= link_to edit_board_path(board), class: "board-link" do %>
+  <%= link_to board_path(board), class: "board-link" do %>
   <div class="tops_user_info">
     <div class="tops_user_icon_box">
       <%= image_tag(board.user.icon_image, class: "tops_user_icon") if board.user.icon_image.attached? %>

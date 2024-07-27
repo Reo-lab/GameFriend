@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+
   resources :gametitles
   resources :setups
-  resources :boards
+  resources :boards do
+    resources :boards_requests, only: [:new, :create]
+  end
+  resources :boards_requests, only: [:index, :show]
   devise_for :users
   resources :users
   resources :tops

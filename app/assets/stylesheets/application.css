@@ -450,3 +450,64 @@
   font-size: 20px;
 }
 
+/*募集版応募画面のレイアウト*/
+/**/
+
+.boards_show_left_title{
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-right: 200px;
+  background-color: rgb(226, 226, 226);
+}
+
+.boards_show_right_title{
+  display: inline-block;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  padding-left: 10px;
+  padding-right: 100px;
+  background-color: rgb(226, 226, 226);
+}
+
+.boards_show_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boards_show_left{
+  width: 48%; /* 両サイドに適切な幅を設定 */
+}
+.boards_show_right {
+  margin-right: 5%;
+  width: 48%; /* 両サイドに適切な幅を設定 */
+}
+
+.board_show_request_box {
+  border: 1px solid #ccc; /* 例: 枠線を追加 */
+  padding: 16px; /* 例: パディングを追加 */
+  margin-right: 10%;
+  border-radius: 8px; /* 例: 角を丸める */
+  background-color: #f9f9f9; /* 例: 背景色を追加 */
+}
+.show-custom-textarea{
+  width: 100%;
+  min-height: 300px; /* 必要に応じて高さを調整 */
+  box-sizing: border-box; /* パディングとボーダーを含めてサイズを計算 */
+  font-size: 200%;
+}
+
+.boards_show_title, .boards_show_board_box, .board_show_request_playtime, .board_show_request_freetext, .board_show_request_submit {
+  margin-bottom: 16px; /* 例: 各要素の下部にマージンを追加 */
+}
+.show_submit_button{
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 430px;
+}

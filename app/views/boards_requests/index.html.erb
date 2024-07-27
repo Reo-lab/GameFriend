@@ -1,0 +1,7 @@
+<%= render "layouts/sidemenu"%>
+
+<div class="index_boards_box">
+  <% @boards.each do |board|%>
+    <%= render "indexboardrequestbox", board: board %>
+  <% end %>
+</div>

@@ -1,0 +1,2 @@
+module BoardrequestsHelper
+end

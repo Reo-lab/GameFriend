@@ -1,0 +1,22 @@
+<div class="index_board_box">
+    <%= link_to "", class: "index_board_link" do %>
+    <div class="index_user_info">
+      <div class="index_user_icon_box">
+        <%= image_tag(board_request.user.icon_image, class: "index_user_icon") if board_request.user.icon_image.attached? %>
+      </div>
+      <div class="index_user_name">
+        <%= board_request.user.name %>
+      </div>
+    </div>
+    <div class="index_boards_info">
+      <div class="index_boards_playstyle">
+        フリーテキスト:<%= board_request.freetext %>
+      </div>
+      <div class="index_boards_time">
+      <% if board_request.playtime %>
+        時間帯:<%= board_request.playtime.strftime("%H:%M")%>まで
+      <%end%>
+      </div>
+    </div>
+    <% end %>
+  </div>

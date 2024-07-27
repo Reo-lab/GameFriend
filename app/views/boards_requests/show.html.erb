@@ -1,0 +1,23 @@
+<%= render "layouts/sidemenu"%>
+
+<div class = "boardsrequests_show_title">
+  募集条件
+</div>
+
+<div class="show_boardsrequests_box">   
+  <%= render "showboardrequestbox", board: @board %>
+</div>
+
+<div class = "boardsrequests_show_usertitle">
+  応募中ユーザー
+</div>
+
+<div class="show_boardsrequestuser_box">   
+  <% @board_requests.each do |board_request|%>
+   <%= render "showboardrequestuserbox", board_request: board_request %>
+  <% end %>
+</div>
+
+<% @board_requests.each do |board_request| %>
+    <%= board_request.user.name %>
+<% end %>

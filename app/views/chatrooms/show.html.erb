@@ -1,0 +1,53 @@
+<%= render "layouts/sidemenu" %>
+
+<div class="chatroom">
+  <input type="hidden" id="chatroom-id" value="<%= @chatroom.id %>" />
+
+  <h1><%= @chatroom.name %></h1>
+
+  <div class="messages">
+    <% @messages.each do |message| %>
+      <div class="message">
+        <div class="message-header">
+          <div class="user-icon-box">
+            <%= image_tag(message.user.icon_image, class: "user-icon") if message.user.icon_image.attached? %>
+          </div>
+          <div class="message-info">
+            <strong><%= message.user.name %></strong>
+            <span class="timestamp"><%= l(message.created_at, format: :short) %></span>
+          </div>
+        </div>
+        <div class="message-content">
+          <%= message.content %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="new_message">
+    <%= form_with(model: [@chatroom, Message.new], local: true) do |form| %>
+      <div class="field">
+        <%= form.label :content, 'Message:', for: 'message_content' %>
+        <%= form.text_area :content, id: 'message_content', data: { behavior: "chat_speaker" }, placeholder: 'メッセージを入力してください', rows: 3 %>
+      </div>
+      <div class="actions">
+        <%= form.submit "Send", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Delete Chatroom', @chatroom, method: :delete, data: { turbo_method: :delete, confirm: 'Are you sure you want to delete this chatroom?' }, class: "btn btn-danger" %>
+
+<h2>ユーザー追加</h2>
+<%= render 'add_users_form', chatroom: @chatroom %>
+
+<h2>参加しているユーザー</h2>
+<ul>
+  <% @chatroom.users.each do |user| %>
+    <li>
+      <%= image_tag(user.icon_image, class: "user-icon") if user.icon_image.attached? %>
+      <%= user.name %>
+    </li>
+  <% end %>
+</ul>

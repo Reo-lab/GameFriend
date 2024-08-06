@@ -13,8 +13,9 @@
 </div>
 
 <div class="show_boardsrequestuser_box">   
-  <% @board_requests.each do |board_request|%>
-   <%= render "showboardrequestuserbox", board_request: board_request %>
+  <% @board_requests.each do |board_request| %>
+    <%= render "showboardrequestuserbox", board_request: board_request %>
+    <%= button_to '応募を許可', approve_board_boards_request_path(board_request.board, board_request), method: :post, class: 'approve_button' %>
   <% end %>
 </div>
 

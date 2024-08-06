@@ -1,0 +1,11 @@
+<div id="add_users_form">
+  <%= form_with url: add_users_chatroom_path(chatroom), method: :post, local: true do |form| %>
+    <div class="field">
+      <%= form.label :user_ids, '追加するユーザー' %>
+      <%= select_tag 'user_ids[]', options_from_collection_for_select(User.all, 'id', 'name'), multiple: true %>
+    </div>
+    <div class="actions">
+      <%= form.submit '追加' %>
+    </div>
+  <% end %>
+</div>

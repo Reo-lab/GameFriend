@@ -30,6 +30,8 @@ gem "jbuilder"
 # devise追加
 gem "devise"
 
+gem "actioncable"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

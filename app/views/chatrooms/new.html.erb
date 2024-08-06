@@ -1,0 +1,19 @@
+<%= render "layouts/sidemenu" %>
+<h1>チャットルーム作成</h1>
+
+<%= form_with(model: @chatroom, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :name, 'チャットルーム名' %>
+    <%= form.text_field :name %>
+  </div>
+  <%= hidden_field_tag :board_request_id, @board_request.id %>
+  <%= hidden_field_tag :board_id, @board_request.board.id %>
+  <div class="field">
+    <p>チャットするユーザー: <%= @user.name %></p>
+  </div>
+  <%= hidden_field_tag "chatroom[user_ids][]", @user.id %>
+  <%= hidden_field_tag "chatroom[user_ids][]", current_user.id %>
+  <div class="actions">
+    <%= form.submit 'チャットルーム作成' %>
+  </div>
+<% end %>

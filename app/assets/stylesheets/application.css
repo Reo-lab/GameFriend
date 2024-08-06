@@ -2,7 +2,24 @@
    margin: 0;
    padding: 0;
  }
- 
+
+ /*フラッシュメッセージ*/
+ .flash {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.flash.notice {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.flash.alert {
+  background-color: #f2dede;
+  color: #a94442;
+}
+/*ヘッダー*/
  .header_body {
    display: flex;
    align-items: center;
@@ -510,4 +527,45 @@
   height: 40px;
   font-size: 20px;
   margin-left: 430px;
+}
+
+/*チャットルームレイアウト*/
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon-box {
+  margin-right: 10px;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.message-info {
+  margin-right: 10px;
+}
+
+.message-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 70%;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: gray;
 }

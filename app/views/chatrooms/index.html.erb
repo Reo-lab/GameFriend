@@ -1,0 +1,12 @@
+<%= render "layouts/sidemenu"%>
+<h1>チャットルーム一覧</h1>
+
+<%= link_to '新しいチャットルームを作成', new_chatroom_path %>
+
+<ul>
+  <% @chatrooms.each do |chatroom| %>
+    <li>
+      <%= link_to chatroom.name, chatroom_path(chatroom) %>
+    </li>
+  <% end %>
+</ul>

@@ -2,6 +2,7 @@ class Board < ApplicationRecord
   belongs_to :user
   has_many :boards_requests
   has_many :boards_chatrooms
+  has_many :chatrooms, through: :boards_chatrooms
   has_many :boards_gametitles
   has_many :boards_tags
 
@@ -13,5 +14,4 @@ class Board < ApplicationRecord
     boards = boards.where("freetext LIKE ?", "%#{params[:query]}%") if params[:query].present?
     boards
   end
-
 end

@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   resources :gametitles
   resources :setups
   resources :boards do
+    member do
+      post 'toggle_openchanger'
+    end
+    
     resources :boards_requests, only: [:new, :create] do
       member do
         post 'approve'

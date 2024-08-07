@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :set_board, only: [:show, :edit, :update, :destroy]
+  before_action :set_board, only: [:show, :edit, :update, :destroy, :toggle_openchanger]
   before_action :set_gametitles, only: [:new, :edit, :create, :update]
   before_action :set_playstyles, only: [:index, :new, :edit]
 
@@ -43,6 +43,14 @@ class BoardsController < ApplicationController
 
 
   def destroy
+  end
+
+  def toggle_openchanger
+    if @board.toggle!(:openchanger)
+      redirect_to boards_path, notice: 'Board was successfully changemode.'
+    else
+      render :board
+    end
   end
 
   private

@@ -1,5 +1,7 @@
 <%= render "layouts/sidemenu"%>
-
+<div class = "boards_new_title">
+  募集版一覧
+</div>
 <div class="index_boards_box">
     <% @boards.each do |board|%>
       <%= render "indexboardbox", board: board %>

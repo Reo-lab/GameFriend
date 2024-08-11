@@ -4,3 +4,5 @@
 # Ignore Sprockets cache
 /tmp/cache/assets/sprockets/
 /config/master.key
+
+/log

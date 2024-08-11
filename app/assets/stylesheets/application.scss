@@ -1,15 +1,48 @@
-* {
+@import "bootstrap";
+ * {
    margin: 0;
    padding: 0;
  }
 
- /*フラッシュメッセージ*/
- .flash {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
+/*ログイン画面*/
+.login-form-container {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  margin-top: 50px;
 }
 
+.card {
+  width: 100%;
+  max-width: 400px; /* カードの最大幅 */
+}
+
+.sign-up-container{
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  margin-top: 50px;
+}
+.confirmation-new-container{
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  margin-top: 50px;
+}
+.password-reset-container{
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  margin-top: 50px;
+}
+/*フラッシュメッセージ*/
+.flash {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 水平方向に中央寄せ */
+  align-items: center;     /* 垂直方向に中央寄せ */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;      /* テキストを中央に配置 */
+}
 .flash.notice {
   background-color: #dff0d8;
   color: #3c763d;
@@ -25,7 +58,7 @@
    align-items: center;
    width: 100vw;
    height: 100px;
-   background-color: black;
+   background-color: rgb(0, 0, 0);
    padding: 0 20px;
    position: relative;
  }
@@ -51,7 +84,6 @@
  .login_box {
    flex: 0 0 auto;
    margin-left: auto;
-   margin-right: 20px;
  }
  
  .GameFriend {
@@ -244,53 +276,59 @@
 
 .tops_mid_search_box{
   float: left;
-  width: 81%;
+  width: 82%;
   margin:15px 15px;
   background-color: #ffffff;
 }
 
-.tops_mid_search_boards{
-  width: 600px;
-  padding: 10px;
-  margin-left: 100px;
-  background-color: #f4f4f4;
-  border-right: 1px solid #ccc;
-}
 .tops_mid_search_submit_button:hover {
   background-color: #0056b3;
 }
 
-.tops_mid_search_field {
-  width: 500px;
-  float: left;
-  margin-bottom: 10px;
+.tops_mid_search_form {
+  width: 600px;
+  display: flex;
+  align-items: center; // テキストフィールドとボタンの垂直揃え
+  margin-top: 10px;
 }
 
-.tops_mid_search_custom-input, .tops_search_custom-textarea {
+.tops_mid_search_field {
+  flex: 1;
+  margin-left:25%;
+}
+
+.tops_mid_search_custom-input {
   font-size: 30px;
-  height: 35px;
-  width: 100%;
-  padding: 5px;
+  height: 45px;
+  width: 95%;
   border: 1px solid #ccc;
   border-radius: 50px;
+  box-sizing: border-box; // パディングを含めた幅計算
 }
-
 
 .tops_mid_search_submit_button {
   font-size: 20px;
-  margin-left: 15px;
-  padding: 10px 20px;
+  padding: 5px 10px;
+  height: 40px; // テキストフィールドと同じ高さに設定
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  margin-top: 0; // マージン調整
+}
+
+.tops_mid_search_actions {
+  display: flex;
+  align-items: center; // ボタンの垂直揃え
 }
 
 .tops_mid_search_submit_button:hover {
   background-color: #0056b3;
 }
-
+.tops_mid_search_actions{
+  
+}
 .tops_mid_search_boards_container{
  height: 100%;
  width:100%;
@@ -358,9 +396,7 @@
 }
 
 /*募集一覧のレイアウト*/
-.index_openchanger_box{
 
-}
 .index_openchanger_true{
   font-size: 20px;
   color: #f4f4f4;
@@ -565,7 +601,7 @@
   margin-right: 10px;
 }
 
-.user-icon {
+.user-icon-chat {
   width: 40px;
   height: 40px;
   border-radius: 50%;

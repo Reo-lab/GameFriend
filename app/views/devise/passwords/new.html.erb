@@ -1,16 +1,24 @@
-<h2>Forgot your password?</h2>
+<div class="password-reset-container">
+    <div class="card shadow-sm" style="max-width: 400px; width: 100%;">
+      <div class="card-body">
+        <h2 class="text-center mb-4">パスワードリセット</h2>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'needs-validation', novalidate: true }) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <div class="mb-3">
+            <%= f.label :email, class: 'form-label' %>
+            <%= f.email_field :email, class: 'form-control', autofocus: true, autocomplete: "email", placeholder: "メールアドレスを入力してください" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.submit "パスワードリセットメールを送信", class: 'btn btn-primary w-100' %>
+          </div>
+        <% end %>
+
+        <div class="text-center mt-3">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

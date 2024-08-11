@@ -1,4 +1,26 @@
 ja:
+  devise:
+    failure:
+      user:
+        unauthenticated: "認証に失敗しました。ログイン情報を確認してください。"
+      unauthenticated: "認証に失敗しました。ログイン情報を確認してください。"
+    sessions:
+      signed_in: "ログインしました。"
+      signed_out: "ログアウトしました。"
+    registrations:
+      signed_up: "アカウント登録が完了しました。"
+      updated: "アカウント情報が更新されました。"
+      destroyed: "アカウントが削除されました。"
+    passwords:
+      send_instructions: "パスワードリセットの指示をメールで送信しました。"
+      updated: "パスワードが更新されました。"
+      no_token: "無効なパスワードリセットトークンです。"
+      invalid_token: "無効なパスワードリセットトークンです。"
+    confirmations:
+      confirmed: "アカウントが確認されました。"
+      send_instructions: "確認メールを送信しました。"
+      already_confirmed: "アカウントはすでに確認されています。"
+      not_found: "アカウントが見つかりません。"
   time:
     formats:
       short: "%Y/%m/%d %H:%M"

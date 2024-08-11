@@ -18,7 +18,7 @@ class ChatChannel < ApplicationCable::Channel
       message: {
         content: message.content,
         user_name: message.user.name,
-        user_icon: url_for(message.user.icon_image),
+        user_icon: message.user.icon_image.attached? ? url_for(message.user.icon_image) : 'default_icon.png', # アイコンがない場合はデフォルトの画像
         timestamp: l(message.created_at, format: :short)
       }
     )

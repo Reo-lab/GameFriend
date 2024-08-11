@@ -8,3 +8,4 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "channels", to: "channels/index.js"
 pin_all_from "app/javascript/channels", under: "channels"
 pin "@rails/actioncable", to: "actioncable.esm.js"
+pin "bootstrap", to: "bootstrap.min.js", preload: true

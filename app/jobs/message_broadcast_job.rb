@@ -8,7 +8,7 @@ class MessageBroadcastJob < ApplicationJob
       message: {
         content: message.content,
         user_name: message.user.name,
-        user_icon: rails_blob_path(message.user.icon_image, only_path: true),
+        user_icon: message.user.icon_image.attached? ? rails_blob_path(message.user.icon_image, only_path: true) : 'default_icon.png',
         timestamp: I18n.l(message.created_at, format: :short)
       }
     }

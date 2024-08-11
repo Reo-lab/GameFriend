@@ -10,7 +10,7 @@
       <div class="message">
         <div class="message-header">
           <div class="user-icon-box">
-            <%= image_tag(message.user.icon_image, class: "user-icon") if message.user.icon_image.attached? %>
+            <%= image_tag(message.user.icon_image, class: "user-icon-chat") if message.user.icon_image.attached? %>
           </div>
           <div class="message-info">
             <strong><%= message.user.name %></strong>
@@ -46,7 +46,7 @@
 <ul>
   <% @chatroom.users.each do |user| %>
     <li>
-      <%= image_tag(user.icon_image, class: "user-icon") if user.icon_image.attached? %>
+      <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
       <%= user.name %>
     </li>
   <% end %>

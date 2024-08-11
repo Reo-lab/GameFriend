@@ -19,7 +19,7 @@ document.addEventListener('turbo:load', () => {
           <div class="message">
             <div class="message-header">
               <div class="user-icon-box">
-                <img src="${data.message.user_icon}" class="user-icon" />
+                <img src="${data.message.user_icon}" class="user-icon-chat" />
               </div>
               <div class="message-info">
                 <strong>${data.message.user_name}</strong>

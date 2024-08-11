@@ -5,4 +5,5 @@
 /tmp/cache/assets/sprockets/
 /config/master.key
 
-/log
+log/development.log
+log/

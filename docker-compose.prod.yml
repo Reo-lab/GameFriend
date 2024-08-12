@@ -8,6 +8,7 @@ services:
     volumes:
       - .:/app
       - /app/tmp
+      - ./public:/app/public
     ports:
       - "3000:3000"
     environment:

@@ -18,5 +18,8 @@ RUN bundle install
 # アプリケーションのコードをコピー
 COPY . /app
 
-# 開発サーバーを起動
-CMD ["rails", "server", "-b", "0.0.0.0"]
+# アセットのプリコンパイル
+RUN bundle exec rake assets:precompile
+
+# サーバーの起動
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

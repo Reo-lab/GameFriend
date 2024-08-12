@@ -7,3 +7,6 @@
 
 log/development.log
 log/
+
+config/master.key
+.env

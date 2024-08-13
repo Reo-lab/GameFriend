@@ -38,8 +38,9 @@ Rails.application.configure do
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
-  config.action_cable.url = "ws://57.181.77.239/cable"
-  config.action_cable.allowed_request_origins = [ 'http://57.181.77.239', /http:\/\/57.181.77.239.*/ ]
+  config.action_cable.url = "ws://gamefriend.com/cable"
+  config.action_cable.allowed_request_origins = [ 'http://gamefriend333.com']
+  ActionCable.server.config.disable_request_forgery_protection = true
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local

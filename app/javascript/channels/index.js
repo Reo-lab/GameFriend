@@ -1,1 +1,1 @@
-import "./chat_channel"
+import "channels/chat_channel"

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :chatrooms, only: [:index, :show, :new, :create, :destroy] do
     resources :messages, only: [:create]
     member do
+      get 'user_add'
+      get 'remove_users'
+      post 'remove_users'
       get 'add_users'
       post 'add_users'
     end

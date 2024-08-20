@@ -1,0 +1,118 @@
+<%= render "layouts/sidemenu" %>
+
+<div class = "user_add_container">
+  <div class = "user_add_left_box">
+    <div class="user_add_left_title">
+      ユーザーを追加するチャット
+    </div>
+    <div class = "user_add_left_contents_container">
+      <div class= "user_add_left_contents_top_box">
+        <div class ="chatroom_info_top">
+          <h1>ルーム名:<%= @chatroom.name%></h1>
+          <% @chatroom.boards.each do |board| %>
+          <h1>募集公開設定:<%= board.openchanger %></h1>
+          <% end %>
+          <h2>参加しているユーザー</h2>
+          <ul>
+            <% @chatroom.users.each do |user| %>
+              <li>
+                <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
+                <%= user.name %>
+              </li>
+            <% end %>
+          </ul>
+        </div>        
+      </div>
+
+      <div class = "user_add_left_contents_under_box" >
+        <h2>追加したユーザー</h2>
+        <ul id="added-users-list">
+          <!-- JavaScriptで追加されたユーザーがここに表示される -->
+        </ul>
+      </div>
+      <form id="save-users-form" method="post" action="<%= add_users_chatroom_path(@chatroom) %>">
+        <input type="hidden" name="user_ids[]" id="user-ids-input">
+        <button type="submit">保存</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class = "user_add_right_box">
+    <div class="user_add_right_title">
+      応募中のユーザー
+    </div>
+    <div class="show_boardsrequestuser_box">
+      <% @board_requests.each do |board_request| %>
+        <label>
+          <input type="checkbox" class="user-checkbox" value="<%= board_request.user.id %>" data-user-name="<%= board_request.user.name %>" data-user-icon="<%= url_for(board_request.user.icon_image) if board_request.user.icon_image.attached? %>">
+          <%= render "boards_requests/showboardrequestuserbox", board_request: board_request %>
+        </label>
+      <% end %>
+    </div>
+    <div>
+      <button id="add-user-button">追加</button>
+    </div>
+  </div>
+</div>
+<ul id="added-users-list">
+  <% @chatroom.users.each do |user| %>
+    <li id="user-<%= user.id %>">
+      <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
+      <%= user.name %>
+      <%= button_to '削除', remove_users_chatroom_path(@chatroom, user_ids: [user.id]), method: :post, form: { data: { turbo: false } } %>
+    </li>
+  <% end %>
+</ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const addUserButton = document.getElementById("add-user-button");
+  const userIdsInput = document.getElementById("user-ids-input");
+
+  addUserButton.addEventListener("click", function() {
+    const selectedUsers = document.querySelectorAll(".user-checkbox:checked");
+
+    selectedUsers.forEach(userCheckbox => {
+      const userId = userCheckbox.value;
+      const userName = userCheckbox.getAttribute("data-user-name");
+      const userIcon = userCheckbox.getAttribute("data-user-icon");
+
+      const userListItem = document.createElement("li");
+      userListItem.setAttribute("data-user-id", userId);
+
+      if (userIcon) {
+        const img = document.createElement("img");
+        img.src = userIcon;
+        img.className = "user-icon-chat";
+        userListItem.appendChild(img);
+      }
+
+      userListItem.appendChild(document.createTextNode(userName));
+
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "削除";
+      removeButton.className = "remove-user-button";
+      userListItem.appendChild(removeButton);
+
+      const userList = document.getElementById("added-users-list");
+      userList.appendChild(userListItem);
+
+      // hiddenフィールドにユーザーIDを追加
+      let userIds = userIdsInput.value ? userIdsInput.value.split(",") : [];
+      userIds.push(userId);
+      userIdsInput.value = userIds.join(",");
+
+      userCheckbox.disabled = true;
+
+      // 削除ボタンのイベントリスナーを追加
+      removeButton.addEventListener("click", function() {
+        userList.removeChild(userListItem);
+        userIds = userIds.filter(id => id !== userId);
+        userIdsInput.value = userIds.join(",");
+        userCheckbox.disabled = false;
+        userCheckbox.checked = false;
+      });
+    });
+  });
+});
+</script>

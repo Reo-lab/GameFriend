@@ -1,6 +1,6 @@
 class ChatroomsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_chatroom, only: [:show, :destroy, :add_users]
+  before_action :set_chatroom, only: [:show, :destroy, :add_users, :user_add, :remove_users]
 
   def index
     @chatrooms = Chatroom.joins(:boards_chatrooms_users).where(boards_chatrooms_users: { user_id: current_user.id })
@@ -22,9 +22,19 @@ class ChatroomsController < ApplicationController
       user_ids = params[:chatroom][:user_ids].uniq
       create_boards_chatrooms_users(@chatroom, user_ids)
       redirect_to @chatroom, notice: 'チャットルームが作成されました。'
+      board_id = params[:board_id]
+      if board_id.present?
+        boards = Board.find(board_id)
+        @chatroom.boards << boards
+      end
     else
       render :new
     end
+  end
+
+  def user_add
+    @boards = @chatroom.boards
+    @board_requests = @boards.map(&:boards_requests).flatten
   end
 
   def add_users
@@ -33,10 +43,21 @@ class ChatroomsController < ApplicationController
       user_ids.each do |user_id|
         BoardsChatroomsUser.find_or_create_by(chatroom_id: @chatroom.id, user_id: user_id)
       end
-      respond_to do |format|
-        format.turbo_stream { render turbo_stream: turbo_stream.replace("add_users_form", partial: "chatrooms/add_users_form", locals: { chatroom: @chatroom }) }
-        format.html { redirect_to @chatroom, notice: 'ユーザーが追加されました。' }
+      @boards = @chatroom.boards
+      @board_requests = @boards.flat_map(&:boards_requests)
+      redirect_to user_add_chatroom_path , notice: 'ユーザーが追加されました。'
+    end
+  end
+
+  def remove_users
+    if request.post?
+      user_ids = params[:user_ids].reject(&:blank?)
+      user_ids.each do |user_id|
+        BoardsChatroomsUser.where(chatroom_id: @chatroom.id, user_id: user_id).destroy_all
       end
+      @boards = @chatroom.boards
+      @board_requests = @boards.flat_map(&:boards_requests)
+      redirect_to user_add_chatroom_path, notice: 'ユーザーが削除されました。'
     end
   end
 
@@ -52,7 +73,7 @@ class ChatroomsController < ApplicationController
   end
 
   def chatroom_params
-    params.require(:chatroom).permit(:name, user_ids: [])
+    params.require(:chatroom).permit(:name,:board_id, user_ids: [])
   end
 
   def create_boards_chatrooms_users(chatroom, user_ids)

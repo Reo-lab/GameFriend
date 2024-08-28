@@ -1,0 +1,72 @@
+<div class="chatroom-container">
+  <%= link_to chatroom_path(chatroom), class: "chatroom-link" do %>
+    <div class="chatroom-name-box">
+      <%= chatroom.name %>
+    </div>
+    <div class="chatroom-contents-container">
+      <div class = "content-left-container">
+        <div class="recruiter-box">
+          <div class = "chatroom-font-box">
+            <h4 class = "chatroom-font">募集者</h4>
+          </div>
+          <% chatroom.boards.each do |board| %>
+            <%= image_tag(board.user.icon_image, class: "user-icon-chat") if board.user.icon_image.attached? %>
+            <%= board.user.name %>
+          <% end %>
+        </div>
+        <div class="boards-box">
+          <% chatroom.boards.each do |board| %>
+            <div class="indexboardbox-wrapper">
+              <% if board.openchanger %>
+                <div class="tops_board_box">
+                  <div class="tops_user_info">
+                    <div class="tops_user_icon_box">
+                      <%= image_tag(board.user.icon_image, class: "tops_user_icon") if board.user.icon_image.attached? %>
+                    </div>
+                    <div class="tops_user_name">
+                      <%= board.user.name %>
+                    </div>
+                    <% if (gametitle = Gametitle.find_by(id: board.boards_gametitle_id)) && gametitle.game_image.attached? %>
+                      <div class="tops_game_image_box">
+                        <%= image_tag(gametitle.game_image, class: "tops_game_image") %>
+                      </div>
+                    <% end %>
+                  </div>
+                  <div class="realtime_notice">
+                    リアルタイムで募集中！
+                  </div>
+                  <div class="tops_boards_info">
+                    <div class="tops_boards_playstyle">
+                      プレイスタイル:<%= board.playstyle %>
+                    </div>
+                    <div class="tops_boards_people">
+                      募集人数:<%= board.number_of_people %>人
+                    </div>
+                    <div class="tops_boards_time">
+                    <% if board.playtime %>
+                      時間帯:<%= board.playtime.strftime("%H:%M")%>まで
+                    <%end%>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="content-right-container">
+        <div class = "chatroom-font-box">
+          <h4 class = "chatroom-font">参加者</h4>
+        </div>
+        <ul>
+          <% chatroom.users.each do |user| %>
+            <li>
+              <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
+              <%= user.name %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

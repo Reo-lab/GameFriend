@@ -3,9 +3,13 @@
   募集版一覧
 </div>
 <div class="index_boards_box">
+  <% if @boards.present? %>
     <% @boards.each do |board|%>
       <%= render "indexboardbox", board: board %>
     <% end %>
+  <% else%>
+  <%= link_to "募集を作成する",new_board_path, class: 'boards_new_link' %>
+  <% end %>
 </div>
 
 

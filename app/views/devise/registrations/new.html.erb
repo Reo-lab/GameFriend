@@ -13,7 +13,7 @@
 
           <div class="mb-2">
             <%= f.label :gender, class: 'form-label' %>
-            <%= f.text_field :gender, class: 'form-control', autocomplete: "gender", placeholder: "性別を入力してください" %>
+            <%= f.select :gender, options_for_select([['男性', 'male'], ['女性', 'female']], f.object.gender), { include_blank: '性別を選択してください' }, class: 'form-control' %>
           </div>
 
           <div class="mb-2">

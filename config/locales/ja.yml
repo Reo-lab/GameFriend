@@ -11,12 +11,12 @@ ja:
       signed_up: "アカウント登録が完了しました。"
       updated: "アカウント情報が更新されました。"
       destroyed: "アカウントが削除されました。"
+      signed_up_but_unconfirmed: "認証メールが送られました、メールのリンクからログインをお願いします"
     passwords:
       send_instructions: "パスワードリセットメールを送信しました。"
       updated: "パスワードが更新されました。"
       no_token: "無効なパスワードリセットトークンです。"
       invalid_token: "無効なパスワードリセットトークンです。"
-      signed_up_but_unconfirmed: "認証メールが送られました、メールのリンクからログインをお願いします"
     confirmations:
       confirmed: "アカウントが確認されました。"
       send_instructions: "確認メールを送信しました。"

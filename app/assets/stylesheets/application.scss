@@ -397,7 +397,22 @@
 }
 
 /*募集一覧のレイアウト*/
-
+.boards_new_link{
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+}
+.boards_new_link:hover {
+  background-color: #0056b3;
+}
 .index_openchanger_true{
   font-size: 20px;
   color: #f4f4f4;

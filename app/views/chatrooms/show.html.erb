@@ -3,8 +3,9 @@
 <div class="chatroom">
   <input type="hidden" id="chatroom-id" value="<%= @chatroom.id %>" />
   <div class="chatroom-name">
-  <%= @chatroom.name %>
+    <%= @chatroom.name %>
   </div>
+  <%= render "users_left_index" %>
   <div class="chat-container">
     <div class="messages">
       <% @messages.each do |message| %>

@@ -8,6 +8,7 @@ class ChatroomsController < ApplicationController
 
   def show
     @messages = @chatroom.messages
+    @boards = @chatroom.boards.first
   end
 
   def new

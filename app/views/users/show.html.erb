@@ -2,7 +2,7 @@
 <h1>User Profile</h1>
 
 <div class= "user_icon_box">
-  <%= image_tag(@user.icon_image, class: "user-icon") if @user.icon_image.attached? %>
+<%= image_tag(@user.icon_image.attached? ? @user.icon_image : 'default_user_icon.png',class: "user-icon") %>
 </div>
 
 <div class="profile_text_box">

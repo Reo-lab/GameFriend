@@ -43,6 +43,8 @@ class BoardsController < ApplicationController
 
 
   def destroy
+    @board.destroy
+    redirect_to boards_path, notice: '募集版が削除されました。'
   end
 
   def toggle_openchanger

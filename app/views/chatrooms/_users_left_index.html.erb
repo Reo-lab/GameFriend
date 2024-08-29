@@ -1,9 +1,11 @@
 <div class="chatroom-left-users">
-  <%= link_to "Menu", setups_path %>
-  <%= link_to "プロフィール",user_path(current_user) %>
-  <%= link_to "募集作成",new_board_path%>
-  <%= link_to "募集一覧",boards_path%>
-  <%= link_to "応募状況",boards_requests_path%>
-  <%= link_to "チャットルーム", chatrooms_path%>
-  <%= link_to "ログアウト","/"%>
+  ユーザー
+  <ul>
+  <% @chatroom.users.each do |user| %>
+    <li>
+    <%= image_tag(user.icon_image.attached? ? user.icon_image : 'default_user_icon.png',class: "user-icon-chat") %>
+      <%= user.name %>
+    </li>
+  <% end %>
+</ul>
 </div>

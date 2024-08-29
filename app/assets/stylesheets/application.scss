@@ -242,6 +242,7 @@
   margin-top: 10px;
   background-color: #000000;
   height: fit-content;
+  min-height:60vh ;
 }
 
 .tops_left_search_boards{
@@ -277,7 +278,7 @@
 
 .tops_mid_search_box{
   float: left;
-  width: 82%;
+  width: 83%;
   margin:15px 15px;
   background-color: #ffffff;
 }
@@ -627,7 +628,7 @@
 }
 .chat-container {
   display: inline-block;
-  width: calc(100% - 18vh);
+  width: calc(100% - 25vh);
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -654,13 +655,30 @@
   padding-left: 10px;
   background-color: rgb(226, 226, 226);
 }
+.chatroom-user-add{
+  float: right;
+  margin-right: 30px;
+  font-size: 50px;
+}
+.bi-person-plus{
+  color: rgb(51, 51, 51);
+}
 .chatroom-left-users{
   float: right;
   background-color: #f8f9fa;
   padding: 10px;
   border-right: 1px solid #dee2e6;
   height: 100vh; /* ビューポートの高さに合わせる */
-  width: 15vh;
+  width: 20vh;
+}
+.chatroom-left-users ul {
+  list-style-type: none;
+  padding: 0; /* リストアイテムの余白を削除 */
+  margin: 0;  /* リストのマージンを削除 */
+}
+
+.chatroom-left-users li {
+  margin-bottom: 5px; /* リストアイテム間の余白 */
 }
 .chatroom-left-users a {
   display: block;
@@ -736,7 +754,9 @@
   font-size: 0.8em;
   color: gray;
 }
-
+.chatroom_delete_link{
+  float: right;
+}
 /*チャットルームユーザー追加画面*/
 .user_add_container{
   display: flex;
@@ -797,6 +817,37 @@
   border-bottom-right-radius: 9px;
 }
 
+.chatroom-delete-button{
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding-left: 3px;
+}
+
+.add_users_list_index{
+  margin-right: 10px; /* リストアイテムの間隔を設定 */
+  display: flex; /* フレックスボックスを使用 */
+  align-items: center; /* 垂直方向にアイテムを中央揃え */
+}
+.chatroom-submit-form{
+  float: right;
+}
+.chatroom-add-button{
+  background-color: #cccccc; /* ボタンの背景色 */
+  border: none; /* ボタンの枠線を無くす */
+  color: rgb(0, 0, 0); /* ボタンの文字色 */
+  padding: 10px 15px; /* ボタン内の余白 */
+  text-align: center; /* テキストを中央に配置 */
+  text-decoration: none; /* テキストの下線を無くす */
+  display: inline-block; /* ボタンをインラインブロックにする */
+  font-size: 16px; /* フォントサイズ */
+  margin-left: 0px; /* ボタンの外部余白 */
+  cursor: pointer; /* カーソルをポインタにする */
+  border-radius: 4px; /* ボタンの角を丸める */
+}
+.chatroom-add-button:hover {
+  background-color: #c4c4c4; /* ホバー時の背景色 */
+}
 /*チャットルーム一覧のレイアウト*/
 
 .chatroom_index_title {

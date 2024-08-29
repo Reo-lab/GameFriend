@@ -1,7 +1,7 @@
-<h1>Boards#edit</h1>
+<%= render "layouts/sidemenu"%>
 
 <%= render 'form' %>
-
+<div>
+    <%= link_to '募集版を削除', @board, method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当に募集版を削除しますか?' }, class: "btn btn-danger" %>
+</div>
 <%= link_to 'Back', boards_path %>
-
-<p>Find me in app/views/boards/edit.html.erb</p>

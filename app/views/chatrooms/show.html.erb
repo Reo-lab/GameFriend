@@ -4,6 +4,11 @@
   <input type="hidden" id="chatroom-id" value="<%= @chatroom.id %>" />
   <div class="chatroom-name">
     <%= @chatroom.name %>
+    <div class="chatroom-user-add">
+      <%= link_to user_add_chatroom_path do %>
+        <i class="bi bi-person-plus"></i>
+      <% end %>
+    </div>
   </div>
   <%= render "users_left_index" %>
   <div class="chat-container">
@@ -39,19 +44,9 @@
       <% end %>
     </div>
   </div>
+  <% if @boards.user_id == current_user.id%>
+      <div class = "chatroom_delete_link">
+        <%= link_to 'Delete Chatroom', @chatroom, method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当にチャットルームを削除しますか?' }, class: "btn btn-danger" %>
+      </div>
+  <% end%>
 </div>
-
-<%= link_to 'Delete Chatroom', @chatroom, method: :delete, data: { turbo_method: :delete, confirm: 'Are you sure you want to delete this chatroom?' }, class: "btn btn-danger" %>
-
-<h2>ユーザー追加</h2>
-<%= render 'add_users_form', chatroom: @chatroom %>
-<%= link_to 'ユーザを追加',user_add_chatroom_path%>
-<h2>参加しているユーザー</h2>
-<ul>
-  <% @chatroom.users.each do |user| %>
-    <li>
-      <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
-      <%= user.name %>
-    </li>
-  <% end %>
-</ul>

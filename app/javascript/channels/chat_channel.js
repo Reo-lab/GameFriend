@@ -26,12 +26,14 @@ document.addEventListener('turbo:load', () => {
                 </div>
                 <div class="message-info">
                   <strong>${data.message.user_name}</strong>
-                  <span class="timestamp">${data.message.timestamp}</span>
                 </div>
               </div>
               <div class="message-content">
                 ${data.message.content}
               </div>
+              <div class="timestamp-box">
+                <span class="timestamp">${data.message.timestamp}</span>
+            </div>
             </div>
           `;
 

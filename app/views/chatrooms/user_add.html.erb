@@ -10,14 +10,15 @@
         <div class ="chatroom_info_top">
           <h1>ルーム名:<%= @chatroom.name%></h1>
           <% @chatroom.boards.each do |board| %>
-          <h1>募集公開設定:<%= board.openchanger %></h1>
+            <h1>募集公開設定:<%= board.openchanger ? '公開' : '非公開' %></h1>
           <% end %>
           <h2>参加しているユーザー</h2>
-          <ul>
+          <ul >
             <% @chatroom.users.each do |user| %>
-              <li>
-                <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
+              <li id="user-<%= user.id %>" class="add_users_list_index">
+                <%= image_tag(user.icon_image.attached? ? user.icon_image : 'default_user_icon.png',class: "user-icon-chat") %>
                 <%= user.name %>
+                <%= button_to '削除', remove_users_chatroom_path(@chatroom, user_ids: [user.id]), method: :post, form: { data: { turbo_confirm: "本当に削除してもよろしいですか？"}},class:"chatroom-delete-button"%>
               </li>
             <% end %>
           </ul>
@@ -29,11 +30,11 @@
         <ul id="added-users-list">
           <!-- JavaScriptで追加されたユーザーがここに表示される -->
         </ul>
+        <form id="save-users-form" method="post" class="chatroom-submit-form" action="<%= add_users_chatroom_path(@chatroom) %>">
+          <input type="hidden" name="user_ids[]" id="user-ids-input">
+          <button type="submit" class="chatroom-add-button">保存</button>
+        </form>
       </div>
-      <form id="save-users-form" method="post" action="<%= add_users_chatroom_path(@chatroom) %>">
-        <input type="hidden" name="user_ids[]" id="user-ids-input">
-        <button type="submit">保存</button>
-      </form>
     </div>
   </div>
   
@@ -54,17 +55,10 @@
     </div>
   </div>
 </div>
-<ul id="added-users-list">
-  <% @chatroom.users.each do |user| %>
-    <li id="user-<%= user.id %>">
-      <%= image_tag(user.icon_image, class: "user-icon-chat") if user.icon_image.attached? %>
-      <%= user.name %>
-      <%= button_to '削除', remove_users_chatroom_path(@chatroom, user_ids: [user.id]), method: :post, form: { data: { turbo: false } } %>
-    </li>
-  <% end %>
-</ul>
 
 <script>
+const defaultIcon = '<%= asset_path("default_user_icon.png") %>';
+
 document.addEventListener("DOMContentLoaded", function() {
   const addUserButton = document.getElementById("add-user-button");
   const userIdsInput = document.getElementById("user-ids-input");
@@ -82,18 +76,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if (userIcon) {
         const img = document.createElement("img");
-        img.src = userIcon;
+        img.src = userIcon
         img.className = "user-icon-chat";
         userListItem.appendChild(img);
-      }
+      } else {
+        const img = document.createElement("img");
+        img.src = defaultIcon; // ユーザーアイコンが存在しない場合はデフォルト画像を設定
+        img.className = "user-icon-chat";
+        userListItem.appendChild(img);
+    }
 
       userListItem.appendChild(document.createTextNode(userName));
 
       const removeButton = document.createElement("button");
       removeButton.textContent = "削除";
-      removeButton.className = "remove-user-button";
+      removeButton.className = "chatroom-delete-button";
       userListItem.appendChild(removeButton);
-
       const userList = document.getElementById("added-users-list");
       userList.appendChild(userListItem);
 

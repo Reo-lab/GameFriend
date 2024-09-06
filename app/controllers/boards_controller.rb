@@ -35,7 +35,7 @@ class BoardsController < ApplicationController
     @board.user = current_user
 
     if @board.save
-      redirect_to @board, notice: 'Board was successfully created.'
+      redirect_to boards_path , notice: 'Board was successfully created.'
     else
       render :new
     end

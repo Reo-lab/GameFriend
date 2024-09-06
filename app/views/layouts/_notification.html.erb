@@ -1,0 +1,7 @@
+<% if notifications.present? %>
+  <% notifications.each do |notification| %>
+    <p><%= notification.message %></p>
+  <% end %>
+<% else %>
+  <p>通知はありません。</p>
+<% end %>

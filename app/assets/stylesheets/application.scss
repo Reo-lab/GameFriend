@@ -83,20 +83,29 @@
  }
  
  .login_box {
-   flex: 0 0 auto;
-   margin-left: auto;
+  margin-right: 10px;
  }
  
  .GameFriend {
    color: aliceblue;
-   font-size: 50px;
+   font-size: 60px;
  }
  
  .login {
    color: aliceblue;
    font-size: 25px;
  }
- 
+ .board_request_header{
+  color: aliceblue;
+  font-size: 50px;
+  background-color: #1100ff;
+  border-radius: 8%;
+ }
+ .board_request_hader_box{
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-right: 20px;
+ }
  /* bootstrapアイコン */
  .bi-gear-wide,
  .bi-bell,
@@ -336,7 +345,22 @@
  width:100%;
 }
 
-
+/*応募中レイアウト*/
+.index_boardrequest_freetext{
+  padding: 0px 5px;
+  background-color: #ccc;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+.board-request-item {
+  display: flex;
+  margin-bottom: 1rem; /* アイテム間のスペースを調整 */
+}
+.boards_request_delete_link{
+  display: block;
+  margin-left: 80%;
+  border: none;
+}
 
 /* 募集版作成レイアウト*/
 .boards_new_title {

@@ -1,0 +1,10 @@
+<%= render "layouts/sidemenu"%>
+
+<div class="board-request-item">
+  <% @board_requests.each do |board_request|%>
+    <% if board_request.user_id == current_user.id%>
+      <%= render "boardrequestbox", board: board_request%>
+    <%end%>
+  <% end %>
+</div> 
+

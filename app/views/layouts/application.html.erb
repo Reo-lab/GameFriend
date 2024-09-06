@@ -15,5 +15,25 @@
     <%= render "layouts/header"%>
     <%= render 'layouts/flash_messages' %>
     <%= yield %>
+
+    <!-- モーダルのHTML -->
+    <div class="modal fade" id="notificationsModal" tabindex="-1" aria-labelledby="notificationsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="notificationsModalLabel">通知</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="notificationsContent">
+            <!-- 通知内容はここに追加されます -->
+            <%= render "layouts/notification", notifications: @notifications %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

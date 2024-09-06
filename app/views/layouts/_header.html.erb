@@ -6,7 +6,7 @@
       <% end %>
     </div>
     <div class="bell_icon_box">
-      <%= link_to "/" do %>
+      <%= link_to '#', data: { bs_toggle: 'modal', bs_target: '#notificationsModal' } do %>
         <i class="bi bi-bell"></i>
       <% end %>
     </div>
@@ -19,6 +19,11 @@
   <div class="GameFriend_box">
     <%= link_to "GameFriend", "/", class: "GameFriend" %>
   </div>
+  <% if current_user.boards_requests.present? %>
+    <div class = "board_request_hader_box">
+      <%= link_to "応募中", request_index_path, class: "board_request_header" %>
+    </div>
+  <% end %>
   <div class="login_box">
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: "delete", turbo_confirm: "ログアウトしますか？" } %>

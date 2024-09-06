@@ -8,7 +8,6 @@ https://drive.google.com/file/d/1PAuCEfaVNKZDHcNVUgEJmQouFgiSywZs/view?usp=shari
 # 使用予定の技術一覧
 <img src="https://img.shields.io/badge/-Ruby-CC342D.svg?logo=ruby&style=flat">
 <img src="https://img.shields.io/badge/-Rails-D30001.svg?logo=ruby-on-rails&style=flat">
-<img src="https://img.shields.io/badge/-Tailwind%20CSS-E8E8E8.svg?logo=Tailwind-CSS&style=flat">
 <img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat">
 <img src="https://img.shields.io/badge/-Amazon%20AWS-232F3E.svg?logo=amazon-aws&style=flat">
 

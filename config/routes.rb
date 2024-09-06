@@ -24,7 +24,8 @@ Rails.application.routes.draw do
       end
     end
   end
-  resources :boards_requests, only: [:index, :show]
+  resources :boards_requests, only: [:index, :show, :destroy]
+  get 'request_index' => 'boards_requests#request_index'
   devise_for :users
   resources :users
   resources :tops

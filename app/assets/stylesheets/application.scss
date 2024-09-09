@@ -104,7 +104,7 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  margin-right: 30px;
+  margin-right: 1%;
   font-size: 25px;
  }
  
@@ -126,7 +126,7 @@
  .board_request_hader_box{
   flex: 0 0 auto;
   margin-left: auto;
-  margin-right: 120px;
+  margin-right: 130px;
  }
  /* bootstrapアイコン */
  .bi-gear-wide,
@@ -215,7 +215,7 @@
 .tops_board_box {
   display: inline-block;
   position: relative; /* 絶対配置の基準 */
-  width: 300px; /* 必要に応じて幅を調整 */
+  width: 350px; /* 必要に応じて幅を調整 */
   border: 1px solid #ccc; /* デザインのためのボーダー */
   padding: 0px; /* 内側の余白 */
   margin-top: 10px;
@@ -278,7 +278,7 @@
 
 .tops_left_search_boards{
   float: left;
-  width: 15%;
+  width: calc(100% - 85%);
   padding: 10px;
   margin-top:15px;
   margin-left: 5px;
@@ -309,7 +309,7 @@
 
 .tops_mid_search_box{
   float: left;
-  width: 83%;
+  width: calc(100% - 18%);
   margin:15px 15px;
   background-color: #ffffff;
 }

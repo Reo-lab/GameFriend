@@ -1,6 +1,8 @@
 <% if notifications.present? %>
   <% notifications.each do |notification| %>
-    <p><%= notification.message %></p>
+    <div class="notification <%= 'notification-unread' if !notification.read? %> <%= 'notification-read' if notification.read? %>">
+      <p><%= notification.message %></p>
+    </div>
   <% end %>
 <% else %>
   <p>通知はありません。</p>

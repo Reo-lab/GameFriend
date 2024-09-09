@@ -24,6 +24,10 @@ Rails.application.routes.draw do
       end
     end
   end
+  resources :notifications do
+    patch 'mark_all_as_read', on: :collection
+  end
+
   resources :boards_requests, only: [:index, :show, :destroy]
   get 'request_index' => 'boards_requests#request_index'
   devise_for :users

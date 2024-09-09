@@ -32,6 +32,23 @@
   justify-content: center; /* 水平方向の中央揃え */
   margin-top: 50px;
 }
+/*通知機能*/
+.notification-unread {
+  background-color: #007bff; /* 青色 */
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+/* 通知の既読状態のスタイル */
+.notification-read {
+  background-color: #f8f9fa; /* 灰色 */
+  color: #6c757d;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
 /*フラッシュメッセージ*/
 .flash {
   width: 100%;
@@ -83,7 +100,12 @@
  }
  
  .login_box {
-  margin-right: 10px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  margin-right: 30px;
+  font-size: 25px;
  }
  
  .GameFriend {
@@ -104,7 +126,7 @@
  .board_request_hader_box{
   flex: 0 0 auto;
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 120px;
  }
  /* bootstrapアイコン */
  .bi-gear-wide,

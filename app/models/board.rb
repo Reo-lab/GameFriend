@@ -4,7 +4,16 @@ class Board < ApplicationRecord
   has_many :boards_chatrooms
   has_many :chatrooms, through: :boards_chatrooms
   has_many :boards_gametitles
+  has_many :gametitles, through: :boards_gametitles
   has_many :boards_tags
+
+  def gametitle
+    boards_gametitles.first&.gametitle
+  end
+
+  def gametitle_id
+    gametitle&.id
+  end
 
   def self.search(params)
     boards = Board.all

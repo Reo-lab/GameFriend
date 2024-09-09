@@ -22,3 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const notificationsModal = document.getElementById('notificationsModal');
+  
+    notificationsModal.addEventListener('shown.bs.modal', () => {
+      fetch('/notifications/mark_all_as_read', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('通知が既読に設定されました');
+        }
+      })
+      .catch(error => console.error('Error:', error));
+    });
+  });

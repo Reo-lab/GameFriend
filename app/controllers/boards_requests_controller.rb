@@ -1,6 +1,7 @@
 class BoardsRequestsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_board, only: [:create]
+  before_action :set_gametitles, only: [:new, :create]
   before_action :set_board_request, only: [:approve, :destroy]
 
   def index
@@ -19,11 +20,12 @@ class BoardsRequestsController < ApplicationController
   def create
     @board_request = @board.boards_requests.new(board_request_params)
     @board_request.user = current_user
-
+    gametitle = Gametitle.find_by(id: @board.boards_gametitle_id)
+    game_title = gametitle.gamename
     if @board_request.save
       Notification.create(
       user: @board.user, 
-      message: "募集版に応募が来ました。"
+      message: "#{game_title}の募集版に応募が来ました。"
     )
       redirect_to @board, notice: '応募が正常に送信されました。'
     else
@@ -54,6 +56,10 @@ class BoardsRequestsController < ApplicationController
 
   def set_board
     @board = Board.find(params[:board_id])
+  end
+
+  def set_gametitles
+    @gametitles = Gametitle.pluck(:gamename, :id)
   end
 
   def set_board_request

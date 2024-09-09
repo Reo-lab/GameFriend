@@ -19,7 +19,7 @@
   <div class="GameFriend_box">
     <%= link_to "GameFriend", "/", class: "GameFriend" %>
   </div>
-  <% if current_user.boards_requests.present? %>
+  <% if current_user && current_user.boards_requests.present? %>
     <div class = "board_request_hader_box">
       <%= link_to "応募中", request_index_path, class: "board_request_header" %>
     </div>

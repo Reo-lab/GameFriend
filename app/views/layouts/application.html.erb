@@ -3,6 +3,7 @@
   <head>
     <title>App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="csrf-token" content="<%= form_authenticity_token %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -25,8 +26,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" id="notificationsContent">
-            <!-- 通知内容はここに追加されます -->
-            <%= render "layouts/notification", notifications: @notifications %>
+            <!-- 通知内容がここに追加されます -->
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>

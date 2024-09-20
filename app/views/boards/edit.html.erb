@@ -1,5 +1,6 @@
 <%= render "layouts/sidemenu"%>
-
+<% breadcrumb :boards_edit,@board %>
+<%= render 'layouts/breadcrumbs' %>
 <%= render 'form' %>
 <div>
     <%= link_to '募集版を削除', @board, method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当に募集版を削除しますか?' }, class: "btn btn-danger" %>

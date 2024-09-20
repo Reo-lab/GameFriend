@@ -1,4 +1,6 @@
 <%= render "layouts/sidemenu"%>
+<% breadcrumb :request_index %>
+<%= render 'layouts/breadcrumbs' %>
 
 <div class="board-request-item">
   <% @board_requests.each do |board_request|%>

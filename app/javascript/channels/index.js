@@ -1,2 +1,2 @@
 import "channels/chat_channel"
-import "channels/notifications_channel"
+import "channels/notification_channel"

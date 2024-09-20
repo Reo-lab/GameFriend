@@ -22,10 +22,11 @@ class BoardsRequestsController < ApplicationController
     @board_request.user = current_user
     gametitle = Gametitle.find_by(id: @board.boards_gametitle_id)
     game_title = gametitle.gamename
+    message = "#{current_user.name}さんが#{game_title}の募集版に応募しました。"
     if @board_request.save
       Notification.create(
       user: @board.user, 
-      message: "#{game_title}の募集版に応募が来ました。"
+      message: message
     )
       redirect_to @board, notice: '応募が正常に送信されました。'
     else

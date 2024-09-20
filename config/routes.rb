@@ -25,8 +25,12 @@ Rails.application.routes.draw do
     end
   end
   resources :notifications do
-    patch 'mark_all_as_read', on: :collection
+    collection do
+      patch 'mark_all_as_read'
+      get 'unread_count'
+    end
   end
+  # 通知を取得するためのエンドポイント
 
   resources :boards_requests, only: [:index, :show, :destroy]
   get 'request_index' => 'boards_requests#request_index'

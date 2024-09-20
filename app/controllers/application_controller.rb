@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :debug_session
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_notifications
+  before_action :set_unread_notifications_count
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :gender]) # 新規登録時(sign_up時)にnameというキーのパラメーターを追加で許可する
@@ -13,12 +13,7 @@ class ApplicationController < ActionController::Base
     Rails.logger.debug "Session Data: #{session.inspect}"
   end
 
-  def set_notifications
-    if user_signed_in?
-      @notifications = current_user.notifications.order(created_at: :desc).limit(10)
-    else
-      @notifications = []
-    end
+  def set_unread_notifications_count
+    @unread_notifications_count = current_user.notifications.unread.count if user_signed_in?
   end
-
 end

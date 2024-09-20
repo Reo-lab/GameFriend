@@ -9,9 +9,6 @@ class Notification < ApplicationRecord
   # スコープで既読通知を取得
   scope :read, -> { where(read: true) }
 
-
-  private
-
   def broadcast_notification
     ActionCable.server.broadcast(
       "notifications_#{user.id}",

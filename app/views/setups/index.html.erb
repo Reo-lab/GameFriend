@@ -1,4 +1,7 @@
 <%= render "layouts/sidemenu"%>
+<% breadcrumb :menu %>
+<%= render 'layouts/breadcrumbs' %>
+
 <div class="setups-index-container">
   <%= link_to 'プロフィール編集/作成した募集のステータス確認',user_path(current_user), class: 'setups-index-item' %>
   <%= link_to '作成した募集一覧', boards_path, class: 'setups-index-item' %>

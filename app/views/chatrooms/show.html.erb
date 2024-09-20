@@ -1,4 +1,6 @@
 <%= render "layouts/sidemenu" %>
+<% breadcrumb :chatrooms_show,@chatroom %>
+<%= render 'layouts/breadcrumbs' %>
 
 <div class="chatroom">
   <input type="hidden" id="chatroom-id" value="<%= @chatroom.id %>" />

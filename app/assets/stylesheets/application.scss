@@ -33,6 +33,21 @@
   margin-top: 50px;
 }
 /*通知機能*/
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+/* ベルアイコンにアニメーションを適用するクラス */
+.bell-icon-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.bell_icon_box.has-new-notification .bi-bell {
+  color: rgb(255, 230, 0)  !important;; /* 新しい通知があるときの色 */
+}
 .notification-unread {
   background-color: #007bff; /* 青色 */
   color: white;
@@ -268,6 +283,23 @@
   font-size: 20px;
 }
 
+/*Menu画面のレイアウト*/
+.setups-index-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.setups-index-item{
+  width: calc(50% - 40px);
+  font-size:35px ;
+  padding: 40px 40px;
+  margin-left: 20px;
+  margin-top: 15px;
+  color: #1e47ff;
+  background-color: #dbdbdb;
+  border-radius: 8px;
+  text-decoration: none;
+}
 /*トップの検索機能のレイアウト*/ 
 .tops_search_boards{
   margin-top: 10px;

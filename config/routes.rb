@@ -38,6 +38,9 @@ Rails.application.routes.draw do
   resources :users
   resources :tops
   root 'tops#index'
+
+  post 'sessions', to: 'sessions#create'
+  get 'users/:id/icon', to: 'users#icon'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

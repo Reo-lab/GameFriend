@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "channels"
+import "signaling_server"
 import 'bootstrap'
 
 document.addEventListener('turbo:load', () => {

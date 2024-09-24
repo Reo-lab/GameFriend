@@ -76,6 +76,7 @@ Rails.application.configure do
   config.assets.debug = true
   config.assets.compile = true
 
+  config.web_console.allowed_ips = '172.19.0.1'
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 

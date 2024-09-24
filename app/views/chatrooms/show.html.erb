@@ -52,3 +52,45 @@
       </div>
   <% end%>
 </div>
+
+<div class = "chatroom-videochat-box">
+  <h1>ビデオ/ボイスチャットルーム</h1>
+  <input type="hidden" id="room-id" value="<%= @chatroom.id %>" />
+  
+  <div>Random User ID:
+    <span id="current-user"><%= current_user.id%></span>
+  </div>
+  
+  <div id="remote-video-container">
+  <div id="remote-user-icon-container" style="display: none;">
+  </div>
+    
+  </div>
+  <div id="local-video-container">
+    <video id="local-video" autoplay></video>
+    <div id="user-icon-container" style="display: none;">
+      <% if current_user.icon_image.attached? %>
+        <img id="user-icon" src="<%= url_for(current_user.icon_image) %>" alt="User Icon" class="user-icon-voice-chat" />
+      <% else %>
+        <img id="user-icon" src="<%= asset_path('default_user_icon.png') %>" alt="Default User Icon" class="user-icon-voice-chat" />
+      <% end %>
+    </div>
+  </div>
+  <div>
+    <label for="video-select">Select Video Device:</label>
+    <select id="video-select"></select>
+  </div>
+  <div>
+    <label for="audio-select">Select Audio Device:</label>
+    <select id="audio-select"></select>
+  </div>
+  <hr />
+  
+  <button id="join-button">
+    ボイスルームに参加する
+  </button>
+  
+  <button id="leave-button">
+    ボイスルームから退出する
+  </button>
+</div>

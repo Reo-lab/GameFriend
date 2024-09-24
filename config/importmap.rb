@@ -7,3 +7,4 @@ pin "@rails/actioncable", to: "actioncable.esm.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin_all_from "app/javascript/channels", under: "channels"
 pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "signaling_server", to:"signaling_server.js"

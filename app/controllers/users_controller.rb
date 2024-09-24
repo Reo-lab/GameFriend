@@ -40,6 +40,15 @@ class UsersController < ApplicationController
   def destroy
   end
 
+  def icon
+    user = User.find(params[:id])
+    if user.icon_image.attached?
+      render json: { url: url_for(user.icon_image) }
+    else
+      render json: { url: ActionController::Base.helpers.asset_path('default_user_icon.png') } # デフォルトアイコン
+    end
+  end
+
   private
 
   def set_user

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Chatroom
 class Chatroom < ApplicationRecord
   has_many :boards_chatrooms, dependent: :destroy
   has_many :boards, through: :boards_chatrooms

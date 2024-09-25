@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
+# ApplicationController
 class ApplicationController < ActionController::Base
   before_action :debug_session
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_unread_notifications_count
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :gender]) # 新規登録時(sign_up時)にnameというキーのパラメーターを追加で許可する
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name gender]) # 新規登録時(sign_up時)にname/genderというキーのパラメーターを追加で許可する
   end
 
   private

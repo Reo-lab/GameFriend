@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# ChatChannelはサブスクライブとメッセージの送受信を提供しています
 class ChatChannel < ApplicationCable::Channel
   def subscribed
     stream_from "chat_channel_#{params[:chatroom_id]}"
@@ -18,7 +21,7 @@ class ChatChannel < ApplicationCable::Channel
       message: {
         content: message.content,
         user_name: message.user.name,
-        user_icon: message.user.icon_image.attached? ? url_for(message.user.icon_image) : 'default_icon.png', # アイコンがない場合はデフォルトの画像
+        user_icon: message.user.icon_image.attached? ? url_for(message.user.icon_image) : 'default_icon.png', 
         timestamp: l(message.created_at, format: :short)
       }
     )

@@ -1,8 +1,11 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
+
+# development.rb
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.hosts << "gamefriend333.com"
+  config.hosts << 'gamefriend333.com'
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -19,13 +22,13 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp/caching-dev.txt").exist?
+  if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -40,20 +43,20 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = {  host: 'localhost', port: 3000 }
-  #送信方法を指定（この他に:sendmail/:file/:testなどがあります)
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # 送信方法を指定（この他に:sendmail/:file/:testなどがあります)
   config.action_mailer.delivery_method = :smtp
-  #送信方法として:smtpを指定した場合は、このconfigを使って送信詳細の設定を行います
+  # 送信方法として:smtpを指定した場合は、このconfigを使って送信詳細の設定を行います
   config.action_mailer.smtp_settings = {
-    #gmail利用時はaddress,domain,portは下記で固定
-    address:"smtp.gmail.com",
+    # gmail利用時はaddress,domain,portは下記で固定
+    address: 'smtp.gmail.com',
     domain: 'gmail.com',
-    port:587,
-    #gmailのユーザアカウント（xxxx@gmail.com)※念のため、credentials.yml.enc行き
+    port: 587,
+    # gmailのユーザアカウント（xxxx@gmail.com)※念のため、credentials.yml.enc行き
     user_name: Rails.application.credentials.gmail[:user_name],
-    #gmail２段階認証回避のためにアプリケーションでの利用パスワードを取得、必ずcredentials.yml.endに設定を！！
+    # gmail２段階認証回避のためにアプリケーションでの利用パスワードを取得、必ずcredentials.yml.endに設定を！！
     password: Rails.application.credentials.gmail[:password],
-    #パスワードをBase64でエンコード
+    # パスワードをBase64でエンコード
     authentication: :login
   }
 

@@ -1,21 +1,22 @@
+# frozen_string_literal: true
+
+# GametitlesController
 class GametitlesController < ApplicationController
   before_action :authenticate_user!
   def index
     @gametitles = Gametitle.all
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def new
     @gametitle = Gametitle.new
   end
 
   def create
-    @gametitle=Gametitle.new(gametitle_params)
+    @gametitle = Gametitle.new(gametitle_params)
     if @gametitle.save
       redirect_to @gametitle, notice: 'gametitle was successfully created.'
     else
@@ -23,11 +24,9 @@ class GametitlesController < ApplicationController
     end
   end
 
-  def update
-  end
+  def update; end
 
-  def destroy
-  end
+  def destroy; end
 
   private
 

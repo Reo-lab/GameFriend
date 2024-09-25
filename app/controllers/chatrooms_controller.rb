@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
+# ChatroomsController
 class ChatroomsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_chatroom, only: [:show, :destroy, :add_users, :user_add, :remove_users]
+  before_action :set_chatroom, only: %i[show destroy add_users user_add remove_users]
 
   def index
     @chatrooms = Chatroom.joins(:boards_chatrooms_users).where(boards_chatrooms_users: { user_id: current_user.id })
@@ -39,27 +42,27 @@ class ChatroomsController < ApplicationController
   end
 
   def add_users
-    if request.post?
-      user_ids = params[:user_ids].reject(&:blank?)
-      user_ids.each do |user_id|
-        BoardsChatroomsUser.find_or_create_by(chatroom_id: @chatroom.id, user_id: user_id)
-      end
-      @boards = @chatroom.boards
-      @board_requests = @boards.flat_map(&:boards_requests)
-      redirect_to user_add_chatroom_path , notice: 'ユーザーが追加されました。'
+    return unless request.post?
+
+    user_ids = params[:user_ids].reject(&:blank?)
+    user_ids.each do |user_id|
+      BoardsChatroomsUser.find_or_create_by(chatroom_id: @chatroom.id, user_id:)
     end
+    @boards = @chatroom.boards
+    @board_requests = @boards.flat_map(&:boards_requests)
+    redirect_to user_add_chatroom_path, notice: 'ユーザーが追加されました。'
   end
 
   def remove_users
-    if request.post?
-      user_ids = params[:user_ids].reject(&:blank?)
-      user_ids.each do |user_id|
-        BoardsChatroomsUser.where(chatroom_id: @chatroom.id, user_id: user_id).destroy_all
-      end
-      @boards = @chatroom.boards
-      @board_requests = @boards.flat_map(&:boards_requests)
-      redirect_to user_add_chatroom_path, notice: 'ユーザーが削除されました。'
+    return unless request.post?
+
+    user_ids = params[:user_ids].reject(&:blank?)
+    user_ids.each do |user_id|
+      BoardsChatroomsUser.where(chatroom_id: @chatroom.id, user_id:).destroy_all
     end
+    @boards = @chatroom.boards
+    @board_requests = @boards.flat_map(&:boards_requests)
+    redirect_to user_add_chatroom_path, notice: 'ユーザーが削除されました。'
   end
 
   def destroy
@@ -74,12 +77,12 @@ class ChatroomsController < ApplicationController
   end
 
   def chatroom_params
-    params.require(:chatroom).permit(:name,:board_id, user_ids: [])
+    params.require(:chatroom).permit(:name, :board_id, user_ids: [])
   end
 
   def create_boards_chatrooms_users(chatroom, user_ids)
     user_ids.uniq.each do |user_id|
-      BoardsChatroomsUser.find_or_create_by!(chatroom: chatroom, user_id: user_id)
+      BoardsChatroomsUser.find_or_create_by!(chatroom:, user_id:)
     end
   end
 end

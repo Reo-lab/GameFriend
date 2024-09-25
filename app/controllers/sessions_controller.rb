@@ -1,4 +1,6 @@
-# app/controllers/sessions_controller.rb
+# frozen_string_literal: true
+
+# SessionsController
 class SessionsController < ApplicationController
   def create
     chatroom_id = params[:session][:chatroomId]

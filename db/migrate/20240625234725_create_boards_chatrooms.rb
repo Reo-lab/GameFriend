@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# CreateBoardsChatrooms
 class CreateBoardsChatrooms < ActiveRecord::Migration[7.0]
   def change
     create_table :boards_chatrooms do |t|

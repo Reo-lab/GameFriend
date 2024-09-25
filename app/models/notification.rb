@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Notification
 class Notification < ApplicationRecord
   belongs_to :user
   validates :message, presence: true
@@ -12,7 +15,7 @@ class Notification < ApplicationRecord
   def broadcast_notification
     ActionCable.server.broadcast(
       "notifications_#{user.id}",
-      { message: message }
+      { message: }
     )
   end
 end

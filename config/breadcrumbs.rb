@@ -1,64 +1,66 @@
+# frozen_string_literal: true
+
 crumb :root do
-  link "Top", root_path
+  link 'Top', root_path
 end
 
 crumb :menu do
-  link "menu", setups_path
+  link 'menu', setups_path
   parent :root
 end
 
 crumb :request_index do
-  link "応募中一覧"
+  link '応募中一覧'
   parent :root
 end
 
 crumb :boards_show do
-  link "応募画面", boards_path
+  link '応募画面', boards_path
   parent :root
 end
 
 crumb :user_show do
-  link "プロフィール", user_path(current_user)
+  link 'プロフィール', user_path(current_user)
   parent :menu
 end
 
 crumb :boards_index do
-  link "募集版一覧", boards_path
+  link '募集版一覧', boards_path
   parent :menu
 end
 
 crumb :boards_edit do |board|
-  link "募集版編集", edit_board_path(board)
+  link '募集版編集', edit_board_path(board)
   parent :boards_index
 end
 
 crumb :boards_new do
-  link "新規募集作成", new_board_path
+  link '新規募集作成', new_board_path
   parent :menu
 end
 
 crumb :boards_request do
-  link "応募状況一覧", boards_requests_path
+  link '応募状況一覧', boards_requests_path
   parent :menu
 end
 
 crumb :boards_request_show do
-  link "応募状況詳細"
+  link '応募状況詳細'
   parent :boards_request
 end
 
 crumb :chatrooms_index do
-  link "チャットルーム一覧", chatrooms_path
+  link 'チャットルーム一覧', chatrooms_path
   parent :menu
 end
 
 crumb :chatrooms_show do |chatroom|
-  link "#{chatroom.name}", chatroom_path(chatroom)
+  link chatroom.name.to_s, chatroom_path(chatroom)
   parent :chatrooms_index
 end
 
 crumb :chatrooms_user_add do |chatroom|
-  link "ユーザー追加", add_users_chatroom_path(chatroom)
+  link 'ユーザー追加', add_users_chatroom_path(chatroom)
   parent :chatrooms_show, chatroom
 end
 # crumb :project do |project|

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
-  resources :chatrooms, only: [:index, :show, :new, :create, :destroy] do
+  resources :chatrooms, only: %i[index show new create destroy] do
     resources :messages, only: [:create]
     member do
       get 'user_add'
@@ -17,8 +19,8 @@ Rails.application.routes.draw do
     member do
       post 'toggle_openchanger'
     end
-    
-    resources :boards_requests, only: [:new, :create] do
+
+    resources :boards_requests, only: %i[new create] do
       member do
         post 'approve'
       end
@@ -32,7 +34,7 @@ Rails.application.routes.draw do
   end
   # 通知を取得するためのエンドポイント
 
-  resources :boards_requests, only: [:index, :show, :destroy]
+  resources :boards_requests, only: %i[index show destroy]
   get 'request_index' => 'boards_requests#request_index'
   devise_for :users
   resources :users

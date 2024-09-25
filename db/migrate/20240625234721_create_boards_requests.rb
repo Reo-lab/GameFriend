@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# CreateBoardsRequests
 class CreateBoardsRequests < ActiveRecord::Migration[7.0]
   def change
     create_table :boards_requests do |t|

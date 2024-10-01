@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @users_slide = @user.users_slides.first
   end
 
   def new

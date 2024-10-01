@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :boards_chatrooms_users
   has_many :messages
   has_many :notifications
+  has_many :users_slides, dependent: :destroy
+  has_many :slide_images, through: :users_slides
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

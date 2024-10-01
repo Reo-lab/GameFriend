@@ -10,7 +10,7 @@
             <h4 class = "chatroom-font">募集者</h4>
           </div>
           <% chatroom.boards.each do |board| %>
-            <%= image_tag(board.user.icon_image, class: "user-icon-chat") if board.user.icon_image.attached? %>
+            <%= image_tag(board.user.icon_image, class: "user-icon-chat-index") if board.user.icon_image.attached? %>
             <%= board.user.name %>
           <% end %>
         </div>

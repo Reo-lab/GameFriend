@@ -1,0 +1,10 @@
+<%= render 'users_slides/form', users_slide: @users_slide %>
+
+<% @user.slide_images.order(:position).each do |slide_image| %>
+  <div class="slide">
+    <%= image_tag slide_image.image,class: "user-icon"%>
+  </div>
+<% end %>
+
+<%= link_to "1", edit_user_users_slide_path(@user) %>
+<%= link_to 'Delete', user_users_slide_path(@user, @users_slide), method: :delete, data: { confirm: 'Are you sure?' } %>

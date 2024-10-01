@@ -1,0 +1,16 @@
+
+<%= form_with model: @users_slide, url: user_users_slides_path(@user), local: true do |form| %>
+
+  <% (1..3).each do |i| %>
+    <div>
+      <%= form.label "images_#{i}", "Upload Image #{i}" %>
+      <%= form.file_field "users_slide[images][]", multiple: false %> <!-- 画像は一つずつ選択 -->
+      <%= form.label "position#{i}", "Position" %>
+      <%= form.number_field "users_slide[positions][]", value: i %> <!-- デフォルトでiを設定 -->
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit "Upload Slides" %>
+  </div>
+<% end %>

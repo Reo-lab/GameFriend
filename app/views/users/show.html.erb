@@ -1,6 +1,48 @@
 <%= render "layouts/sidemenu"%>
 <% breadcrumb :user_show %>
 <%= render 'layouts/breadcrumbs' %>
+<% if @user.slide_images.exists?%>
+<div id="slideshow-container">
+  <div class="slide-wrapper">
+    <!-- 左側の小さい画像 -->
+    <div class="small-slide left">
+      <%= image_tag @user.slide_images.last.image, class: "small-icon" if @user.slide_images.any? %>
+    </div>
+
+    <!-- 中央の大きな画像 -->
+    <div class="main-slide">
+      <%= image_tag @user.slide_images.first.image, class: "main-icon" if @user.slide_images.any? %>
+    </div>
+
+    <!-- 右側の小さい画像 -->
+    <div class="small-slide right">
+      <%= image_tag @user.slide_images.second.image, class: "small-icon" if @user.slide_images.count > 1 %>
+    </div>
+  </div>
+</div>
+
+  <% if @users_slide.present? %>
+    <%= link_to "Edit Slide", edit_user_users_slide_path(@user, @users_slide) %>
+  <% else %>
+    <p>No slides available to edit.</p>
+<% end %>
+<% else %>
+  <h1>スライドショーを設定しましょう！</h1>
+  <%= form_with model: @users_slide, url: user_users_slides_path(@user) , local: true do |form| %>
+    <% (1..3).each do |i| %>
+      <div>
+        <%= form.label "images_#{i}", "スライドショー画像 #{i}", for: "users_slide_images_#{i}" %>
+        <%= form.file_field "users_slide[images][]", id: "users_slide_images_#{i}", multiple: false %> <!-- 画像は一つずつ選択 -->
+        <%= form.label "position#{i}", "Position", for: "users_slide_positions_#{i}" %>
+        <%= form.number_field "users_slide[positions][]", id: "users_slide_positions_#{i}", value: i %> <!-- デフォルトでiを設定 -->
+      </div>
+    <% end %>
+  
+    <div>
+      <%= form.submit "スライドショーを設定する" %>
+    </div>
+  <% end %>
+<% end %>
 <h1>User Profile</h1>
 
 <div class= "user_icon_box">
@@ -25,3 +67,63 @@
 
   <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-primary' %>
 </div>
+
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image">
+</div>
+
+
+<script>
+document.addEventListener('turbo:load', function() {
+  let slideIndex = 0; // 現在のスライドインデックス
+  const images = <%= @user.slide_images.map { |slide| url_for(slide.image) }.to_json.html_safe %>;
+  const mainSlide = document.querySelector(".main-slide img");
+  const leftSlide = document.querySelector(".small-slide.left img");
+  const rightSlide = document.querySelector(".small-slide.right img");
+
+  const modal = document.getElementById("image-modal");
+  const modalImage = document.getElementById("modal-image");
+  const closeModal = document.querySelector(".close");
+
+  // スライドを更新する関数
+  function updateSlides() {
+    mainSlide.src = images[slideIndex];
+    leftSlide.src = images[(slideIndex - 1 + images.length) % images.length];
+    rightSlide.src = images[(slideIndex + 1) % images.length];
+  }
+
+  // 画像をクリックするとモーダルを表示
+  mainSlide.addEventListener("click", function() {
+    modalImage.src = mainSlide.src; // データ属性に大きい画像URLを設定
+    modal.style.display = "block";
+  });
+
+
+  // モーダルを閉じる
+  closeModal.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // モーダル外をクリックした場合も閉じる
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // 左右スライドのクリックイベント
+  leftSlide.addEventListener("click", function() {
+    slideIndex = (slideIndex - 1 + images.length) % images.length;
+    updateSlides();
+  });
+
+  rightSlide.addEventListener("click", function() {
+    slideIndex = (slideIndex + 1) % images.length;
+    updateSlides();
+  });
+
+  // 初期スライドの表示
+  updateSlides();
+});
+</script>

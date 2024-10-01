@@ -1,0 +1,11 @@
+<% @Slide_Images.each do |slide_image| %>
+  <div class="slide">
+    <% if slide_image.image.attached? %>
+      <%= image_tag slide_image.image, class: "user-icon" %>
+    <% else %>
+      <p>No image available</p>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to "change",change_slide_image_path(@Slide_Images)%>

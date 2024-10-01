@@ -813,12 +813,15 @@
 }
 
 .user-icon-box {
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 
 .user-icon-chat {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -993,7 +996,7 @@ height: 70%;
 border-bottom-left-radius: 9px;
 }
 
-.user-icon-chat {
+.user-icon-chat-index {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1098,4 +1101,93 @@ button:hover {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/*スライドショー*/
+#slideshow-container {
+  width: calc(100% - 15vh);
+  height: auto;     /* 高さを自動に設定 */
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6); /* 背景を半透明に */
+}
+
+.slide-wrapper {
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  align-items: center;     /* 垂直方向の中央揃え */
+  gap: 10px;               /* 画像間に隙間を設定 */
+}
+
+.main-slide {
+  flex: 2;                 /* メインの画像を大きく表示 */
+  text-align: center;
+}
+
+.small-slide {
+  flex: 1;                 /* 小さい画像のスペースを小さく */
+  text-align: center;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.main-icon{
+  width: 100%;  /* 画像の幅を全体に合わせる */ /* 画像の幅を指定 */
+  height: 100%; /* 画像の高さを指定 */
+  object-fit: contain;
+}
+
+.small-icon {
+  width: 100%;             /* 小さい画像の幅をコンテナに合わせる */
+  max-height: 150px;       /* 小さい画像の高さを設定 */
+  object-fit: contain;       /* 画像の比率を保つ */
+  opacity: 0.7;            /* 少し透明にして目立たないように */
+  cursor: pointer;         /* マウスカーソルを変更（クリック可能に見せる） */
+}
+
+.small-icon:hover {
+  opacity: 1;              /* ホバー時に画像を目立たせる */
+}
+
+.modal {
+  display: none; /* 非表示がデフォルト */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* 背景を半透明に */
+}
+
+/* モーダルの画像 */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  object-fit: contain;
+  background-color: transparent; /* 画像の周りの背景を透明に */
+}
+
+/* 閉じるボタン */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }

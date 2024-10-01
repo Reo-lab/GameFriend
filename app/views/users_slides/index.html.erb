@@ -1,0 +1,13 @@
+<% @user_slides.each do |slide| %>
+  <div class="slide-show">
+    <h2>Slide Show ID: <%= slide.id %></h2>
+    <%= link_to 'Edit', edit_user_users_slide_path(@user, slide) %>
+    <%= link_to 'Delete', user_users_slide_path(@user, slide), method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当に募集版を削除しますか?' }, class: "btn btn-danger" %>
+  </div>
+<% end %>
+
+<% @user.slide_images.order(:position).each do |slide_image| %>
+  <div class="slide">
+    <%= image_tag slide_image.image,class: "user-icon"%>
+  </div>
+<% end %>

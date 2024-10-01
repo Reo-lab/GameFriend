@@ -37,7 +37,15 @@ Rails.application.routes.draw do
   resources :boards_requests, only: %i[index show destroy]
   get 'request_index' => 'boards_requests#request_index'
   devise_for :users
-  resources :users
+  resources :users do
+    resources :users_slides
+  end
+  resources :slide_images do
+    member do
+      get 'change'
+      patch 'change'
+    end
+  end
   resources :tops
   root 'tops#index'
 

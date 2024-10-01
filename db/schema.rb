@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_09_08_072258) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_27_164343) do
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -141,6 +141,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_072258) do
     t.index ["boards_request_id"], name: "index_permit_requests_on_boards_request_id"
   end
 
+  create_table "slide_images", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "users_slide_id", null: false
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_slide_id"], name: "index_slide_images_on_users_slide_id"
+  end
+
   create_table "tags", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "tagname"
     t.datetime "created_at", null: false
@@ -167,6 +175,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_072258) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "users_slides", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_users_slides_on_user_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "boards", "users"
@@ -184,4 +199,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_08_072258) do
   add_foreign_key "messages", "users"
   add_foreign_key "notifications", "users"
   add_foreign_key "permit_requests", "boards_requests"
+  add_foreign_key "slide_images", "users_slides"
+  add_foreign_key "users_slides", "users"
 end

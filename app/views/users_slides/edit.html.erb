@@ -1,0 +1,14 @@
+<%= form_with(model: @users_slide, url: user_users_slide_path(current_user, @users_slide), local: true) do |form| %>
+  <% @users_slide.slide_images.each_with_index do |slide_image, index| %>
+    <div>
+      <%= slide_image.image.attached? ? image_tag(slide_image.image,class: "user-icon") : "No Image" %>
+      <%= form.hidden_field "slide_images[][id]", value: slide_image.id %>
+      <%= form.file_field "slide_images[][image]", id: "slide_image_#{index}" %>
+      <%= form.number_field "slide_images[][position]", value: slide_image.position %>
+      <%= hidden_field_tag "slide_images[][id]", slide_image.id %>
+    </div>
+  <% end %>
+  <div>
+    <%= form.submit "Update Slides" %>
+  </div>
+<% end %>

@@ -304,6 +304,23 @@
   border-radius: 8px;
   text-decoration: none;
 }
+
+/*ユーザープロフィールのレイアウト*/
+#cropModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cropButton {
+  margin-top: 10px;
+}
 /*トップの検索機能のレイアウト*/ 
 .tops_search_boards{
   margin-top: 10px;
@@ -1152,7 +1169,7 @@ button:disabled {
   opacity: 1;              /* ホバー時に画像を目立たせる */
 }
 
-.modal {
+.modal-slide {
   display: none; /* 非表示がデフォルト */
   position: fixed;
   z-index: 1000;
@@ -1166,7 +1183,7 @@ button:disabled {
 }
 
 /* モーダルの画像 */
-.modal-content {
+.modal-slide-content {
   margin: auto;
   display: block;
   max-width: 80%;

@@ -17,10 +17,64 @@
   
     <div>
       <%= form.label :icon_image %>
-      <%= form.file_field :icon_image %>
+      <%= form.file_field :icon_image, id: "icon_image_input" %>
     </div>
   
+    <%= form.hidden_field :cropped_icon, id: "cropped_icon" %> 
+
     <div>
       <%= form.submit "Update User" %>
     </div>
   <% end %>
+
+<div id="cropModal" style="display: none;">
+  <img id="cropper_image" style="max-width: 100%;">
+  <button id="cropButton">トリミングする</button>
+</div>
+
+<script>
+document.addEventListener('turbo:load', function() {
+  const imageInput = document.getElementById('icon_image_input');
+  const cropperImage = document.getElementById('cropper_image');
+  const cropModal = document.getElementById('cropModal');
+  let cropper;
+
+  // 画像が選択されたとき
+  imageInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      // モーダルを表示してCropper.jsを初期化
+      cropperImage.src = e.target.result;
+      cropModal.style.display = 'block';
+
+      // Cropper.jsを作成
+      cropper = new Cropper(cropperImage, {
+        aspectRatio: 1, // 正方形
+        viewMode: 1
+      });
+    };
+
+    reader.readAsDataURL(file);
+  });
+
+  // トリミング後の画像を保存
+  document.getElementById('cropButton').addEventListener('click', function() {
+    const croppedCanvas = cropper.getCroppedCanvas();
+    
+    // croppedCanvasをBase64に変換し、hidden fieldにセット
+    croppedCanvas.toBlob(function(blob) {
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        const base64data = reader.result;
+        document.getElementById('cropped_icon').value = base64data;
+      };
+      reader.readAsDataURL(blob);
+
+      // モーダルを非表示にする
+      cropModal.style.display = 'none';
+    });
+  });
+});
+</script>

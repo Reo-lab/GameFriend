@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 # UsersController
+require 'base64'
+
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update]
 
@@ -30,7 +32,22 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      @user.icon_image.attach(params[:user][:icon_image]) if params[:user][:icon_image].present?
+      if params[:user][:cropped_icon].present?
+        # Base64形式の画像データをデコードして保存
+        image_data = params[:user][:cropped_icon].gsub(/^data:image\/(png|jpg|jpeg);base64,/, '')
+        decoded_image = Base64.decode64(image_data)
+        temp_file = Tempfile.new(["cropped_icon", ".jpg"])
+        temp_file.binmode
+        temp_file.write(decoded_image)
+        temp_file.rewind
+
+        @user.icon_image.attach(io: temp_file, filename: 'cropped_icon.jpg')
+        temp_file.close
+        temp_file.unlink
+      elsif params[:user][:icon_image].present?
+        @user.icon_image.attach(params[:user][:icon_image])
+      end
+
       redirect_to @user, notice: 'User was successfully updated.'
     else
       render :edit

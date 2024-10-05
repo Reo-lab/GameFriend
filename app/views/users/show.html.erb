@@ -45,32 +45,42 @@
   <% end %>
   <% end %>
 <% end %>
-<h1>User Profile</h1>
 
-<div class= "user_icon_box">
-<%= image_tag(@user.icon_image.attached? ? @user.icon_image : 'default_user_icon.png',class: "user-icon") %>
-</div>
-
-<div class="profile_text_box">
-  <div>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </div>
+<div class = "user-profile-container">
+  <h1 class = "user-profile-title">User Profile</h1>
   
-  <div>
-    <strong>Gender:</strong>
-    <%= @user.gender %>
+  <div class = "user-profile-box">
+    <div class= "user_icon_box">
+      <%= image_tag(@user.icon_image.attached? ? @user.icon_image : 'default_user_icon.png',class: "user-icon") %>
+    </div>
+    
+    <div class="profile_text_box">
+      <div class = "profile_text_box_name">
+        <strong>Name:</strong>
+        <%= @user.name %>
+      </div>
+      
+      <div>
+        <strong>Gender:</strong>
+        <%= @user.gender %>
+      </div>
+      
+      <div>
+        <strong>Age:</strong>
+        <%= @user.age %>
+      </div>
+      <% if @user == current_user %>
+      <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-primary' %>
+    <% end %>
+    </div>
+    <div class="profile_text">
+      <div class="profile_text_title">プロフィール</div>
+      <div class = "profile_text_body">
+        <%= @user.bio.present? ?  simple_format(@user.bio)  : 'プロフィールがありません' %>
+      </div>
+    </div>
   </div>
-  
-  <div>
-    <strong>Age:</strong>
-    <%= @user.age %>
-  </div>
-  <% if @user == current_user %>
-  <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-primary' %>
-  <% end %>
 </div>
-
 <div id="image-modal" class="modal-slide">
   <span class="close">&times;</span>
   <img class="modal-slide-content" id="modal-image">

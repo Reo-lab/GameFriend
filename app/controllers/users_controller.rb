@@ -11,7 +11,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
     @users_slide = @user.users_slides.first
   end
 

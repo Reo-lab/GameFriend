@@ -24,6 +24,11 @@ crumb :user_show do
   parent :menu
 end
 
+crumb :user_edit do
+  link 'プロフィール編集', user_path(current_user)
+  parent :user_show
+end
+
 crumb :boards_index do
   link '募集版一覧', boards_path
   parent :menu

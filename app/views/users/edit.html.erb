@@ -1,31 +1,39 @@
 <%= render "layouts/sidemenu"%>
-<%= form_with(model: @user, local: true) do |form| %>
-    <div>
-      <%= form.label :name %>
-      <%= form.text_field :name %>
-    </div>
-  
-    <div>
-      <%= form.label :gender %>
-      <%= form.select :gender, ['Male', 'Female'] %>
-    </div>
-  
-    <div>
-      <%= form.label :age %>
-      <%= form.number_field :age %>
-    </div>
-  
-    <div>
-      <%= form.label :icon_image %>
-      <%= form.file_field :icon_image, id: "icon_image_input" %>
-    </div>
-  
-    <%= form.hidden_field :cropped_icon, id: "cropped_icon" %> 
+<% breadcrumb :user_edit %>
+<%= render 'layouts/breadcrumbs' %>
+<div class = "user-edit-title">プロフィール編集</div>
+<%= form_with(model: @user, local: true, class: 'user-form') do |form| %>
+  <div class="form-group">
+    <%= form.label :name, '名前', class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
 
-    <div>
-      <%= form.submit "Update User" %>
-    </div>
-  <% end %>
+  <div class="form-group">
+    <%= form.label :gender, '性別', class: 'form-label' %>
+    <%= form.select :gender, ['Male', 'Female'], {}, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :age, '年齢', class: 'form-label' %>
+    <%= form.number_field :age, class: 'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :bio, 'プロフィール紹介文', class: 'form-label' %>
+    <%= form.text_area :bio, rows: 5, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :icon_image, 'アイコン画像', class: 'form-label' %>
+    <%= form.file_field :icon_image, id: 'icon_image_input', class: 'form-control-file' %>
+  </div>
+
+  <%= form.hidden_field :cropped_icon, id: 'cropped_icon' %> 
+
+  <div class="form-group">
+    <%= form.submit '更新する', class: 'btn btn-primary' %>
+  </div>
+<% end %>
 
 <div id="cropModal" style="display: none;">
   <img id="cropper_image" style="max-width: 100%;">

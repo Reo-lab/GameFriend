@@ -44,6 +44,15 @@ gem 'terser'
 gem 'redis', '~> 4.0'
 
 gem 'gretel'
+
+gem 'dotenv-rails'
+
+gem 'omniauth', '1.9.1'
+
+gem 'omniauth-google-oauth2' 
+
+gem 'omniauth-rails_csrf_protection'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

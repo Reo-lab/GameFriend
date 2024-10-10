@@ -7,7 +7,7 @@ class BoardsController < ApplicationController
   before_action :set_playstyles, only: %i[index new edit]
 
   def index
-    @boards = Board.all
+    @boards = Board.find_by(user: current_user)
   end
 
   def show

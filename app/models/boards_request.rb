@@ -4,5 +4,5 @@
 class BoardsRequest < ApplicationRecord
   belongs_to :board
   belongs_to :user
-  has_one :permit_request
+  has_one :permit_request, dependent: :destroy
 end

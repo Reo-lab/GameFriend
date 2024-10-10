@@ -3,8 +3,8 @@
 # Board
 class Board < ApplicationRecord
   belongs_to :user
-  has_many :boards_requests
-  has_many :boards_chatrooms
+  has_many :boards_requests, dependent: :destroy
+  has_many :boards_chatrooms, dependent: :destroy
   has_many :chatrooms, through: :boards_chatrooms
   has_many :boards_gametitles
   has_many :gametitles, through: :boards_gametitles

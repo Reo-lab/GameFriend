@@ -36,7 +36,9 @@ Rails.application.routes.draw do
 
   resources :boards_requests, only: %i[index show destroy]
   get 'request_index' => 'boards_requests#request_index'
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
   resources :users do
     resources :users_slides
   end

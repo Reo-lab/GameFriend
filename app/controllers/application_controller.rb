@@ -10,6 +10,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name gender]) # 新規登録時(sign_up時)にname/genderというキーのパラメーターを追加で許可する
   end
 
+  def after_sign_in_path_for(resource)
+    root_path  # ここでログイン後のリダイレクト先を変更可能
+  end
   private
 
   def debug_session

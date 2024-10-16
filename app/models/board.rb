@@ -18,6 +18,20 @@ class Board < ApplicationRecord
     gametitle&.id
   end
 
+  def set_end_time_24_hours_from_now
+    self.end_time = Time.current + 24.hours
+  end
+
+  def expired?
+    end_time && Time.current > end_time
+  end
+
+  def check_and_close!
+    if expired?
+      update(openchanger: false)
+    end
+  end
+
   def self.search(params)
     boards = Board.all
     boards = boards.where('playstyle LIKE ?', "%#{params[:playstyle]}%") if params[:playstyle].present?

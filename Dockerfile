@@ -8,6 +8,7 @@ RUN apt-get update -qq && apt-get install -y \
     yarn \
     default-mysql-client \
     cron && \
+    supervisor && \
     apt-get clean
 
 # 作業ディレクトリの作成
@@ -16,9 +17,6 @@ WORKDIR /app
 # GemfileとGemfile.lockをコピー
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
-
-# cronの設定ファイルを追加
-COPY ./cronjob /etc/cron.d/mycron
 
 # cronジョブの権限を設定
 RUN chmod 0644 /etc/cron.d/mycron
@@ -30,8 +28,16 @@ RUN bundle install
 # アプリケーションのコードをコピー
 COPY . /app
 
+# cronの設定ファイルを生成
+RUN bundle exec whenever --update-crontab
+
+# cronジョブの権限を設定
+RUN chmod 0644 /etc/cron.d/mycron
+
 # アセットのプリコンパイル
 RUN bundle exec rake assets:precompile
+# supervisordの設定をコピー
+COPY ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# サーバーの起動とcronサービスの開始
-CMD service cron start && bundle exec puma -C config/puma.rb
+# サーバーの起動
+CMD ["/usr/bin/supervisord", "-n"]

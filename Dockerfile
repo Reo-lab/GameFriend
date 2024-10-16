@@ -7,7 +7,7 @@ RUN apt-get update -qq && apt-get install -y \
     nodejs \
     yarn \
     default-mysql-client \
-    cron && \
+    cron \
     supervisor && \
     apt-get clean
 

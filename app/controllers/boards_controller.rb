@@ -7,7 +7,7 @@ class BoardsController < ApplicationController
   before_action :set_playstyles, only: %i[index new edit]
 
   def index
-    @boards = Board.find_by(user: current_user)
+    @boards = Board.where(user: current_user)
   end
 
   def show
@@ -36,6 +36,7 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     @board.user = current_user
+    @board.set_end_time_24_hours_from_now
 
     if @board.save
       redirect_to boards_path, notice: 'Board was successfully created.'
@@ -51,6 +52,9 @@ class BoardsController < ApplicationController
 
   def toggle_openchanger
     if @board.toggle!(:openchanger)
+      if @board.openchanger?
+        @board.update(end_time: Time.current + 24.hours)
+      end
       redirect_to boards_path, notice: 'Board was successfully changemode.'
     else
       render :board

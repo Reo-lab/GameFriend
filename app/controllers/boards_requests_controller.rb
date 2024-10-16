@@ -8,7 +8,7 @@ class BoardsRequestsController < ApplicationController
   before_action :set_board_request, only: %i[approve destroy]
 
   def index
-    @boards = Board.find_by(user: current_user)
+    @boards = Board.where(user: current_user)
   end
 
   def request_index

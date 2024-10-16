@@ -18,9 +18,6 @@ WORKDIR /app
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 
-# cronジョブの権限を設定
-RUN chmod 0644 /etc/cron.d/mycron
-
 # Bundlerのインストール
 RUN gem install bundler:2.3.26
 RUN bundle install
@@ -31,8 +28,8 @@ COPY . /app
 # cronの設定ファイルを生成
 RUN bundle exec whenever --update-crontab
 
-# cronジョブの権限を設定
-RUN chmod 0644 /etc/cron.d/mycron
+# cronの設定ファイルをコピー
+COPY /etc/cron.d/mycron /etc/cron.d/mycron 
 
 # アセットのプリコンパイル
 RUN bundle exec rake assets:precompile

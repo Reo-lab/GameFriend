@@ -28,9 +28,6 @@ COPY . /app
 # cronの設定ファイルを生成
 RUN bundle exec whenever --update-crontab
 
-# cronの設定ファイルをコピー
-COPY /etc/cron.d/mycron /etc/cron.d/mycron 
-
 # アセットのプリコンパイル
 RUN bundle exec rake assets:precompile
 # supervisordの設定をコピー

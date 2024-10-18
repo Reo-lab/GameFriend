@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.hour do
-  runner "Board.where(openchanger: 'true').each(&:check_and_close!)"
+  runner "Board.where(openchanger: true).each(&:check_and_close!)"
 end

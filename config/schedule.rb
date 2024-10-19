@@ -18,7 +18,11 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+set :environment, 'production'
 
-every 1.hour do
+# コマンドの出力をログファイルに保存
+set :output, 'log/cron.log'
+
+every 1.minute do
   runner "Board.where(openchanger: true).each(&:check_and_close!)"
 end

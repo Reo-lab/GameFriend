@@ -27,7 +27,7 @@ test:
 
 production:
   <<: *default
-  database: myapp_production
+  database: app_production
   username: <%= ENV['RDS_USERNAME'] %>
   password: <%= ENV['RDS_PASSWORD'] %>
   host: <%= ENV['RDS_HOST'] %>
@@ -51,3 +51,4 @@ production:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+

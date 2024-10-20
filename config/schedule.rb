@@ -29,6 +29,6 @@ env :PATH, ENV['PATH']
 
 ENV.each { |k, v| env(k, v) }
 
-every 1.minute do
+every 1.hours do
   rake "board:check_and_close"
 end

@@ -24,5 +24,5 @@ set :environment, 'production'
 set :output, 'log/cron.log'
 
 every 1.minute do
-  runner "Board.where(openchanger: true).each(&:check_and_close!)"
+  command "cd /app && /usr/local/bundle/bin/bundle exec /usr/local/bundle/bin/rails runner -e production 'Board.where(openchanger: true).each(&:check_and_close!)' >> log/cron.log 2>&1"
 end

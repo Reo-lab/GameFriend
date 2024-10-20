@@ -25,6 +25,7 @@ set :environment, 'production'
 
 # コマンドの出力をログファイルに保存
 set :output, 'log/cron.log'
+env :PATH, ENV['PATH']
 
 ENV.each { |k, v| env(k, v) }
 

@@ -26,6 +26,7 @@ RUN bundle install
 COPY . /app
 
 # start_cron.shに実行権限を付与
+COPY start_cron.sh /app/start_cron.sh
 RUN chmod +x /app/start_cron.sh
 
 # cronの設定ファイルを生成

@@ -38,6 +38,18 @@ services:
       - redis-data:/data
     networks:
       - backend
+  cron:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /usr/bin/supervisord -n
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: mysql2://${RDS_USERNAME}:${RDS_PASSWORD}@${RDS_HOST}:3306/${RDS_DATABASE}
+      RAILS_ENV: production 
+    networks:
+      - backend
 
 networks:
   backend:

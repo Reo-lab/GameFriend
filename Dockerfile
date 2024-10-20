@@ -25,6 +25,9 @@ RUN bundle install
 # アプリケーションのコードをコピー
 COPY . /app
 
+# start_cron.shに実行権限を付与
+RUN chmod +x /app/start_cron.sh
+
 # cronの設定ファイルを生成
 RUN bundle exec whenever --update-crontab
 

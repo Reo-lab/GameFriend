@@ -23,6 +23,8 @@ set :environment, 'production'
 # コマンドの出力をログファイルに保存
 set :output, 'log/cron.log'
 
+ENV.each { |k, v| env(k, v) }
+
 every 1.minute do
   command "cd /app && /usr/local/bundle/bin/bundle exec /usr/local/bundle/bin/rails runner -e production 'Board.where(openchanger: true).each(&:check_and_close!)' >> log/cron.log 2>&1"
 end

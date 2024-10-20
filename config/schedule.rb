@@ -29,5 +29,5 @@ set :output, 'log/cron.log'
 ENV.each { |k, v| env(k, v) }
 
 every 1.minute do
-  runner "Board.where(openchanger: true).each(&:check_and_close!)"
+  rake "board:check_and_close"
 end

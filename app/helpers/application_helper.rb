@@ -4,8 +4,8 @@
 module ApplicationHelper
   def default_meta_tags
     {
-      site: 'ゲームフレンド',
-      title: 'ゲームフレンド',
+      site: 'ゲームフレンド【いま一緒にゲームできる人を探す】',
+      title: 'ゲームフレンド【いま一緒にゲームできる人を探す】',
       reverse: true,
       separator: '|',
       description: 'ゲームフレンドは、オンラインゲームで一緒に遊ぶ友達を簡単に見つけられるマッチングサイトです。多くのプレイヤーとつながり、楽しいゲーム時間を共有しましょう。',

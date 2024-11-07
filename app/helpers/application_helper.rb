@@ -4,7 +4,7 @@
 module ApplicationHelper
   def default_meta_tags
     {
-      site: 'ゲームフレンド',
+      site: 'ゲームフレンド【いま一緒にゲームできる人を探す】',
       title: 'ゲームフレンド',
       reverse: true,
       separator: '|',

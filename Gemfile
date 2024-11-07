@@ -55,6 +55,9 @@ gem 'omniauth-rails_csrf_protection'
 
 gem 'whenever', require: false
 
+gem 'meta-tags'
+
+gem 'sitemap_generator'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

@@ -373,6 +373,21 @@
 #cropButton {
   margin-top: 10px;
 }
+
+.discord_link{
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-bottom :8px;
+}
+.bi-discord{
+  background-color: rgb(73, 60, 255);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1.5px;
+  padding-bottom: 1.5px;
+  border-radius: 50%;
+}
 /*トップの検索機能のレイアウト*/ 
 .tops_search_boards{
   margin-top: 10px;

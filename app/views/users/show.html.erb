@@ -69,6 +69,12 @@
         <strong>Age:</strong>
         <%= @user.age %>
       </div>
+
+      <div class ="discord_link" onclick="copyToClipboard('<%= @user.discord %>')" style="cursor: pointer;">
+        <strong><i class="bi bi-discord"></i></strong> <%= @user.discord %>
+        <span id="copy-notice" style="display: none; color: green;">(コピーしました!)</span>
+        <i class="bi bi-clipboard2-fill"></i>
+      </div>
       <% if @user == current_user %>
       <%= link_to 'Edit Profile', edit_user_path(@user), class: 'btn btn-primary' %>
     <% end %>
@@ -88,6 +94,19 @@
 
 
 <script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    // コピー成功時の表示
+    const notice = document.getElementById("copy-notice");
+    notice.style.display = "inline";
+    setTimeout(() => {
+      notice.style.display = "none";
+    }, 1500);
+  }, function(err) {
+    console.error("Failed to copy text: ", err);
+  });
+}
+
 document.addEventListener('turbo:load', function() {
   let slideIndex = 0; // 現在のスライドインデックス
   const images = <%= @user.slide_images.map { |slide| url_for(slide.image) }.to_json.html_safe %>;

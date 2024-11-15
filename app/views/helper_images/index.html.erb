@@ -1,0 +1,8 @@
+<h1><%= @helper_images.title %></h1>
+
+<%= image_tag @helper_images.image_file %> <!-- 画像の表示 -->
+
+<p><%= @helper_images.description %></p>
+<p>表示順: <%= @helper_images.position %></p>
+
+<%= link_to '戻る', images_path %>

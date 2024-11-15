@@ -29,6 +29,9 @@
       時間帯:<%= board.playtime.strftime("%H:%M")%>まで
     <%end%>
     </div>
+    <div class="tops_boards_freetext">
+      <%= board.freetext.present? ?  simple_format(board.freetext) : 'フリーテキストはありません' %>
+    </div>
   </div>
   <% end %>
 </div>

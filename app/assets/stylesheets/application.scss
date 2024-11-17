@@ -217,7 +217,7 @@
    top: 50%;
    right: 0;
    transform: translateY(-50%);
-   margin-right: 1%;
+   margin-right: 3px;
    font-size: 25px;
   }
   
@@ -228,11 +228,13 @@
   
   .mobile_login {
     color: aliceblue;
-    font-size: 15px;
+    font-size: 12px;
+    padding: 3px;
+    margin: 3px;
   }
   .mobile_board_request_header{
    color: aliceblue;
-   font-size: 15px;
+   font-size: 10px;
    background-color: #1100ff;
    border-radius: 8%;
   }

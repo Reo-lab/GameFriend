@@ -65,7 +65,9 @@
     <% end %>
     <div class="mobile_login_box">
     <% if user_signed_in? %>
-      <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: "delete", turbo_confirm: "ログアウトしますか？" }, class: "mobile_login" %>
+      <%= form_with url: destroy_user_session_path, method: :delete, data: { turbo: false }, html: { onsubmit: "return confirm('ログアウトしますか？');" } do %>
+       <button type="submit" class="mobile_login">ログアウト</button>
+      <% end %>
     <% else %>
       <%= link_to "ログイン", new_user_session_path, class: "mobile_login" %>
     <% end %>

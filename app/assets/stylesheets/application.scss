@@ -232,14 +232,15 @@
   }
   .mobile_board_request_header{
    color: aliceblue;
-   font-size: 50px;
+   font-size: 15px;
    background-color: #1100ff;
    border-radius: 8%;
   }
   .mobile_board_request_hader_box{
    flex: 0 0 auto;
    margin-left: auto;
-   margin-right: 130px;
+   margin-top: 10px;
+   margin-right: 60px;
   }
 }
 
@@ -365,7 +366,8 @@
     margin-left: 10px;
   }
   .profile_text_box_name{
-    font-size: 20px;
+    font-size: 15px;
+    width: 170px;
   }
   .profile_text_box{
     font-size: 15px;
@@ -650,6 +652,7 @@
 .tops_mid_search_box{
   display: inline-block;
   width: calc(100% - 19%);
+  min-height: 100vh;
   height: max-content;
   margin:15px 15px;
   background-color: #ffffff;
@@ -771,6 +774,7 @@
 }
 .board-request-item {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 1rem; /* アイテム間のスペースを調整 */
 }
 .boards_request_delete_link{
@@ -778,7 +782,18 @@
   margin-left: 80%;
   border: none;
 }
-
+@media screen and (max-width: 768px) {
+.bordrequest_box{
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: 0px;
+  border-radius: 10px;
+}
+}
 /* 募集版作成レイアウト*/
 .boards_new_title {
   display: inline-block;
@@ -847,6 +862,13 @@
   margin-left: 600px;
 }
 @media screen and (max-width: 768px) {
+  .submit_button{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 190px;
+  }
   .form_container{
     display: inline-block;
     width: 290px;
@@ -1404,6 +1426,66 @@
 .chatroom_delete_link{
   float: right;
 }
+@media screen and (max-width: 768px) {
+  .message {
+    display: flex;
+    align-items: flex-start;
+    width: max-content;
+    margin-bottom: 5px;
+    margin-left:5px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+  .message-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-icon-box {
+    width: 30px;
+    height: 30px;
+    margin-right: 3px;
+  }
+  
+  .user-icon-chat {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .message-info {
+    font-size: 10px;
+  }
+  
+  .message-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 70%;
+    font-size: 11px;
+  }
+
+  .timestamp-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #c4c4c4; /* .messagesと同じ背景色 */
+    border-radius: 5px;
+    position: absolute;
+    right: -70px; 
+    bottom: 0;
+  }
+  .timestamp {
+    font-size: 0.5em;
+    color: gray;
+  }
+  .chatroom_delete_link{
+    float: right;
+  }
+}
 /*チャットルームユーザー追加画面*/
 .user_add_container{
   display: flex;
@@ -1582,10 +1664,11 @@
   }
   .chatroom-delete-button{
     border: none;
-    width: 60px;
     border-radius: 4px;
-    margin-left: 5px;
     padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 }
 /*チャットルーム一覧のレイアウト*/

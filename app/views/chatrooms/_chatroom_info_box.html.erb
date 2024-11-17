@@ -17,7 +17,7 @@
         <div class="boards-box">
           <% chatroom.boards.each do |board| %>
             <div class="indexboardbox-wrapper">
-              <div class="tops_board_box">
+              <div class="tops_board_chat_index_box">
                 <div class="tops_user_info">
                   <div class="tops_user_icon_box">
                     <%= image_tag(board.user.icon_image, class: "tops_user_icon") if board.user.icon_image.attached? %>

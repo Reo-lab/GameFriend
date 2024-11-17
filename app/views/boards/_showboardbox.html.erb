@@ -1,4 +1,5 @@
 <% if board.openchanger %>
+<div class = "boardrequest_box_wrapper">
 <div class="tops_board_box">
   <%= link_to user_path(board.user.id), class: "board-link" do %>
   <div class="tops_user_info">
@@ -34,5 +35,6 @@
     </div>
   </div>
   <% end %>
+</div>
 </div>
 <% end %>

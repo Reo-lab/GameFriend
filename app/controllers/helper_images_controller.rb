@@ -1,7 +1,8 @@
 class HelperImagesController < ApplicationController
     def index
-        @@helper_images = HelperImage.all
+        @helper_images = HelperImage.all
     end
+
     def new
         @helper_image = HelperImage.new
     end
@@ -18,7 +19,7 @@ class HelperImagesController < ApplicationController
     private
 
     def set_image
-      @helper_image = HelperImage.find(params[:id])
+      @helper_image = HelperImage.all.order(:position)
     end
 
     def image_params

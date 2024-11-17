@@ -1,8 +1,11 @@
-<h1><%= @helper_images.title %></h1>
+<% if current_user %>
+<% if current_user.id == 1%>
+<% @helper_images.each do |image| %>
+<h1><%= image.title %></h1>
 
-<%= image_tag @helper_images.image_file %> <!-- 画像の表示 -->
+<%= image_tag image.image_file %> <!-- 画像の表示 -->
 
-<p><%= @helper_images.description %></p>
-<p>表示順: <%= @helper_images.position %></p>
-
-<%= link_to '戻る', images_path %>
+<p>表示順: <%= image.position %></p>
+<% end %>
+<% end%>
+<% end %>

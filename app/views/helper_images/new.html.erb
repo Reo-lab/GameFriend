@@ -1,3 +1,5 @@
+<% if current_user %>
+<% if current_user.id == 1%>
 <!-- app/views/images/new.html.erb -->
 <h1>新しい画像をアップロード</h1>
 
@@ -31,4 +33,6 @@
   <div class="actions">
     <%= form.submit "保存" %>
   </div>
+<% end %>
+<% end%>
 <% end %>

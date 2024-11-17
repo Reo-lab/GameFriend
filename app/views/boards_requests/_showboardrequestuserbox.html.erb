@@ -1,6 +1,6 @@
-<div class="index_board_box">
+<div class="index_board_user_box">
   <%= link_to user_path(board_request.user.id), class: "index_board_link" do %>
-  <div class="index_user_info">
+  <div class="index_user_request_info">
     <div class="index_user_icon_box">
       <%= image_tag(board_request.user.icon_image, class: "index_user_icon") if board_request.user.icon_image.attached? %>
     </div>

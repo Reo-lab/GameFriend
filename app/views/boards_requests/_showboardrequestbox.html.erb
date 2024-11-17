@@ -1,4 +1,5 @@
 <%if board.user == current_user %>
+  <div class = "board_request_index_box_wrapper">
   <div class="index_board_box">
     <%= link_to edit_board_path(board), class: "index_board_link" do %>
       <div class="index_openchanger_box">
@@ -43,4 +44,5 @@
     </div>
     <% end %>
   </div>
-  <%end%>
+  </div>
+<%end%>

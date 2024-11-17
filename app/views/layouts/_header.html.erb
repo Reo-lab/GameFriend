@@ -1,4 +1,5 @@
-<div class="header_body">
+<!-- デスクトップ -->
+<div class="header_desktop_body">
   <div class="left_icons">
     <div class="setup_icon_box">
       <%= link_to setups_path do %>
@@ -18,6 +19,7 @@
   </div>
   <div class="GameFriend_box">
     <%= link_to "GameFriend", "/", class: "GameFriend" %>
+    <i id="openModal", class="bi bi-question-circle"></i>
   </div>
   <% if current_user && current_user.boards_requests.present? %>
     <div class = "board_request_hader_box">
@@ -29,6 +31,43 @@
       <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: "delete", turbo_confirm: "ログアウトしますか？" } %>
     <% else %>
       <%= link_to "ログイン", new_user_session_path, class: "login" %>
+    <% end %>
+  </div>
+</div>
+
+<!-- モバイル -->
+<div class="header-mobile">
+  <div class="mobile_left_icons">
+    <div class="mobile_setup_icon_box">
+      <%= link_to setups_path do %>
+        <i class="bi bi-gear-wide"></i>
+      <% end %>
+    </div>
+    <div class="mobile_bell_icon_box">
+      <%= link_to '#', data: { bs_toggle: 'modal', bs_target: '#notificationsModal' } do %>
+        <i class="bi bi-bell"></i>
+      <% end %>
+    </div>
+    <div class="mobile_chat_icon_box">
+      <%= link_to chatrooms_path do %>
+        <i class="bi bi-chat-left-text"></i>
+      <% end %>
+    </div>
+    </div>
+    <div class="mobile_GameFriend_box">
+    <%= link_to "GameFriend", "/", class: "mobile_GameFriend" %>
+    <i id="openModal-mobile", class="bi bi-question-circle"></i>
+    </div>
+    <% if current_user && current_user.boards_requests.present? %>
+    <div class = "mobile_board_request_hader_box">
+      <%= link_to "応募中", request_index_path, class: "mobile_board_request_header" %>
+    </div>
+    <% end %>
+    <div class="mobile_login_box">
+    <% if user_signed_in? %>
+      <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: "delete", turbo_confirm: "ログアウトしますか？" }, class: "mobile_login" %>
+    <% else %>
+      <%= link_to "ログイン", new_user_session_path, class: "mobile_login" %>
     <% end %>
   </div>
 </div>

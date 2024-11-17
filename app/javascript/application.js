@@ -84,3 +84,54 @@ document.addEventListener('turbo:load', () => {
       .catch(error => console.error('Error:', error));
     });
   });
+
+  document.addEventListener('turbo:load', () => {
+    const modal = document.getElementById('slideshowModal');
+    const openModalButton = [
+      document.getElementById('openModal'),
+      document.getElementById('openModal-mobile')
+    ];
+    const closeModalButton = document.getElementById('closeModal');
+    const slides = document.querySelectorAll('.slide');
+    const nextButton = document.getElementById('nextSlide');
+    const prevButton = document.getElementById('prevSlide');
+    let slideIndex = 0;
+  
+    // モーダルを開く
+    openModalButton.forEach(button => {
+      button.addEventListener('click', () => {
+      modal.style.display = 'block';
+      showSlide(slideIndex);
+      });
+    });
+    // モーダルを閉じる
+    closeModalButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  
+    // 外をクリックでモーダルを閉じる
+    window.addEventListener('click', (e) => {
+      if (e.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  
+    // スライドを表示
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+    }
+  
+    // 次のスライド
+    nextButton.addEventListener('click', () => {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+    });
+  
+    // 前のスライド
+    prevButton.addEventListener('click', () => {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
+    });
+  });

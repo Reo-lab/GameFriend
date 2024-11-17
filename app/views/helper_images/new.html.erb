@@ -1,0 +1,38 @@
+<% if current_user %>
+<% if current_user.id == 1%>
+<!-- app/views/images/new.html.erb -->
+<h1>新しい画像をアップロード</h1>
+
+<%= form_with model: @helper_image, local: true do |form| %>
+  <% if @helper_image.errors.any? %>
+    <div class="errors">
+      <h2><%= pluralize(@helper_image.errors.count, "error") %> prohibited this image from being saved:</h2>
+      <ul>
+        <% @helper_image.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_file, "画像をアップロード" %>
+    <%= form.file_field :image_file %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.number_field :position %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "保存" %>
+  </div>
+<% end %>
+<% end%>
+<% end %>

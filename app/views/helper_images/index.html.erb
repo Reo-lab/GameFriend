@@ -1,0 +1,11 @@
+<% if current_user %>
+<% if current_user.id == 1%>
+<% @helper_images.each do |image| %>
+<h1><%= image.title %></h1>
+
+<%= image_tag image.image_file %> <!-- 画像の表示 -->
+
+<p>表示順: <%= image.position %></p>
+<% end %>
+<% end%>
+<% end %>

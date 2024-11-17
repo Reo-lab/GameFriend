@@ -1,35 +1,38 @@
 <% if board.openchanger %>
-<div class="tops_board_box">
-  <%= link_to board_path(board), class: "board-link" do %>
-  <div class="tops_user_info">
-    <div class="tops_user_icon_box">
-      <%= image_tag(board.user.icon_image, class: "tops_user_icon") if board.user.icon_image.attached? %>
-    </div>
-    <div class="tops_user_name">
-      <%= board.user.name %>
-    </div>
-    <% if (gametitle = Gametitle.find_by(id: board.boards_gametitle_id)) && gametitle.game_image.attached? %>
-      <div class="tops_game_image_box">
-        <%= image_tag(gametitle.game_image, class: "tops_game_image") %>
+<div class = "tops_board_box_wrapper">
+  <div class="tops_board_box">
+    <%= link_to board_path(board), class: "board-link" do %>
+    <div class="tops_user_info">
+      <div class="tops_user_icon_box">
+        <%= image_tag(board.user.icon_image, class: "tops_user_icon") if board.user.icon_image.attached? %>
       </div>
+      <div class="tops_user_name">
+        <%= board.user.name %>
+      </div>
+      <% if (gametitle = Gametitle.find_by(id: board.boards_gametitle_id)) && gametitle.game_image.attached? %>
+        <div class="tops_game_image_box">
+          <%= image_tag(gametitle.game_image, class: "tops_game_image") %>
+        </div>
+      <% end %>
+    </div>
+    <div class="realtime_notice">
+      リアルタイムで募集中！
+    </div>
+    <div class="tops_boards_info">
+      <div class="tops_boards_playstyle">
+        プレイスタイル:<%= board.playstyle %>
+      </div>
+      <div class="tops_boards_people">
+        募集人数:<%= board.number_of_people %>人
+      </div>
+      <div class="tops_boards_time">
+      <% if board.playtime %>
+        時間帯:<%= board.playtime.strftime("%H:%M")%>まで
+      <%end%>
+      </div>
+    </div>
     <% end %>
   </div>
-  <div class="realtime_notice">
-    リアルタイムで募集中！
-  </div>
-  <div class="tops_boards_info">
-    <div class="tops_boards_playstyle">
-      プレイスタイル:<%= board.playstyle %>
-    </div>
-    <div class="tops_boards_people">
-      募集人数:<%= board.number_of_people %>人
-    </div>
-    <div class="tops_boards_time">
-    <% if board.playtime %>
-      時間帯:<%= board.playtime.strftime("%H:%M")%>まで
-    <%end%>
-    </div>
-  </div>
-  <% end %>
 </div>
+
 <% end %>

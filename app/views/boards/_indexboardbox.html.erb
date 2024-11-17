@@ -1,4 +1,5 @@
 <%if board.user == current_user %>
+  <div class = "index_board_box_wrapper">
   <div class="index_board_box">
       <div class="index_openchanger_box">
         <% if board.openchanger %>
@@ -42,5 +43,6 @@
     </div>
     <%= link_to "編集",edit_board_path(board),class: "boards_index_edit_link" %>
     <%= link_to "公開/非公開切り替え", toggle_openchanger_board_path(board), method: :post, data: { turbo_method: :post }, class: "toggle_openchanger_button" %>
-    </div>
-  <%end%>
+  </div>
+  </div>
+<%end%>

@@ -1,46 +1,48 @@
 <%if board.user == current_user %>
-  <div class="index_board_box">
-    <%= link_to boards_request_path(board), class: "index_board_link" do %>
-      <div class="index_openchanger_box">
-        <% if board.openchanger %>
-          <div class = "index_openchanger_true">
-            ステータス: 公開
-          </div>
-        <% else %>
-          <div class = "index_openchanger_false">
-            ステータス: 非公開
+  <div class = "index_board_box_wrapper">
+    <div class="index_board_box">
+      <%= link_to boards_request_path(board), class: "index_board_link" do %>
+        <div class="index_openchanger_box">
+          <% if board.openchanger %>
+            <div class = "index_openchanger_true">
+              ステータス: 公開
+            </div>
+          <% else %>
+            <div class = "index_openchanger_false">
+              ステータス: 非公開
+            </div>
+          <% end %>
+        </div>
+      <div class="index_user_info">
+        <div class="index_user_icon_box">
+          <%= image_tag(board.user.icon_image, class: "index_user_icon") if board.user.icon_image.attached? %>
+        </div>
+        <div class="index_user_name">
+          <%= board.user.name %>
+        </div>
+        <% if (gametitle = Gametitle.find_by(id: board.boards_gametitle_id)) && gametitle.game_image.attached? %>
+          <div class="index_game_image_box">
+            <%= image_tag(gametitle.game_image, class: "index_game_image") %>
           </div>
         <% end %>
       </div>
-    <div class="index_user_info">
-      <div class="index_user_icon_box">
-        <%= image_tag(board.user.icon_image, class: "index_user_icon") if board.user.icon_image.attached? %>
+      <div class="index_realtime_notice">
+        リアルタイムで募集中！
       </div>
-      <div class="index_user_name">
-        <%= board.user.name %>
-      </div>
-      <% if (gametitle = Gametitle.find_by(id: board.boards_gametitle_id)) && gametitle.game_image.attached? %>
-        <div class="index_game_image_box">
-          <%= image_tag(gametitle.game_image, class: "index_game_image") %>
+      <div class="index_boards_info">
+        <div class="index_boards_playstyle">
+          プレイスタイル:<%= board.playstyle %>
         </div>
+        <div class="index_boards_people">
+          募集人数:<%= board.number_of_people %>人
+        </div>
+        <div class="index_boards_time">
+        <% if board.playtime %>
+          時間帯:<%= board.playtime.strftime("%H:%M")%>まで
+        <%end%>
+        </div>
+      </div>
       <% end %>
     </div>
-    <div class="index_realtime_notice">
-      リアルタイムで募集中！
-    </div>
-    <div class="index_boards_info">
-      <div class="index_boards_playstyle">
-        プレイスタイル:<%= board.playstyle %>
-      </div>
-      <div class="index_boards_people">
-        募集人数:<%= board.number_of_people %>人
-      </div>
-      <div class="index_boards_time">
-      <% if board.playtime %>
-        時間帯:<%= board.playtime.strftime("%H:%M")%>まで
-      <%end%>
-      </div>
-    </div>
-    <% end %>
   </div>
-  <%end%>
+<%end%>

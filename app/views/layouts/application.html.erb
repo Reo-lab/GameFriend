@@ -39,5 +39,25 @@
         </div>
       </div>
     </div>
+    <!-- モーダル -->
+    <div id="slideshowModal" class="slide-modal">
+      <div class="slide-modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <div class="slideshow-container">
+          <% if @helper_images.present? %>
+            <% @helper_images.each do |image| %>
+              <div class="slide" >
+                <%= image_tag image.image_file %>
+              </div>
+            <% end %>
+            <!-- 次/前ボタン -->
+          <% else %>
+            <p>No images available for the slideshow.</p>
+          <% end %>
+        </div>
+      </div>
+      <a class="prev" id="prevSlide">&#10094;</a>
+      <a class="next" id="nextSlide">&#10095;</a>
+    </div>
   </body>
 </html>

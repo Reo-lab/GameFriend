@@ -47,14 +47,18 @@
     </div>
   </div>
   <% if @boards %>
-  <% if @boards.user_id == current_user.id%>
-      <div class = "chatroom_delete_link">
-        <%= link_to 'Delete Chatroom', @chatroom, method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当にチャットルームを削除しますか?' }, class: "btn btn-danger" %>
-      </div>
-  <% end%>
+    <% if @boards.user_id == current_user.id%>
+        <div>
+          <%= form_with url: @chatroom, method: :delete, data: { turbo: false }, html: { onsubmit: "return confirm('本当にチャットルームを削除しますか?');" } do %>
+            <button type="submit" class="btn btn-danger">チャットルームを削除</button>
+          <% end %>
+        </div>
+    <% end%>
   <% else %>
-    <div class = "chatroom_delete_link">
-       <%= link_to 'Delete Chatroom', @chatroom, method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当にチャットルームを削除しますか?' }, class: "btn btn-danger" %>
+    <div>
+      <%= form_with url: @chatroom, method: :delete, data: { turbo: false }, html: { onsubmit: "return confirm('本当にチャットルームを削除しますか?');" } do %>
+        <button type="submit" class="btn btn-danger">チャットルームを削除</button>
+      <% end %>
     </div>
   <% end %>
 </div>

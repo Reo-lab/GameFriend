@@ -1770,6 +1770,16 @@ border-bottom-left-radius: 9px;
   transform-origin: top left;
   /* スケール時にコンテンツが親要素からはみ出さないようにする */
 }
+.tops_board_chat_index_box {
+  display: inline-block;
+  position: relative; /* 絶対配置の基準 */
+  width: 300px; /* 必要に応じて幅を調整 */
+  border: 1px solid #ccc; /* デザインのためのボーダー */
+  padding: 0px; /* 内側の余白 */
+  margin-top: 10px;
+  margin-left: 0px;
+  border-radius: 10px;
+}
 @media screen and (max-width: 768px) {
   .indexboardbox-wrapper {
     width: 50%;

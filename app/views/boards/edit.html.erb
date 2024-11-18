@@ -2,7 +2,10 @@
 <% breadcrumb :boards_edit,@board %>
 <%= render 'layouts/breadcrumbs' %>
 <%= render 'form' %>
+
 <div>
-    <%= link_to '募集版を削除', @board, method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当に募集版を削除しますか?' }, class: "btn btn-danger" %>
+  <%= form_with url: @board, method: :delete, data: { turbo: false }, html: { onsubmit: "return confirm('本当に募集版を削除しますか?');" } do %>
+      <button type="submit" class="btn btn-danger">募集版を削除</button>
+  <% end %>
 </div>
 <%= link_to 'Back', boards_path %>

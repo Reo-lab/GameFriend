@@ -45,6 +45,8 @@
   </div>
 </div>
   <div>
-  <%= link_to '取り消す', boards_request_path(board), method: :delete, data: { turbo_method: :delete, turbo_confirm: '本当に応募を取り消しますか?' }, class: "boards_request_delete_link" %>
+    <%= form_with url: boards_request_path(board), method: :delete, data: { turbo: false }, html: { onsubmit: "return confirm('本当に応募を取り消しますか?');" } do %>
+      <button type="submit" class="btn btn-danger">応募を取り消す</button>
+    <% end %>
   </div>
 </div>

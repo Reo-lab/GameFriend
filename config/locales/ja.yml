@@ -2,7 +2,7 @@ ja:
   devise:
     failure:
       user:
-        unauthenticated: "認証に失敗しました。ログイン情報を確認してください。"
+        unauthenticated: "ログインしてください。"
       unauthenticated: "認証に失敗しました。ログイン情報を確認してください。"
     sessions:
       signed_in: "ログインしました。"

@@ -2,6 +2,7 @@
 
 # BoardsController
 class BoardsController < ApplicationController
+  before_action :authenticate_user!, only: %i[show]
   before_action :set_board, only: %i[show edit update destroy toggle_openchanger]
   before_action :set_gametitles, only: %i[new edit create update]
   before_action :set_playstyles, only: %i[index new edit]

@@ -21,8 +21,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      redirect_to @user, notice: 'ユーザーが作成されました.'
     else
+      flash[:alert] = @user.errors.full_messages.join(", ")
       render :new
     end
   end

@@ -42,6 +42,26 @@ ja:
         boards_tag_id: タグID
         playtime: 何時まで
         freetext: フリーテキスト
+    errors:
+        models:
+          user:
+            attributes:
+              email:
+                blank: メールアドレスを入力してください
+                invalid: "無効なメールアドレスです"
+              password:
+                blank: "パスワードを入力してください"
+                too_short: "パスワードは %{count} 文字以上で入力してください"
+              name:
+                blank: "名前を入力してください"
+              gender:
+                blank: "性別を選択してください"
+                invalid: "無効な性別です"
+                is_not_a_valid_gender: "性別を選択してください"
+        messages:
+          blank: "を入力してください"
+          too_short: "は %{count} 文字以上で入力してください"
+          is_not_a_valid_gender: "性別を選択してください"
   helpers:
     submit:
       create: 作成

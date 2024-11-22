@@ -5,6 +5,6 @@ FactoryBot.define do
     gender {"male"}
     password { "password" }
     password_confirmation { "password" }
-    # その他、Userモデルに必要な属性を追加してください
+    confirmed_at { Time.now } 
   end
 end

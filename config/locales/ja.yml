@@ -49,6 +49,7 @@ ja:
               email:
                 blank: メールアドレスを入力してください
                 invalid: "無効なメールアドレスです"
+                taken: "emailは既に使われています"
               password:
                 blank: "パスワードを入力してください"
                 too_short: "パスワードは %{count} 文字以上で入力してください"

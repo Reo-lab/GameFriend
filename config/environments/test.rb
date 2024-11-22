@@ -9,8 +9,10 @@ require 'active_support/core_ext/integer/time'
 # and recreated between test runs. Don't rely on the data there!
 
 Rails.application.configure do
+  Rails.env = 'test'
+  config.default_url_options = { host: 'localhost', port: 3000 }
+  config.hosts << "localhost:3000"
   # Settings specified here will take precedence over those in config/application.rb.
-  config.hosts << 'gamefriend333.com'
   # Turn false under Spring and add config.action_view.cache_template_loading = true.
   config.cache_classes = true
 

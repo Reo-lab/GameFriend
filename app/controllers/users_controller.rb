@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user, notice: 'ユーザーが作成されました.'
     else
-      flash[:alert] = @user.errors.full_messages.join(", ")
+      flash[:alert] = @user.errors.full_messages.join(', ')
       render :new
     end
   end
@@ -34,9 +34,9 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       if params[:user][:cropped_icon].present?
         # Base64形式の画像データをデコードして保存
-        image_data = params[:user][:cropped_icon].gsub(/^data:image\/(png|jpg|jpeg);base64,/, '')
+        image_data = params[:user][:cropped_icon].gsub(%r{^data:image/(png|jpg|jpeg);base64,}, '')
         decoded_image = Base64.decode64(image_data)
-        temp_file = Tempfile.new(["cropped_icon", ".jpg"])
+        temp_file = Tempfile.new(['cropped_icon', '.jpg'])
         temp_file.binmode
         temp_file.write(decoded_image)
         temp_file.rewind

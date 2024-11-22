@@ -27,9 +27,9 @@ class Board < ApplicationRecord
   end
 
   def check_and_close!
-    if expired?
-      update(openchanger: false)
-    end
+    return unless expired?
+
+    update(openchanger: false)
   end
 
   def self.search(params)

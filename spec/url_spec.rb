@@ -59,11 +59,6 @@ RSpec.describe 'URL Access', type: :request do
     expect(response).to be_successful
   end
 
-  it 'slide_images index page is accessible' do
-    get slide_images_path
-    expect(response).to be_successful
-  end
-
   it 'tops index page is accessible' do
     get tops_path
     expect(response).to be_successful

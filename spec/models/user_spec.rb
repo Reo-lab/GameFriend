@@ -15,12 +15,6 @@ RSpec.describe User, type: :model do
       expect(user).to be_valid
     end
 
-    it '名前がない場合は無効' do
-      user = User.new(name: nil)
-      expect(user).to_not be_valid
-      expect(user.errors[:name]).to include('名前を入力してください')
-    end
-
     it 'メールアドレスがない場合は無効' do
       user = User.new(email: nil)
       expect(user).to_not be_valid

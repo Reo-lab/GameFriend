@@ -58,6 +58,8 @@ gem 'whenever', require: false
 gem 'meta-tags'
 
 gem 'sitemap_generator'
+
+gem 'factory_bot_rails'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -80,6 +82,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rubocop', require: false
+  gem 'rspec-rails', '~> 6.0'
 end
 
 group :development do

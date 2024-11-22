@@ -6,13 +6,21 @@
     <%= form.label :name, 'チャットルーム名' %>
     <%= form.text_field :name %>
   </div>
-  <%= hidden_field_tag :board_request_id, @board_request.id %>
-  <%= hidden_field_tag :board_id, @board_request.board.id %>
+  <% if @board_request %>
+    <%= hidden_field_tag :board_request_id, @board_request.id %>
+    <%= hidden_field_tag :board_id, @board_request.board.id %>
+  <% else %>
+    <p>ボードリクエストが見つかりません。</p>
+  <% end %>
   <div class="field">
+  <% if @user %>
     <p>チャットするユーザー: <%= @user.name %></p>
+  <% end %>
   </div>
+  <% if @user %>
   <%= hidden_field_tag "chatroom[user_ids][]", @user.id %>
   <%= hidden_field_tag "chatroom[user_ids][]", current_user.id %>
+  <% end %>
   <div class="actions">
     <%= form.submit 'チャットルーム作成' %>
   </div>

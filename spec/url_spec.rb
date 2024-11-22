@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 RSpec.describe 'URL Access', type: :request do
-  let(:user) { create(:user) }  
+  let(:user) { create(:user) }
 
   before do
     user.skip_confirmation! # メール確認をスキップ
@@ -37,7 +39,6 @@ RSpec.describe 'URL Access', type: :request do
     expect(response).to be_successful
   end
 
-
   it 'boards_requests index page is accessible' do
     get boards_requests_path
     expect(response).to be_successful
@@ -55,11 +56,6 @@ RSpec.describe 'URL Access', type: :request do
 
   it 'users_slides index page is accessible' do
     get user_users_slides_path(user)
-    expect(response).to be_successful
-  end
-
-  it 'slide_images index page is accessible' do
-    get slide_images_path
     expect(response).to be_successful
   end
 

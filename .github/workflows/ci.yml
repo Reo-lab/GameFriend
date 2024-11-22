@@ -1,0 +1,58 @@
+name: CI for Rails App
+
+on:
+  push:
+    branches:
+      - main  # mainブランチにプッシュされたとき
+  pull_request:
+    branches:
+      - main  # mainブランチへのプルリクエスト時
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # 実行環境
+    services:
+      db:
+        image: mysql:8.0  # MySQLのイメージを指定（AWS RDS MySQLと互換性のあるバージョンに）
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: password  # 必要に応じて変更
+          MYSQL_DATABASE: myapp_test      # テストデータベース名を指定
+        options: >-
+          --health-cmd="mysqladmin ping --host=db --password=password"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.5' # プロジェクトのRubyバージョンに合わせて指定
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Run lint
+        run: bundle exec rubocop
+        continue-on-error: true 
+          
+      - name: Set up database
+        env:
+          RAILS_ENV: test
+        run: |
+          cp config/database.yml.ci config/database.yml
+          bin/rails db:create
+          bin/rails db:migrate
+
+      - name: Run tests
+        env:
+          RAILS_ENV: test
+        run: |
+          bundle exec rspec

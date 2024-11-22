@@ -53,9 +53,7 @@ class BoardsController < ApplicationController
 
   def toggle_openchanger
     if @board.toggle!(:openchanger)
-      if @board.openchanger?
-        @board.update(end_time: Time.current + 24.hours)
-      end
+      @board.update(end_time: Time.current + 24.hours) if @board.openchanger?
       redirect_to boards_path, notice: 'Board was successfully changemode.'
     else
       render :board

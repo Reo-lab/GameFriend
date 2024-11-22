@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# HelperImagesController
 class HelperImagesController < ApplicationController
   def index
     @helper_images = HelperImage.all

@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
+# SlideImagesController
 class SlideImagesController < ApplicationController
   before_action :set_user
   def index
-    @Slide_Images = current_user.slide_images.all
+    @slide_images = current_user.slide_images.all
   end
 
   def new; end
@@ -11,7 +12,7 @@ class SlideImagesController < ApplicationController
   def create; end
 
   def show
-    @Slide_Images = current_user.slide_images.all
+    @slide_images = current_user.slide_images.all
   end
 
   def change; end

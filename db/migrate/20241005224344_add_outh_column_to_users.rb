@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# AddOuthColumnToUsers
 class AddOuthColumnToUsers < ActiveRecord::Migration[7.0]
   def change
     add_column :users, :provider, :string

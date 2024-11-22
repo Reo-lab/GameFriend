@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# UnlocksController
 module Users
   class UnlocksController < Devise::UnlocksController
     # GET /resource/unlock/new

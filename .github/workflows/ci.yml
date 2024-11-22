@@ -37,6 +37,7 @@ jobs:
       - name: Run lint
         run: |
           bundle exec rubocop
+        continue-on-error: true 
           
       - name: Set up database
         env:

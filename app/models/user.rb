@@ -17,11 +17,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable,
          :omniauthable, omniauth_providers: %i[google_oauth2]
 
-  validates :name, presence: true, length: { maximum: 20 }
-  validates :gender, presence: true
-  validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 6 }
-
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.name = auth.info.name

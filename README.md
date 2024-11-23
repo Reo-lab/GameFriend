@@ -1,9 +1,11 @@
 # GameFriend
+![21](https://github.com/user-attachments/assets/95e7858f-4ed1-46c2-aaf5-c3ddde09691c)
 # 画面遷移図
 https://www.figma.com/design/ZamX8I47EiBqaJx7EYuRao/Reo's-team-library?node-id=2331-2&t=y65jO756HAS5tYlG-1
 
 # ER図
 https://drive.google.com/file/d/1PAuCEfaVNKZDHcNVUgEJmQouFgiSywZs/view?usp=sharing
+<img width="1163" alt="2d043905e3474697b990967d52e4257c" src="https://github.com/user-attachments/assets/8b96dabf-2898-4d33-b913-a1174c5c879b">
 
 # 使用予定の技術一覧
 <img src="https://img.shields.io/badge/-Ruby-CC342D.svg?logo=ruby&style=flat">
@@ -90,7 +92,7 @@ TwitterやSNSでの宣伝を通じて、利用者を獲得していきたい。
 ### 通話機能の実装予定方法
     - 自作かAPIを使用するかの可否
         - 技術力アピールのためにAPIの通話サービスを使用せず、最終的にすべて自作で一度作成する予定
-        - しかし、沼った場合の時間、技術コストが大きすぎるため、代替手段としてAmazon Chime SDK を使用してのグループボイスチャットの実装を先に試す
+        - しかし、行き詰まった場合の時間、技術コストが大きすぎるため、代替手段としてAmazon Chime SDK を使用してのグループボイスチャットの実装を先に試す
         - 本番環境での検証で自作通話アプリが、どの程度の通信、サーバーコストが発生するかを確認して実装するかしないかを判断する
         - ユーザビリティを考えれば、API通話サービス(SDK,Twilio,SKYWAY)を使用した方が良い
         - しかし、APIを使用した場合、誰でも簡単に実装できるので技術力アピールに繋がるか不安
@@ -128,34 +130,38 @@ TwitterやSNSでの宣伝を通じて、利用者を獲得していきたい。
     - 募集検索機能
     - 募集応募機能
     - 応募許可機能
-    - 通知機能
-    - タグ機能
     - チャットルーム機能（特定のユーザだけが入室できる場所）
     - チャット機能
     - 滑らかなUI/UX
 ## 本リリースまでに作っていたいもの
     - ボイスチャット機能
-    - サーバー募集掲示板
+    - 通知機能
+    - googleログイン
     - ディスコのリンク設定
 ## 余裕があれば実装したいもの
     - ユーザー評価システム
     - ゲームニュースやゲーマー情報などのニュースサイト
     - カスタムマッチングフィルター(超詳細な検索)
 # ■ 機能の実装方針予定
-    - 言語：Railsのみ
+    - 言語：Rails Javascript
     - 開発環境: Docker
-    - サーバー：AWS
+    - サーバー：AWS(EC2+RDS)+nginx
     - UI、UX
-        - CSSライブラリ(TailWind)
+        - CSS
     - ボイスチャット機能
-        - ActionCable+Websocket+WebRTCによるP2P通信
+        - ActionCable+Javascript+WebRTCによるP2P通信
         - 課題：通信量でかかるサーバーコスト（要検討）
     - チャット機能
-        - ActionCable+Websocket
+        - ActionCable+Javascript
+    - 通知機能
+        - ActionCable+Javascript
     - ユーザー認証
     　  - Device
-    - 検索機能
-        -Hotwire
     - 画像アップロード、表示
         - ImageMagick
         - MiniMagick
+    - テスト
+        - rspec
+        - rubocop
+    - CI
+        - GitHubActions

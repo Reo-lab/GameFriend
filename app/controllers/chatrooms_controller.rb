@@ -6,12 +6,17 @@ class ChatroomsController < ApplicationController
   before_action :set_chatroom, only: %i[show destroy add_users user_add remove_users]
 
   def index
-    @chatrooms = Chatroom.joins(:boards_chatrooms_users).where(boards_chatrooms_users: { user_id: current_user.id })
+    @chatrooms = Chatroom
+                    .includes(:boards)                               # boardsを事前ロード
+                    .includes(users: { icon_image_attachment: :blob }) # ユーザーと添付ファイルを事前ロード
+                    .joins(:boards_chatrooms_users)                  # 必要な結合
+                    .where(boards_chatrooms_users: { user_id: current_user.id })
   end
 
   def show
     @messages = @chatroom.messages
     @boards = @chatroom.boards.first
+    @users = @chatroom.users.includes(icon_image_attachment: :blob)
   end
 
   def new
@@ -39,6 +44,7 @@ class ChatroomsController < ApplicationController
   def user_add
     @boards = @chatroom.boards
     @board_requests = @boards.map(&:boards_requests).flatten
+    @users = @chatroom.users.includes(icon_image_attachment: :blob)
   end
 
   def add_users

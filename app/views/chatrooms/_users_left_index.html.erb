@@ -1,7 +1,7 @@
 <div class="chatroom-left-users">
   ユーザー
   <ul>
-  <% @chatroom.users.each do |user| %>
+  <% @users.each do |user| %>
     <%= link_to user_path(user.id) do %>
       <li>
       <%= image_tag(user.icon_image.attached? ? user.icon_image : 'default_user_icon.png',class: "user-icon-chat") %>

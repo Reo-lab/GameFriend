@@ -89,4 +89,13 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  config.after_initialize do
+    Bullet.enable = true                # Bulletを有効化
+    Bullet.alert = true                 # ブラウザに通知
+    Bullet.bullet_logger = true         # Bullet専用ログを記録
+    Bullet.console = true               # コンソールに通知
+    Bullet.rails_logger = true          # Railsログに通知
+    Bullet.add_footer = true            # HTMLフッターに通知を追加
+  end
 end

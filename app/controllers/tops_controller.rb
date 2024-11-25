@@ -5,7 +5,7 @@ class TopsController < ApplicationController
   before_action :set_gametitles, only: %i[new edit create update]
   before_action :set_playstyles, only: %i[index new edit]
   def index
-    @boards = Board.all
+    @boards = Board.includes(:user)
     @gametitles = Gametitle.pluck(:gamename, :id)
     @search_boards = Board.all
     if params[:query].present? || params[:playstyle].present? || params[:playtime].present? || params[:gametitle].present?

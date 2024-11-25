@@ -8,11 +8,11 @@ class BoardsRequestsController < ApplicationController
   before_action :set_board_request, only: %i[approve destroy]
 
   def index
-    @boards = Board.where(user: current_user)
+    @boards = Board.where(user: current_user).includes(:user)
   end
 
   def request_index
-    @board_requests = BoardsRequest.all
+    @board_requests = BoardsRequest.includes(:board).includes(:user)
   end
 
   def show

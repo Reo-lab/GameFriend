@@ -1,26 +1,31 @@
-# GameFriend
+# アプリ名【GameFriend】
 ![21](https://github.com/user-attachments/assets/95e7858f-4ed1-46c2-aaf5-c3ddde09691c)
-# 画面遷移図
-https://www.figma.com/design/ZamX8I47EiBqaJx7EYuRao/Reo's-team-library?node-id=2331-2&t=y65jO756HAS5tYlG-1
+<img src="https://img.shields.io/badge/-Ruby-CC342D.svg?logo=ruby&style=flat">　<img src="https://img.shields.io/badge/-Rails-D30001.svg?logo=ruby-on-rails&style=flat">　<img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat">　<img src="https://img.shields.io/badge/-Amazon%20AWS-232F3E.svg?logo=amazon-aws&style=flat">
 
-# ER図
-https://drive.google.com/file/d/1PAuCEfaVNKZDHcNVUgEJmQouFgiSywZs/view?usp=sharing
-<img width="1163" alt="2d043905e3474697b990967d52e4257c" src="https://github.com/user-attachments/assets/8b96dabf-2898-4d33-b913-a1174c5c879b">
+# 目次
+- [サービス概要](#サービス概要)
+- [サービスURL](#サービスurl)
+- [サービス開発の背景](#サービス開発の背景)
+- [サービスの利用イメージ](#サービスの利用イメージ)
+- [技術構成について](#技術構成について)
+  - [使用技術](#使用技術)
+  - [ER図](#er図)
+  - [画面遷移図](#画面遷移図)
 
-# 使用予定の技術一覧
-<img src="https://img.shields.io/badge/-Ruby-CC342D.svg?logo=ruby&style=flat">
-<img src="https://img.shields.io/badge/-Rails-D30001.svg?logo=ruby-on-rails&style=flat">
-<img src="https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat">
-<img src="https://img.shields.io/badge/-Amazon%20AWS-232F3E.svg?logo=amazon-aws&style=flat">
+##  ◇ サービス概要 ◇<a id="サービス概要"></a>
+　一緒にゲームをしたい人達がリアルタイムで表示されるゲーマーのマッチングアプリです。
 
-# ■ サービス概要
-### 一緒にゲームをしたい人達がリアルタイムで表示されるゲーマーのマッチングアプリです。
+　ゲームをやりたいけど一緒に遊ぶ相手がいない、そんな時に全国から一緒に遊べる人を探せます。
 
-### ゲームをやりたいけど一緒に遊ぶ相手がいない、そんな時に全国から一緒に遊べる人を探せます。
+　ゲーマー達の繋がりをさらに広げて、気が合う人達とすぐに出会えるそんなサービスです。
 
-### ゲーマー達の繋がりをさらに広げて、気が合う人達とすぐに出会えるそんなサービスです。
 
-# ■ このサービスへの思い・作りたい理由
+##  ◇ サービスURL ◇<a id="サービスurl"></a>
+  https://gamefriend333.com/
+
+<br>
+
+##  ◇ サービス開発の背景 ◇<a id="サービス開発の背景"></a>
 
 - 誰かと一緒に遊びたい。1人より複数人で遊んだ方が絶対楽しい。けど今は、フレンドが用事で遊べない。
 
@@ -31,99 +36,94 @@ https://drive.google.com/file/d/1PAuCEfaVNKZDHcNVUgEJmQouFgiSywZs/view?usp=shari
 - そんなことが多かったので、よりスムーズに遊べる人を探して見つけられるこのサービスを思いつきました。
 
 
-# ■ ユーザー層について
-## PCゲーマー
 
-PCゲームとWEBブラウザは非常に親和性が高いと思います。
+##  ◇ ユーザー層について ◇<a id="ユーザー層について"></a>
+  ### ・PCゲーマー
+&nbsp;&nbsp;&nbsp;&nbsp;PCゲームとWEBブラウザは非常に親和性が高いと思います。
+   
+&nbsp;&nbsp;&nbsp;&nbsp;大体のpcゲーマーはゲームをしながら動画を見たり、待機時間でネットサーフィンをするものです。
+   
+&nbsp;&nbsp;&nbsp;&nbsp;なので入り口として、ブラウザサービスの利用ハードルは低いと思います。
 
-大体のpcゲーマーはゲームをしながら動画を見たり、待機時間でネットサーフィンをするものです。
+  ### ・1人ゲーマー
+&nbsp;&nbsp;&nbsp;&nbsp;やはりゲームは、複数人で一緒にプレイした方が面白く楽しいです。
+   
+&nbsp;&nbsp;&nbsp;&nbsp;また、ゲームによっては複数人で協力する前提のものが多くあります。
+   
+&nbsp;&nbsp;&nbsp;&nbsp;実際に、フレンドとチームを組んでプレイする人が経験上多いです。
+   
+&nbsp;&nbsp;&nbsp;&nbsp; 一緒に誰かと遊びたい人、上手くなるために教えてほしい人、誰かにコツを伝授したい人、そんな人たちがターゲットです。
 
-なので入り口として、ブラウザサービスの利用ハードルは低いと思います。
+<br>
 
-## 一人ゲーマー
-やはりゲームは、複数人で一緒にプレイした方が面白く楽しいです。
+# ◇ サービスの利用イメージ ◇<a id="サービスの利用イメージ"></a>
 
-また、ゲームによっては複数人で協力する前提のものが多くあります。
+| TOP画面 |
+| :---: | 
+| ![1](https://github.com/user-attachments/assets/796e54aa-310e-40ba-ba46-2ac75e9a9473) |
+| まずユーザーがサイトに訪れたら、リアルタイムで募集をかけている人たちがトップページに表示されます。 |
 
-実際に、フレンドとチームを組んでプレイする人が経験上多いです。
+| 募集版詳細画面 |
+| :---: | 
+| ![2](https://github.com/user-attachments/assets/4668247b-76f3-4466-864a-fcfc74d9fc9e) |
+| その募集条件を見て自分に合っていると思う募集に応募します。 |
 
-一緒に誰かと遊びたい人たち、上手くなるために教えてほしい人たち、誰かにコツを伝授したい人たち、そんな人たちがターゲットです。
+| 募集版作成 |
+| :---: | 
+| ![3](https://github.com/user-attachments/assets/b8235f6e-e97f-48e5-b7ad-a5e11e0c094a) |
+| また、募集に合いそうなものがなければ自分で募集を作成します。 |
 
+| チャットルーム画面　|
+| :---: | 
+| ![4](https://github.com/user-attachments/assets/9081b6d8-4f80-4fd9-a021-35e23d64dc36) |
+| 応募をした後に、募集をしている側が承諾すると、チャットルームが作成されます。 |
+| チャットやボイスチャットを通じて、実際にプレイするか、ゲームでフレンドになるか、どこで通話するかなどを話し合えます。 |
 
-# ■サービスの利用イメージ
+<br>
 
-まずユーザーがサイトに訪れたら、リアルタイムで野良募集をかけている人たちがトップページに表示されます。
+# 技術構成について
 
-その募集条件を見て自分に合っていると思う募集に応募します。また、募集に合いそうなものがなければ自分で募集を作成します。
+## 使用技術
+| カテゴリ | 技術内容 |
+| --- | --- | 
+| サーバーサイド | Ruby on Rails 7.0.8・Ruby 3.1.5 |
+| フロントエンド | Ruby on Rails・JavaScript |
+| CSS | Sassc + Bootstrap |
+| データベースサーバー | AWS RDS |
+| アプリケーションサーバー | AWS EC2 puma|
+| バージョン管理ツール | GitHub・Git Flow |
 
-応募をした後に、募集をしている側が承諾すると、2人だけのチャットルームが作成されます。
+## ER図
+https://drive.google.com/file/d/1PAuCEfaVNKZDHcNVUgEJmQouFgiSywZs/view?usp=sharing
+<img width="1163" alt="2d043905e3474697b990967d52e4257c" src="https://github.com/user-attachments/assets/8b96dabf-2898-4d33-b913-a1174c5c879b">
 
-そこで、チャットやボイスチャットを通じて、実際にプレイするか、ゲームでフレンドになるか、どこで通話するかなどを話し合っていただけます。
+## 画面遷移図
+https://www.figma.com/design/ZamX8I47EiBqaJx7EYuRao/Reo's-team-library?node-id=2331-2&t=y65jO756HAS5tYlG-1
 
+<br>
 
-これによって、ユーザーはスムーズに一緒にゲームをする人を見つけられ、楽しいゲームライフを送ることができます。
+# 使用技術一覧
 
-### 募集できる条件
-    - ゲームタイトル
-    - プレイスタイル
-    - 募集する人数
-    - 性別 (必須ではない)
-    - プレイできる時間帯
-    - その他フリー入力スペース
-
-
-# ■ ユーザーの獲得について
-TwitterやSNSでの宣伝を通じて、利用者を獲得していきたい。
-
-想定したユーザー層に対してそれぞれどのようにサービスを届けるのか現状考えていることがあれば教えてください。
-
-# ■ サービスの差別化ポイント・推しポイント
-## 似たようなサービス
-- ディス速
-    - 差別化ポイント
-        - 自分が設定したタグの募集があると通知が届く
-        - リアルタイムでゲームをしたい人たちと出会える
-        - 自分が設定したタグの募集があると通知が届く
-        - 募集掲示板のようなものよりもユーザーはスムーズなマッチングができる
-        - 通話機能
-            - WEB上で通話がすぐできることで、どんな人かどうかをより早く把握できる
-            - なりすましや、迷惑ユーザー対策になる
-
-### 通話機能の実装予定方法
+### 通話機能の実装方法
     - 自作かAPIを使用するかの可否
-        - 技術力アピールのためにAPIの通話サービスを使用せず、最終的にすべて自作で一度作成する予定
-        - しかし、行き詰まった場合の時間、技術コストが大きすぎるため、代替手段としてAmazon Chime SDK を使用してのグループボイスチャットの実装を先に試す
-        - 本番環境での検証で自作通話アプリが、どの程度の通信、サーバーコストが発生するかを確認して実装するかしないかを判断する
-        - ユーザビリティを考えれば、API通話サービス(SDK,Twilio,SKYWAY)を使用した方が良い
-        - しかし、APIを使用した場合、誰でも簡単に実装できるので技術力アピールに繋がるか不安
-        - この通話機能が、本アプリの技術力、キャッチアップ力アピールの肝になっている
-        - もし通話APIを使用する場合、他の技術力が示せる機能を追加しないといけない
-        - また、通話APIサービスを使用するコストもそれなりにかかる
+        - 技術力アピールのためにAPIの通話サービスを使用せず、最終的にすべて自作で作成
+
+    - 自作で通話機能を作成した手順
+        - 音声通話確立までの流れ
+            - WebRTCを使用してブラウザ間のP2P接続を確立するためにSDPとICEの交換が必要
+            - SDPとICE交換のためにシグナリングサーバーをセットアップ,この役割をRails Action Cableが担うようにする
+                - actioncableをシグナリングサーバーとして使用する方法
+                    - 以下のMITが公開しているシグナリングサーバーを参考にactioncableでのsignalingserver.jsを作成
+                    - https://github.com/jeanpaulsio/action-cable-signaling-server
+            - ユーザーが接続を開始すると、Rails Action Cable経由でSDPやICE情報を交換する。これにより、ブラウザ間でのP2P接続が確立される。
+            - 接続が確立されると、ブラウザ間での音声ストリームの送受信が可能になり、リアルタイムの音声通話が実現される。
 
     - WebRTCとは
         -WebRTCとは(参考サイト)
             - WebRTCの概要：https://skyway.ntt.com/blog/entry/webrtc
             - WebRTCをほぼ学べるサイトhttps://zenn.dev/voluntas/scraps/82b9e111f43ab3
-        -　懸念点　
-            - P2Pでの複数人通信は実装可能だが、通信量,サーバー負担,クライアントの負担がどの程度になるか不確定
 
-    - 自作で通話機能を作成する手順
-        - 音声通話確立までの流れ
-            - WebRTCを使用してブラウザ間のP2P接続を確立するためにSDPとICEの交換が必要
-            - SDPとICE交換のためにシグナリングサーバーをセットアップ,この役割をRails Action Cableが担うようにする
-                - actioncableをシグナリングサーバーとして使用する方法
-                    - 以下のMITが公開しているシグナリングサーバーを参考にactioncableでのsignalingserver.jsを作成（ローカル動作確認済み）
-                    - https://github.com/jeanpaulsio/action-cable-signaling-server
-            - ユーザーが接続を開始すると、Rails Action Cable経由でSDPやICE情報を交換する。これにより、ブラウザ間でのP2P接続が確立される。
-            - 接続が確立されると、ブラウザ間での音声ストリームの送受信が可能になり、リアルタイムの音声通話が実現される。
-
-        - TURN,STUNサーバーの実装
-            - coTurnを使用する予定(https://github.com/coturn/coturn)
-            - EC2上にcoTurnで実装する
-
-
-# ■ 機能候補
-## MVPリリースまでに作っていたいもの
+### 機能一覧
     - ログイン機能
     - プロフィール機能ー画像
     - リアルタイム募集機能ー表示/非表示
@@ -133,16 +133,17 @@ TwitterやSNSでの宣伝を通じて、利用者を獲得していきたい。
     - チャットルーム機能（特定のユーザだけが入室できる場所）
     - チャット機能
     - 滑らかなUI/UX
-## 本リリースまでに作っていたいもの
     - ボイスチャット機能
     - 通知機能
     - googleログイン
     - ディスコのリンク設定
-## 余裕があれば実装したいもの
+    -- 今後実装したいもの　--
     - ユーザー評価システム
     - ゲームニュースやゲーマー情報などのニュースサイト
     - カスタムマッチングフィルター(超詳細な検索)
-# ■ 機能の実装方針予定
+
+
+### 機能の実装技術一覧
     - 言語：Rails Javascript
     - 開発環境: Docker
     - サーバー：AWS(EC2+RDS)+nginx

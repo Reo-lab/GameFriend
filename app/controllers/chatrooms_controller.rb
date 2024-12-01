@@ -7,10 +7,10 @@ class ChatroomsController < ApplicationController
 
   def index
     @chatrooms = Chatroom
-                    .includes(:boards)                               # boardsを事前ロード
-                    .includes(users: { icon_image_attachment: :blob }) # ユーザーと添付ファイルを事前ロード
-                    .joins(:boards_chatrooms_users)                  # 必要な結合
-                    .where(boards_chatrooms_users: { user_id: current_user.id })
+                 .includes(:boards)
+                 .includes(users: { icon_image_attachment: :blob })
+                 .joins(:boards_chatrooms_users)
+                 .where(boards_chatrooms_users: { user_id: current_user.id })
   end
 
   def show
@@ -27,15 +27,11 @@ class ChatroomsController < ApplicationController
 
   def create
     @chatroom = Chatroom.new(chatroom_params)
+
     if @chatroom.save
-      user_ids = params[:chatroom][:user_ids].uniq
-      create_boards_chatrooms_users(@chatroom, user_ids)
+      handle_chatroom_users
+      handle_associated_board
       redirect_to @chatroom, notice: 'チャットルームが作成されました。'
-      board_id = params[:board_id]
-      if board_id.present?
-        boards = Board.find(board_id)
-        @chatroom.boards << boards
-      end
     else
       render :new
     end
@@ -77,6 +73,19 @@ class ChatroomsController < ApplicationController
   end
 
   private
+
+  def handle_chatroom_users
+    user_ids = params[:chatroom][:user_ids].uniq
+    create_boards_chatrooms_users(@chatroom, user_ids)
+  end
+
+  def handle_associated_board
+    board_id = params[:board_id]
+    return unless board_id.present?
+
+    board = Board.find(board_id)
+    @chatroom.boards << board
+  end
 
   def set_chatroom
     @chatroom = Chatroom.find(params[:id])

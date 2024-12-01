@@ -7,10 +7,7 @@ class TopsController < ApplicationController
   def index
     @boards = Board.includes(:user)
     @gametitles = Gametitle.pluck(:gamename, :id)
-    @search_boards = Board.all
-    if params[:query].present? || params[:playstyle].present? || params[:playtime].present? || params[:gametitle].present?
-      @search_boards = Board.search(params)
-    end
+    @search_boards = fetch_search_boards
   end
 
   private
@@ -21,5 +18,17 @@ class TopsController < ApplicationController
 
   def set_gametitles
     @gametitles = Gametitle.pluck(:gamename, :id)
+  end
+
+  def fetch_search_boards
+    if search_params_present?
+      Board.search(params)
+    else
+      Board.all
+    end
+  end
+
+  def search_params_present?
+    params[:query].present? || params[:playstyle].present? || params[:playtime].present? || params[:gametitle].present?
   end
 end

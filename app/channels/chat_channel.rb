@@ -19,7 +19,7 @@ class ChatChannel < ApplicationCable::Channel
 
   def create_message(content)
     Message.create!(
-      content: content,
+      content:,
       user: current_user,
       chatroom_id: params[:chatroom_id]
     )

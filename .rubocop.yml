@@ -1,6 +1,9 @@
 AllCops:
-  TargetRubyVersion: 3.1.5 # お使いのRubyのバージョンに合わせて変更してください
+  TargetRubyVersion: 3.1.5
   Exclude:
     - db/schema.rb
     - bin/*
     - vendor/*
+    - 'config/**/*'
+    - 'db/migrate/**/*'
+    - 'spec/**/*'

@@ -5,7 +5,7 @@ class TopsController < ApplicationController
   before_action :set_gametitles, only: %i[new edit create update]
   before_action :set_playstyles, only: %i[index new edit]
   def index
-    @boards = Board.includes(:user)
+    @boards = Board.includes(user: { icon_image_attachment: :blob })
     @gametitles = Gametitle.pluck(:gamename, :id)
     @search_boards = fetch_search_boards
   end

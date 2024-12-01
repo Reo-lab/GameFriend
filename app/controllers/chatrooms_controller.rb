@@ -14,7 +14,7 @@ class ChatroomsController < ApplicationController
   end
 
   def show
-    @messages = @chatroom.messages
+    @messages = @chatroom.messages.includes(:user)
     @boards = @chatroom.boards.first
     @users = @chatroom.users.includes(icon_image_attachment: :blob)
   end

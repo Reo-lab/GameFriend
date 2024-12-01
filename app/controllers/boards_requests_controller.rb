@@ -21,16 +21,11 @@ class BoardsRequestsController < ApplicationController
   end
 
   def create
-    @board_request = @board.boards_requests.new(board_request_params)
-    @board_request.user = current_user
-    gametitle = Gametitle.find_by(id: @board.boards_gametitle_id)
-    game_title = gametitle.gamename
-    message = "#{current_user.name}さんが#{game_title}の募集版に応募しました。"
+    @board_request = build_board_request
+    game_title = fetch_game_title
+    message = build_message(game_title)
     if @board_request.save
-      Notification.create(
-        user: @board.user,
-        message:
-      )
+      send_notification(message)
       redirect_to @board, notice: '応募が正常に送信されました。'
     else
       redirect_to @board, alert: '応募に失敗しました。'
@@ -68,6 +63,28 @@ class BoardsRequestsController < ApplicationController
 
   def set_board_request
     @board_request = BoardsRequest.find(params[:id])
+  end
+
+  def build_board_request
+    request = @board.boards_requests.new(board_request_params)
+    request.user = current_user
+    request
+  end
+
+  def fetch_game_title
+    gametitle = Gametitle.find_by(id: @board.boards_gametitle_id)
+    gametitle.gamename
+  end
+
+  def build_message(game_title)
+    "#{current_user.name}さんが#{game_title}の募集版に応募しました。"
+  end
+
+  def send_notification(message)
+    Notification.create(
+      user: @board.user,
+      message:
+    )
   end
 
   def board_request_params

@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 
 # application.rb
 module App
+  # application.rb
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0

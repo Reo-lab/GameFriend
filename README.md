@@ -123,6 +123,11 @@ https://www.figma.com/design/ZamX8I47EiBqaJx7EYuRao/Reo's-team-library?node-id=2
             - WebRTCの概要：https://skyway.ntt.com/blog/entry/webrtc
             - WebRTCをほぼ学べるサイトhttps://zenn.dev/voluntas/scraps/82b9e111f43ab3
 
+https://qiita.com/Reo-lab/items/90a037f5c18c027342d1
+
+
+↑　通話機能の作成方法について、詳しくはこちらの記事に書いています
+
 ### 機能一覧
     - ログイン機能
     - プロフィール機能ー画像

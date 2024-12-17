@@ -77,7 +77,7 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   # Suppress logger output for asset requests.
-  config.assets.debug = true
+  config.assets.digest = false
   config.assets.compile = true
 
   config.web_console.allowed_ips = '172.19.0.1'

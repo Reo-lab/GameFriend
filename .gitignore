@@ -12,3 +12,5 @@ config/master.key
 .env
 
 storage
+/app/assets/builds/*
+!/app/assets/builds/.keep

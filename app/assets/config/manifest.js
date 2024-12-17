@@ -5,3 +5,4 @@
 //= link application.js
 //= link application.css
 //= link bootstrap.min.js
+//= link_tree ../builds

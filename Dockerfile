@@ -5,11 +5,15 @@ FROM ruby:3.1.5
 # 必要なパッケージをインストール
 RUN apt-get update -qq && apt-get install -y \
     nodejs \
+    npm \
     yarn \
     default-mysql-client \
     cron \
     supervisor && \
     apt-get clean
+
+# Tailwind CSS, PostCSS, Autoprefixer をインストール
+RUN npm install -g tailwindcss postcss autoprefixer
 
 # 作業ディレクトリの作成
 WORKDIR /app

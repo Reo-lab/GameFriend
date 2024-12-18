@@ -77,8 +77,9 @@ Rails.application.configure do
   config.active_record.verbose_query_logs = true
 
   # Suppress logger output for asset requests.
-  config.assets.debug = true
   config.assets.compile = true
+  config.assets.debug = false
+  config.assets.digest = false
 
   config.web_console.allowed_ips = '172.19.0.1'
   # Raises error for missing translations.

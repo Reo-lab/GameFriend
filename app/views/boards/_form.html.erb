@@ -1,49 +1,57 @@
 <%= form_with(model: @board, local: true) do |form| %>
-  <div class="form_container">
+  <div class="inline-block w-[40rem] ml-14 mt-2 p-6 bg-gray-200  rounded-lg ">
     <% if @board.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@board.errors.count, "件のエラーが発生しました") %>:</h2>
-  
-        <ul>
+      <div id="error_explanation" class="mb-4 p-4 border border-red-400 bg-red-100 text-red-600 rounded">
+        <h2 class="font-semibold text-lg"><%= pluralize(@board.errors.count, "件のエラーが発生しました") %>:</h2>
+        <ul class="mt-2 list-disc pl-5">
           <% @board.errors.full_messages.each do |message| %>
             <li><%= message %></li>
           <% end %>
         </ul>
       </div>
     <% end %>
-  
-    <div class="field">
-      <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id') %>
-      <%= form.select :boards_gametitle_id, options_for_select(@gametitles, @board.boards_gametitle_id), {}, class: 'custom-input' %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :playstyle, t('activerecord.attributes.board.playstyle') %>
-      <%= form.select :playstyle, options_for_select(@playstyles, @board.playstyle), {}, class: 'custom-input' %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :number_of_people, t('activerecord.attributes.board.number_of_people') %>
-      <%= form.number_field :number_of_people, class: 'custom-input' %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :openchanger, t('activerecord.attributes.board.openchanger') %>
-      <%= form.select :openchanger, options_for_select([['公開', true], ['非公開', false]]), {}, class: 'custom-input-openchanger' %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :playtime, t('activerecord.attributes.board.playtime') %>
-      <%= form.time_field :playtime, class: 'custom-input' %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :freetext, t('activerecord.attributes.board.freetext') %>
-      <%= form.text_area :freetext, class: 'custom-textarea' %>
-    </div>
-  
-    <div class="actions">
-      <%= form.submit @board.persisted? ? t('helpers.submit.update') : t('helpers.submit.create'), class:'submit_button' %>
+    
+    <div class="space-y-2">
+      <!-- Game Title -->
+      <div class="field">
+        <%= form.label :boards_gametitle_id, t('activerecord.attributes.board.boards_gametitle_id'), class: 'block text-xl w-50 font-medium text-gray-700 my-2' %>
+        <%= form.select :boards_gametitle_id, options_for_select(@gametitles, @board.boards_gametitle_id), {}, class: 'w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500' %>
+      </div>
+      
+      <!-- Playstyle -->
+      <div class="field">
+        <%= form.label :playstyle, t('activerecord.attributes.board.playstyle'), class: 'block text-xl w-50 font-medium text-gray-700 my-2' %>
+        <%= form.select :playstyle, options_for_select(@playstyles, @board.playstyle), {}, class: 'w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500' %>
+      </div>
+      
+      <!-- Number of People -->
+      <div class="field">
+        <%= form.label :number_of_people, t('activerecord.attributes.board.number_of_people'), class: 'block text-xl w-50 font-medium text-gray-700 my-2' %>
+        <%= form.number_field :number_of_people, class: 'w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500' %>
+      </div>
+      
+      <!-- Open Changer -->
+      <div class="field">
+        <%= form.label :openchanger, t('activerecord.attributes.board.openchanger'), class: 'block text-xl w-50 font-medium text-gray-700 my-2' %>
+        <%= form.select :openchanger, options_for_select([['公開', true], ['非公開', false]]), {}, class: 'w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500' %>
+      </div>
+      
+      <!-- Playtime -->
+      <div class="field">
+        <%= form.label :playtime, t('activerecord.attributes.board.playtime'), class: 'block text-xl w-50 font-medium text-gray-700 my-2' %>
+        <%= form.time_field :playtime, class: 'w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500' %>
+      </div>
+      
+      <!-- Free Text -->
+      <div class="field">
+        <%= form.label :freetext, t('activerecord.attributes.board.freetext'), class: 'block text-xl w-44 font-medium text-gray-700 my-2' %>
+        <%= form.text_area :freetext, class: 'w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500' %>
+      </div>
+      
+      <!-- Submit Button -->
+      <div class="actions">
+        <%= form.submit @board.persisted? ? t('helpers.submit.update') : t('helpers.submit.create'), class: 'w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' %>
+      </div>
     </div>
   </div>
 <% end %>

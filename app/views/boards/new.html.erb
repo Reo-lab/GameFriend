@@ -1,9 +1,8 @@
 <%= render "layouts/sidemenu"%>
 <% breadcrumb :boards_new %>
 <%= render 'layouts/breadcrumbs' %>
-<div class = "boards_new_title">
+<div class = "inline-block text-5xl mt-6 ml-7 pl-2 pr-48 bg-gray-200 leading-normal">
   新規募集作成
 </div>
-<%= render 'form' %>
+<%= render 'form', class: "inline-block" %>
 
-<%= link_to 'Back', boards_path %>

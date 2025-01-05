@@ -1,3 +1,6 @@
+<div class = "tops_boards_container_title">
+【新着募集】
+</div>
 <div class="tops_boards_container">
   <% @boards.each do |board|%>
     <%= render "boardbox", board: board %>
@@ -29,7 +32,7 @@
   <%= form_with(url: tops_path, method: :get, local: true, class: 'tops_mid_search_form') do %>
     <div class="tops_mid_search_field">
       <%= label_tag :query, '' %>
-      <%= text_field_tag :query, params[:query], class: 'tops_mid_search_custom-input' %>
+      <%= text_field_tag :query, params[:query], class: 'tops_mid_search_custom-input', placeholder: "募集検索" %>
     </div>
     <div class="tops_mid_search_actions">
       <%= submit_tag '検索', class: 'tops_mid_search_submit_button' %>

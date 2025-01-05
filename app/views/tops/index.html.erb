@@ -1,5 +1,5 @@
 <div class = "tops_boards_container_title">
-【新着募集】
+新着募集
 </div>
 <div class="tops_boards_container">
   <% @boards.each do |board|%>
@@ -7,6 +7,9 @@
   <% end %>
 </div>
 
+<div class ="tops_boards_container_index_title">
+  募集を探す
+</div>
 <div class = "tops_search_boards">
 <div class="tops_left_search_boards">
   <%= form_with(url: tops_path, method: :get, local: true) do %>

@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
  * {
    margin: 0;
    padding: 0;
@@ -441,7 +441,7 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-bottom: 3px;
-  margin: 0px 3px;
+  margin: 0px 20px;
 }
 .tops_user_icon{
   width: 100px; /* 画像の幅を指定 */
@@ -487,6 +487,22 @@
   margin-left: 20px;
   border-radius: 10px;
 }
+.tops_boards_container_title{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  color: white;
+  font-size: 38px;
+  background-color: rgb(0, 0, 0);
+  padding-left: 15px;
+  padding-top: 0px;
+  margin: 0px 20px;
+  margin-top: 5px;
+  border-top: solid white 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
 @media screen and (max-width: 768px) {
   .tops_board_box_wrapper{
@@ -496,6 +512,24 @@
   }
   .tops_boards_container{
     height: 110px;
+    margin: 0px 10px;
+    border: solid black 1px;
+  }
+  .tops_boards_container_title{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-top: 3px;
+    margin: 0px 10px;
+    margin-top: 5px;
+    border-top: solid white 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 }
 .tops_user_info {
@@ -621,8 +655,23 @@
   border-radius: 50%;
 }
 /*トップの検索機能のレイアウト*/ 
+.tops_boards_container_index_title{
+  font-family: 'Noto Sans JP', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color: white;
+  font-size: 40px;
+  background-color: rgb(0, 0, 0);
+  padding-left: 15px;
+  padding-top: 0px;
+  margin: 0px 10px;
+  margin-top: 5px;
+  border-bottom: solid white 1px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .tops_search_boards{
-  margin-top: 10px;
+  margin:0px 10px;
   background-color: #000000;
   height: max-content;
   min-height:60vh ;
@@ -725,6 +774,21 @@
   width:100%;
 }
 @media screen and (max-width: 768px) {
+  .tops_boards_container_index_title{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: white;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0);
+    padding-left: 15px;
+    padding-top: 0px;
+    margin: 0px 10px;
+    margin-top: 5px;
+    border-bottom: solid white 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
   .tops_left_search_boards{
     display: none;
   }
@@ -735,6 +799,7 @@
     height: 100%;
     width:100%;
     margin-left: 10px;
+    margin-top: 5px;
   }
   .tops_board_box_wrapper{
     width: 43%;
@@ -793,6 +858,17 @@
   margin-left: 80%;
   border: none;
 }
+.bordrequest_box{
+  display: inline-block;
+  position: relative;
+  width: 350px;
+  border: 1px solid #ccc;
+  padding: 0px;
+  margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 768px) {
 .bordrequest_box{
   display: inline-block;
@@ -812,7 +888,7 @@
   margin-top: 20px;
   margin-left: 30px;
   padding-left: 10px;
-  padding-right: 200px;
+  padding-right: 30px;
   background-color: rgb(226, 226, 226);
 }
 @media screen and (max-width: 768px) {
@@ -988,7 +1064,7 @@
   border: 1px solid #ccc; /* デザインのためのボーダー */
   padding: 0px; /* 内側の余白 */
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 40px;
   border-radius: 10px;
 }
 .index_boards_box {
@@ -1683,21 +1759,25 @@
   }
 }
 /*チャットルーム一覧のレイアウト*/
-
+.index_chatroom_box{
+  display: inline-block;
+  width: 70%;
+  margin-top: 10px;
+  margin-left: 40px;
+}
 .chatroom_index_title {
   display: inline-block;
   font-size: 50px;
-  margin-top: 10px;
-  margin-left: 25px;
+  margin-top: 20px;
+  margin-left: 30px;
   margin-bottom: 5px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 2%;
   background-color: rgb(226, 226, 226);
 }
 
 .chatroom-container {
   max-width: 400px;
-  margin-left: 150px;
   max-height:300px;
   margin-bottom: 5px;
 }
@@ -1705,6 +1785,8 @@
   .index_chatroom_box{
     display: inline-block;
     width: 70%;
+    margin-top: 5px;
+    margin-left: 5px;
   }
   .chatroom_index_title {
     display: inline-block;
@@ -1758,11 +1840,11 @@
 }
 .recruiter-box{
  border-bottom: 0.5px solid #000000;
- height: 30%;
+ height: 33%;
 }
 
 .boards-box{
-height: 70%;
+height: 67%;
 border-bottom-left-radius: 9px;
 }
 
@@ -1786,7 +1868,7 @@ border-bottom-left-radius: 9px;
   border: 1px solid #ccc; /* デザインのためのボーダー */
   padding: 0px; /* 内側の余白 */
   margin-top: 10px;
-  margin-left: 0px;
+  margin-left: 5px;
   border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
@@ -2071,15 +2153,3 @@ button:disabled {
   padding-bottom: 1px;
 }
 
-.tops_boards_container_title{
-  color: white;
-  font-size: 35px;
-  background-color: rgb(0, 0, 0);
-  padding-left: 0px;
-  padding-top: 3px;
-  margin: 0px 3px;
-  margin-top: 5px;
-  border-top: solid white 1px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}

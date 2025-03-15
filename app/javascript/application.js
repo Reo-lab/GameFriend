@@ -4,6 +4,7 @@ import "controllers"
 import "channels"
 import "signaling_server"
 import 'bootstrap'
+import "hello"
 
 document.addEventListener('turbo:load', () => {
   const notificationsButton = document.querySelector('.bell_icon_box');

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                 // 出力先の JavaScript のバージョン
+    "module": "ESNext",              // モジュールの形式
+    "moduleResolution": "node",      // モジュールの解決方法
+    "strict": true,                  // 厳格な型チェック
+    "esModuleInterop": true,         // ES モジュールのインポート
+  },
+  "include": [
+    "app/javascript/**/*.ts",
+    "app/javascript/**/*.tsx"
+  ]
+}

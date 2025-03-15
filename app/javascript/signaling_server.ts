@@ -34,15 +34,22 @@ const ice: RTCConfiguration = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 
-document.getElementById('startButton')?.addEventListener('click', () => {
-  navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-    .then((stream: MediaStream) => {
-      window.location.reload();
-    })
-    .catch((error: DOMException) => {
-      console.error('カメラまたはマイクへのアクセスが拒否されました。', error);
-      alert('カメラまたはマイクへのアクセスが必要です。');
+document.addEventListener("turbo:load", () => {
+  const startButton = document.getElementById("startButton") as HTMLButtonElement;
+
+  if (startButton) {
+    startButton.addEventListener("click", () => {
+      navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then((stream: MediaStream) => {
+          // ストリームを取得した後、ページをリロード
+          window.location.href = window.location.href;
+        })
+        .catch((error: DOMException) => {
+          console.error("カメラまたはマイクへのアクセスが拒否されました。", error);
+          alert("カメラまたはマイクへのアクセスが必要です。");
+        });
     });
+  }
 });
 
 document.addEventListener("turbo:load", async () => {

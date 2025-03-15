@@ -4,11 +4,14 @@ FROM ruby:3.1.5
 # 必要なパッケージをインストール
 # 必要なパッケージをインストール
 RUN apt-get update -qq && apt-get install -y \
+    curl \
     nodejs \
-    yarn \
     default-mysql-client \
     cron \
     supervisor && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update -qq && apt-get install -y yarn && \
     apt-get clean
 
 # 作業ディレクトリの作成
@@ -22,8 +25,16 @@ COPY Gemfile.lock /app/Gemfile.lock
 RUN gem install bundler:2.3.26
 RUN bundle install
 
+RUN yarn add typescript
+
+ENV PATH="/app/node_modules/.bin:$PATH"
+
 # アプリケーションのコードをコピー
 COPY . /app
+
+RUN tsc --version
+
+RUN yarn tsc
 
 # start_cron.shに実行権限を付与
 COPY start_cron.sh /app/start_cron.sh

@@ -8,7 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var _a;
 import consumer from "channels/consumer";
 // Broadcast Types
 const JOIN_ROOM = "JOIN_ROOM";
@@ -34,18 +33,21 @@ window.onload = () => {
 const ice = {
     iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
-(_a = document.getElementById('startButton')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => {
-    // カメラとマイクの両方を要求
-    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-        .then((stream) => {
-        // ストリームが正常に取得できた場合、ページをリロード
-        window.location.reload();
-    })
-        .catch((error) => {
-        // エラー発生時の処理
-        console.error('カメラまたはマイクへのアクセスが拒否されました。', error);
-        alert('カメラまたはマイクへのアクセスが必要です。');
-    });
+document.addEventListener("turbo:load", () => {
+    const startButton = document.getElementById("startButton");
+    if (startButton) {
+        startButton.addEventListener("click", () => {
+            navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+                .then((stream) => {
+                // ストリームを取得した後、ページをリロード
+                window.location.href = window.location.href;
+            })
+                .catch((error) => {
+                console.error("カメラまたはマイクへのアクセスが拒否されました。", error);
+                alert("カメラまたはマイクへのアクセスが必要です。");
+            });
+        });
+    }
 });
 document.addEventListener("turbo:load", () => __awaiter(void 0, void 0, void 0, function* () {
     const chatroomElement = document.getElementById("room-id");

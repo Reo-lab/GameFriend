@@ -1,4 +1,4 @@
-// app/javascript/signaling_server.js
+// app/javascript/signaling_server.ts
 
 import consumer from "channels/consumer";
 
@@ -8,36 +8,41 @@ const EXCHANGE = "EXCHANGE";
 const REMOVE_USER = "REMOVE_USER";
 
 // DOM Elements
-let currentUser;
-let localVideo;
-let remoteVideoContainer;
-let pcPeers = {};
-let localstream;
-let videoDevices = [];
-let audioDevices = [];
+let currentUser: string;
+let localVideo: HTMLVideoElement | null;
+let remoteVideoContainer: HTMLElement | null = null;
+let localstream: MediaStream | null = null;
+let videoDevices: MediaDeviceInfo[] = [];
+let audioDevices: MediaDeviceInfo[] = [];
+interface PeerConnection {
+  pc: RTCPeerConnection;
+  userId: string;
+}
+let pcPeers: Record<string, PeerConnection> = {};
 
 window.onload = () => {
-  const chatroomElement = document.getElementById("room-id"); // チャットルームを特定するための要素を取得
+  const chatroomElement = document.getElementById("room-id"); // チャットルームを特定
   if (chatroomElement) {
-  currentUser = document.getElementById("current-user").innerText;
-  localVideo = document.getElementById("local-video");
+  currentUser = (document.getElementById("current-user")as HTMLElement).innerText;
+  localVideo = document.getElementById("local-video")as HTMLVideoElement;
   remoteVideoContainer = document.getElementById("remote-video-container");
  }
 };
 
 // Ice Credentials
-const ice = { iceServers: [{ urls: "stun:stun.l.google.com:19302" }] };
+const ice: RTCConfiguration = {
+  iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+};
 
-// Add event listener's to buttons
 document.addEventListener("turbo:load", async () => {
-  const chatroomElement = document.getElementById("room-id"); // チャットルームを特定するための要素を取得
+  const chatroomElement = document.getElementById("room-id"); 
   if (chatroomElement) {
-  currentUser = document.getElementById("current-user").innerHTML;
-  localVideo = document.getElementById("local-video");
+  currentUser =  (document.getElementById("current-user") as HTMLElement).innerText;
+  localVideo = document.getElementById("local-video") as HTMLVideoElement;
   remoteVideoContainer = document.getElementById("remote-video-container");
 
-  const joinButton = document.getElementById("join-button");
-  const leaveButton = document.getElementById("leave-button");
+  const joinButton = document.getElementById("join-button") as HTMLButtonElement;
+  const leaveButton = document.getElementById("leave-button") as HTMLButtonElement;
 
   joinButton.onclick = handleJoinSession;
   leaveButton.onclick = handleLeaveSession;
@@ -49,19 +54,20 @@ document.addEventListener("turbo:load", async () => {
 });
 
 const getMediaDevices = async () => {
+  await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
   const devices = await navigator.mediaDevices.enumerateDevices();
   videoDevices = devices.filter(device => device.kind === "videoinput");
   audioDevices = devices.filter(device => device.kind === "audioinput");
 };
 
 const populateDeviceSelects = () => {
-  const videoSelect = document.getElementById("video-select");
-  const audioSelect = document.getElementById("audio-select");
+  const videoSelect = document.getElementById("video-select") as HTMLSelectElement;
+  const audioSelect = document.getElementById("audio-select") as HTMLSelectElement;
   
-  // ビデオなしのオプションを追加
+  // ビデオなしオプション追加
   const noVideoOption = document.createElement("option");
-  noVideoOption.value = ""; // ビデオなしの場合の値
-  noVideoOption.text = "ビデオなし"; // 表示名
+  noVideoOption.value = "";
+  noVideoOption.text = "ビデオなし";
   videoSelect.appendChild(noVideoOption);
 
   videoDevices.forEach(device => {
@@ -79,28 +85,28 @@ const populateDeviceSelects = () => {
   });
 };
 
-const handleJoinSession = async () => {
-  const videoSelect = document.getElementById("video-select");
-  const audioSelect = document.getElementById("audio-select");
-  const userIconContainer = document.getElementById("user-icon-container"); // アイコンコンテナを取得
-  const localVideo = document.getElementById("local-video");
+const handleJoinSession = async (): Promise<void> => {
+  const videoSelect = document.getElementById("video-select") as HTMLSelectElement;
+  const audioSelect = document.getElementById("audio-select") as HTMLSelectElement;
+  const userIconContainer = document.getElementById("user-icon-container") as HTMLElement; // アイコン
+  const localVideo = document.getElementById("local-video") as HTMLVideoElement ;
 
   if (videoSelect.value === "") {
-    // ビデオなしの場合、アイコンを表示
+    // ビデオ無しで、アイコン表示
     userIconContainer.style.display = "block";
     localVideo.style.display = "none";
   } else {
-    // ビデオがある場合、アイコンを非表示
+    // ビデオ有りで、アイコン非表示
     userIconContainer.style.display = "none";
   }
 
-  const constraints = {
-    video: videoSelect.value ? { deviceId: { exact: videoSelect.value } } : false, // ビデオなしの場合はfalseに
+  const constraints: MediaStreamConstraints = {
+    video: videoSelect.value ? { deviceId: { exact: videoSelect.value } } : false, // ビデオなしの場合はfalse
     audio: {
-      deviceId: audioSelect.value ?  { deviceId: { exact: videoSelect.value } } : undefined,
+      deviceId: audioSelect.value ? audioSelect.value : undefined,
       echoCancellation: false,
-      noiseSuppression: true,
-      sampleRate: 44100, // サンプルレートを指定
+      noiseSuppression: true, // trueで良い音質になった
+      sampleRate: 44100, 
     },
   };
 
@@ -112,7 +118,7 @@ const handleJoinSession = async () => {
     localVideo.muted = true;
     console.log("Local video stream obtained");
   
-    const chatroomIdElement = document.getElementById("room-id");
+    const chatroomIdElement = document.getElementById("room-id") as HTMLInputElement;
     const roomId = chatroomIdElement.value; 
     console.log("Attempting to join the session...");
     consumer.subscriptions.create(
@@ -125,12 +131,12 @@ const handleJoinSession = async () => {
            from: currentUser,
            chatroomId: roomId,
          };
-         console.log("Broadcasting data:", dataToSend); // 送信するデータのログ
+         console.log("Broadcasting data:", dataToSend);
          console.log("Before broadcasting data");
          broadcastData(dataToSend);
          console.log(`${currentUser} has joined the room.`);
       },
-      received: (data) => {
+      received: (data: { type: string, from: string, to?: string, sdp?: string, candidate?: string }) => {
         console.log("received", data);
         if (data.from === currentUser) return;
         switch (data.type) {
@@ -145,26 +151,33 @@ const handleJoinSession = async () => {
           return;
         }
       },      disconnected: () => {
-        console.error("Disconnected from the session channel."); // 切断時のエラーログ
+        console.error("Disconnected from the session channel.");
       },
       rejected: () => {
-      console.error("Failed to connect to the session channel."); // 接続失敗時のエラーログ
+      console.error("Failed to connect to the session channel."); 
       }
     }
   );
-  } catch (error) {
-  console.error("Error accessing media devices.", error);
-  alert("Error accessing local video and audio stream: " + error.message);
- }
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Error accessing media devices.", error);
+      alert("Error accessing local video and audio stream: " + error.message);
+    } else {
+      console.error("Unknown error:", error);
+      alert("An unknown error occurred while accessing the local video and audio stream.");
+    }
+  }
 };
 
-const handleLeaveSession = () => {
+const handleLeaveSession = async (): Promise<void> => {
   for (let user in pcPeers) {
-    pcPeers[user].close();
+    pcPeers[user].pc.close();
   }
   pcPeers = {};
 
-  remoteVideoContainer.innerHTML = "";
+  if (remoteVideoContainer) {
+    remoteVideoContainer.innerHTML = "";
+  }
 
   broadcastData({
     type: REMOVE_USER,
@@ -172,23 +185,25 @@ const handleLeaveSession = () => {
   });
 };
 
-const joinRoom = (data) => {
+const joinRoom = (data: { from: string }) => {
   createPC(data.from, true);
 };
 
-const removeUser = (data) => {
+const removeUser = (data: { from: string }) => {
   console.log("removing user", data.from);
   let video = document.getElementById(`remoteVideoContainer+${data.from}`);
   video && video.remove();
   delete pcPeers[data.from];
 };
 
-const createPC = (userId, isOffer) => {
+const createPC = (userId: string, isOffer: boolean): RTCPeerConnection => {
   let pc = new RTCPeerConnection(ice);
   pcPeers[userId] = { pc, userId }; // PCとユーザーIDを保存
 
-  for (const track of localstream.getTracks()) {
-    pc.addTrack(track, localstream);
+  if (localstream) {
+    for (const track of localstream.getTracks()) {
+      pc.addTrack(track, localstream);
+    }
   }
 
   isOffer &&
@@ -208,39 +223,39 @@ const createPC = (userId, isOffer) => {
       .catch(logError);
 
   pc.onicecandidate = (event) => {
-    event.candidate &&
+    if (event.candidate) {
       broadcastData({
         type: EXCHANGE,
         from: currentUser,
         to: userId,
         candidate: JSON.stringify(event.candidate),
       });
+    }
   };
 
   pc.ontrack = async (event) => {
-    const stream = event.streams[0]; // 受信したストリームを取得
-    const videoTracks = stream.getVideoTracks(); // ビデオトラックを取得
-    const audioTracks = stream.getAudioTracks(); // オーディオトラックを取得
+    const stream = event.streams[0];
+    const videoTracks = stream.getVideoTracks();
+    const audioTracks = stream.getAudioTracks();
     console.log("videoTracks:", videoTracks); 
-    let existingVideo = document.getElementById(`remoteVideoContainer+${userId}`);
+    let existingVideo = document.getElementById(`remoteVideoContainer+${userId}`)as HTMLVideoElement;
     let remoteUserIconContainer = document.getElementById("remote-user-icon-container");
 
     const remoteUserId = pcPeers[userId].userId;
     console.log("Remote User ID:", remoteUserId); 
-    // アイコンを表示する関数
     const showremoteUserIcon = async () => {
       
       try {
-        const remoteUser = await fetch(`/users/${remoteUserId}/icon`) // ユーザーアイコン情報を取得
+        const remoteUser = await fetch(`/users/${remoteUserId}/icon`) 
           .then(response => response.json());
       
         if (remoteUserIconContainer) {
-          remoteUserIconContainer.style.display = "block"; // アイコンを表示
+          remoteUserIconContainer.style.display = "block";
           const remoteUserIcon = document.createElement("img");
-          remoteUserIcon.src = remoteUser.url; // APIから返されるURLを使ってアイコンを設定
+          remoteUserIcon.src = remoteUser.url; 
           remoteUserIcon.alt = "User Icon";
           remoteUserIcon.classList.add("user-icon-voice-chat");
-          remoteUserIconContainer.appendChild(remoteUserIcon); // アイコンをコンテナに追加
+          remoteUserIconContainer.appendChild(remoteUserIcon);
         }
       } catch (error) {
         console.error("Error fetching user icon:", error);
@@ -257,17 +272,18 @@ const createPC = (userId, isOffer) => {
             remoteUserIconContainer.style.display = "block"; // アイコンを表示
         }
     } else {
-      // ビデオトラックがある場合
       if (!existingVideo) {
         const element = document.createElement("video");
         element.id = `remoteVideoContainer+${userId}`;
         element.autoplay = true;
+        element.muted = true;
         element.srcObject = stream;
         element.classList.add('remote-video');
-        remoteVideoContainer.appendChild(element);
+        if (remoteVideoContainer) {
+          remoteVideoContainer.appendChild(element);
+        }
         console.log("Remote video element created and added.");
         
-        // アイコンを非表示に
         if (remoteUserIconContainer) {
           remoteUserIconContainer.style.display = "none";
         }
@@ -277,7 +293,6 @@ const createPC = (userId, isOffer) => {
         existingVideo.style.display = "block"; // ビデオを表示
         console.log("Existing video element updated.");
         
-        // アイコンを非表示に
         if (remoteUserIconContainer) {
           remoteUserIconContainer.style.display = "none";
         }
@@ -286,8 +301,8 @@ const createPC = (userId, isOffer) => {
     if (audioTracks.length > 0) {
       const audioElement = document.createElement("audio");
       audioElement.srcObject = stream;
-      audioElement.autoplay = true; // 自動再生
-      document.body.appendChild(audioElement); // DOMに追加
+      audioElement.autoplay = true;
+      document.body.appendChild(audioElement);
       console.log("Audio element created and added.");
     }
   };
@@ -305,8 +320,8 @@ const createPC = (userId, isOffer) => {
   return pc;
 };
 
-const exchange = (data) => {
-  let pc;
+const exchange = (data: { from: string, candidate?: string, sdp?: string }) => {
+  let pc: RTCPeerConnection;
 
   if (!pcPeers[data.from]) {
     pc = createPC(data.from, false);
@@ -343,17 +358,29 @@ const exchange = (data) => {
   }
 };
 
-const broadcastData = (data) => {
+interface BroadcastData {
+  from: string;
+  chatroomId?: string;
+  [key: string]: any; 
+}
+
+const broadcastData = (data:BroadcastData) => {
   /**
    * Add CSRF protection: https://stackoverflow.com/questions/8503447/rails-how-to-add-csrf-protection-to-forms-created-in-javascript
    */
-  const csrfToken = document.querySelector("[name=csrf-token]").content;
+  const csrfToken = (document.querySelector("[name=csrf-token]")as HTMLMetaElement)?.content || '';
   const headers = new Headers({
     "content-type": "application/json",
     "X-CSRF-TOKEN": csrfToken,
   });
   // roomIdをデータに含める
-  data.chatroomId = document.getElementById("room-id").value;
+  const roomIdElement = document.getElementById("room-id") as HTMLInputElement | null;
+  if (roomIdElement) {
+    data.chatroomId = roomIdElement.value;
+  } else {
+    console.error("Room ID element not found");
+    return; 
+  }
 
   fetch("/sessions", {
     method: "POST",
@@ -361,19 +388,19 @@ const broadcastData = (data) => {
     headers,
   })
   .then(response => {
-    console.log("Response status:", response.status); // ステータスコードをログ出力
+    console.log("Response status:", response.status); 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    return response.text(); // サーバーからのレスポンスをJSONとして解析
+    return response.text();
   })
   .then(text => {
-    console.log("Raw response text:", text); // レスポンスをテキストとしてログに出力
-    if (text.trim() === "") { // 空のレスポンスをチェック
+    console.log("Raw response text:", text);
+    if (text.trim() === "") { 
       throw new Error("相手が参加すると通話が開始されます");
     }
     try {
-        const jsonResponse = JSON.parse(text); // 必要に応じてパース
+        const jsonResponse = JSON.parse(text);
         console.log("Parsed JSON:", jsonResponse);
     } catch (parseError) {
         console.error("Error parsing JSON:", parseError);
@@ -385,4 +412,4 @@ const broadcastData = (data) => {
   });
 };
 
-const logError = (error) => console.warn("Whoops! Error:", error);
+const logError = (error: any) => console.warn("Whoops! Error:", error);

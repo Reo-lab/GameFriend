@@ -16,14 +16,13 @@ const REMOVE_USER = "REMOVE_USER";
 // DOM Elements
 let currentUser;
 let localVideo;
-let remoteVideoContainer;
-// Objects
-let pcPeers = {};
-let localstream;
+let remoteVideoContainer = null;
+let localstream = null;
 let videoDevices = [];
 let audioDevices = [];
+let pcPeers = {};
 window.onload = () => {
-    const chatroomElement = document.getElementById("room-id"); // チャットルームを特定するための要素を取得
+    const chatroomElement = document.getElementById("room-id"); // チャットルームを特定
     if (chatroomElement) {
         currentUser = document.getElementById("current-user").innerText;
         localVideo = document.getElementById("local-video");
@@ -31,12 +30,13 @@ window.onload = () => {
     }
 };
 // Ice Credentials
-const ice = { iceServers: [{ urls: "stun:stun.l.google.com:19302" }] };
-// Add event listener's to buttons
+const ice = {
+    iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+};
 document.addEventListener("turbo:load", () => __awaiter(void 0, void 0, void 0, function* () {
-    const chatroomElement = document.getElementById("room-id"); // チャットルームを特定するための要素を取得
+    const chatroomElement = document.getElementById("room-id");
     if (chatroomElement) {
-        currentUser = document.getElementById("current-user").innerHTML;
+        currentUser = document.getElementById("current-user").innerText;
         localVideo = document.getElementById("local-video");
         remoteVideoContainer = document.getElementById("remote-video-container");
         const joinButton = document.getElementById("join-button");
@@ -49,6 +49,7 @@ document.addEventListener("turbo:load", () => __awaiter(void 0, void 0, void 0, 
     }
 }));
 const getMediaDevices = () => __awaiter(void 0, void 0, void 0, function* () {
+    yield navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     const devices = yield navigator.mediaDevices.enumerateDevices();
     videoDevices = devices.filter(device => device.kind === "videoinput");
     audioDevices = devices.filter(device => device.kind === "audioinput");
@@ -56,10 +57,10 @@ const getMediaDevices = () => __awaiter(void 0, void 0, void 0, function* () {
 const populateDeviceSelects = () => {
     const videoSelect = document.getElementById("video-select");
     const audioSelect = document.getElementById("audio-select");
-    // ビデオなしのオプションを追加
+    // ビデオなしオプション追加
     const noVideoOption = document.createElement("option");
-    noVideoOption.value = ""; // ビデオなしの場合の値
-    noVideoOption.text = "ビデオなし"; // 表示名
+    noVideoOption.value = "";
+    noVideoOption.text = "ビデオなし";
     videoSelect.appendChild(noVideoOption);
     videoDevices.forEach(device => {
         const option = document.createElement("option");
@@ -77,24 +78,24 @@ const populateDeviceSelects = () => {
 const handleJoinSession = () => __awaiter(void 0, void 0, void 0, function* () {
     const videoSelect = document.getElementById("video-select");
     const audioSelect = document.getElementById("audio-select");
-    const userIconContainer = document.getElementById("user-icon-container"); // アイコンコンテナを取得
+    const userIconContainer = document.getElementById("user-icon-container"); // アイコン
     const localVideo = document.getElementById("local-video");
     if (videoSelect.value === "") {
-        // ビデオなしの場合、アイコンを表示
+        // ビデオなし、アイコン表示
         userIconContainer.style.display = "block";
         localVideo.style.display = "none";
     }
     else {
-        // ビデオがある場合、アイコンを非表示
+        // ビデオがあり、アイコン非表示
         userIconContainer.style.display = "none";
     }
     const constraints = {
-        video: videoSelect.value ? { deviceId: { exact: videoSelect.value } } : false, // ビデオなしの場合はfalseに
+        video: videoSelect.value ? { deviceId: { exact: videoSelect.value } } : false, // ビデオなしの場合はfalseに設定
         audio: {
-            deviceId: audioSelect.value ? { deviceId: { exact: videoSelect.value } } : undefined,
+            deviceId: audioSelect.value ? audioSelect.value : undefined,
             echoCancellation: false,
-            noiseSuppression: true,
-            sampleRate: 44100, // サンプルレートを指定
+            noiseSuppression: true, // trueで良い音質になった
+            sampleRate: 44100,
         },
     };
     try {
@@ -146,21 +147,30 @@ const handleJoinSession = () => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
     catch (error) {
-        console.error("Error accessing media devices.", error);
-        alert("Error accessing local video and audio stream: " + error.message);
+        if (error instanceof Error) {
+            console.error("Error accessing media devices.", error);
+            alert("Error accessing local video and audio stream: " + error.message);
+        }
+        else {
+            // errorがError型でない場合の処理
+            console.error("Unknown error:", error);
+            alert("An unknown error occurred while accessing the local video and audio stream.");
+        }
     }
 });
-const handleLeaveSession = () => {
+const handleLeaveSession = () => __awaiter(void 0, void 0, void 0, function* () {
     for (let user in pcPeers) {
-        pcPeers[user].close();
+        pcPeers[user].pc.close();
     }
     pcPeers = {};
-    remoteVideoContainer.innerHTML = "";
+    if (remoteVideoContainer) {
+        remoteVideoContainer.innerHTML = "";
+    }
     broadcastData({
         type: REMOVE_USER,
         from: currentUser,
     });
-};
+});
 const joinRoom = (data) => {
     createPC(data.from, true);
 };
@@ -173,8 +183,10 @@ const removeUser = (data) => {
 const createPC = (userId, isOffer) => {
     let pc = new RTCPeerConnection(ice);
     pcPeers[userId] = { pc, userId }; // PCとユーザーIDを保存
-    for (const track of localstream.getTracks()) {
-        pc.addTrack(track, localstream);
+    if (localstream) {
+        for (const track of localstream.getTracks()) {
+            pc.addTrack(track, localstream);
+        }
     }
     isOffer &&
         pc
@@ -192,13 +204,14 @@ const createPC = (userId, isOffer) => {
         })
             .catch(logError);
     pc.onicecandidate = (event) => {
-        event.candidate &&
+        if (event.candidate) {
             broadcastData({
                 type: EXCHANGE,
                 from: currentUser,
                 to: userId,
                 candidate: JSON.stringify(event.candidate),
             });
+        }
     };
     pc.ontrack = (event) => __awaiter(void 0, void 0, void 0, function* () {
         const stream = event.streams[0]; // 受信したストリームを取得
@@ -243,9 +256,12 @@ const createPC = (userId, isOffer) => {
                 const element = document.createElement("video");
                 element.id = `remoteVideoContainer+${userId}`;
                 element.autoplay = true;
+                element.muted = true;
                 element.srcObject = stream;
                 element.classList.add('remote-video');
-                remoteVideoContainer.appendChild(element);
+                if (remoteVideoContainer) {
+                    remoteVideoContainer.appendChild(element);
+                }
                 console.log("Remote video element created and added.");
                 // アイコンを非表示に
                 if (remoteUserIconContainer) {
@@ -318,16 +334,24 @@ const exchange = (data) => {
     }
 };
 const broadcastData = (data) => {
+    var _a;
     /**
      * Add CSRF protection: https://stackoverflow.com/questions/8503447/rails-how-to-add-csrf-protection-to-forms-created-in-javascript
      */
-    const csrfToken = document.querySelector("[name=csrf-token]").content;
+    const csrfToken = ((_a = document.querySelector("[name=csrf-token]")) === null || _a === void 0 ? void 0 : _a.content) || '';
     const headers = new Headers({
         "content-type": "application/json",
         "X-CSRF-TOKEN": csrfToken,
     });
     // roomIdをデータに含める
-    data.chatroomId = document.getElementById("room-id").value;
+    const roomIdElement = document.getElementById("room-id");
+    if (roomIdElement) {
+        data.chatroomId = roomIdElement.value;
+    }
+    else {
+        console.error("Room ID element not found");
+        return; // もしroomIdが見つからない場合は処理を中断
+    }
     fetch("/sessions", {
         method: "POST",
         body: JSON.stringify(data),

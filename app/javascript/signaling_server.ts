@@ -34,6 +34,17 @@ const ice: RTCConfiguration = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
 
+document.getElementById('startButton')?.addEventListener('click', () => {
+  navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+    .then((stream: MediaStream) => {
+      window.location.reload();
+    })
+    .catch((error: DOMException) => {
+      console.error('カメラまたはマイクへのアクセスが拒否されました。', error);
+      alert('カメラまたはマイクへのアクセスが必要です。');
+    });
+});
+
 document.addEventListener("turbo:load", async () => {
   const chatroomElement = document.getElementById("room-id"); 
   if (chatroomElement) {
@@ -54,7 +65,6 @@ document.addEventListener("turbo:load", async () => {
 });
 
 const getMediaDevices = async () => {
-  await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
   const devices = await navigator.mediaDevices.enumerateDevices();
   videoDevices = devices.filter(device => device.kind === "videoinput");
   audioDevices = devices.filter(device => device.kind === "audioinput");

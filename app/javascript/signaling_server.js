@@ -1,4 +1,4 @@
-// app/javascript/signaling_server.js
+// app/javascript/signaling_server.ts
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var _a;
 import consumer from "channels/consumer";
 // Broadcast Types
 const JOIN_ROOM = "JOIN_ROOM";
@@ -33,6 +34,19 @@ window.onload = () => {
 const ice = {
     iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
+(_a = document.getElementById('startButton')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => {
+    // カメラとマイクの両方を要求
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then((stream) => {
+        // ストリームが正常に取得できた場合、ページをリロード
+        window.location.reload();
+    })
+        .catch((error) => {
+        // エラー発生時の処理
+        console.error('カメラまたはマイクへのアクセスが拒否されました。', error);
+        alert('カメラまたはマイクへのアクセスが必要です。');
+    });
+});
 document.addEventListener("turbo:load", () => __awaiter(void 0, void 0, void 0, function* () {
     const chatroomElement = document.getElementById("room-id");
     if (chatroomElement) {
@@ -49,7 +63,6 @@ document.addEventListener("turbo:load", () => __awaiter(void 0, void 0, void 0, 
     }
 }));
 const getMediaDevices = () => __awaiter(void 0, void 0, void 0, function* () {
-    yield navigator.mediaDevices.getUserMedia({ video: true, audio: true });
     const devices = yield navigator.mediaDevices.enumerateDevices();
     videoDevices = devices.filter(device => device.kind === "videoinput");
     audioDevices = devices.filter(device => device.kind === "audioinput");
@@ -81,16 +94,16 @@ const handleJoinSession = () => __awaiter(void 0, void 0, void 0, function* () {
     const userIconContainer = document.getElementById("user-icon-container"); // アイコン
     const localVideo = document.getElementById("local-video");
     if (videoSelect.value === "") {
-        // ビデオなし、アイコン表示
+        // ビデオ無しで、アイコン表示
         userIconContainer.style.display = "block";
         localVideo.style.display = "none";
     }
     else {
-        // ビデオがあり、アイコン非表示
+        // ビデオ有りで、アイコン非表示
         userIconContainer.style.display = "none";
     }
     const constraints = {
-        video: videoSelect.value ? { deviceId: { exact: videoSelect.value } } : false, // ビデオなしの場合はfalseに設定
+        video: videoSelect.value ? { deviceId: { exact: videoSelect.value } } : false, // ビデオなしの場合はfalse
         audio: {
             deviceId: audioSelect.value ? audioSelect.value : undefined,
             echoCancellation: false,
@@ -117,7 +130,7 @@ const handleJoinSession = () => __awaiter(void 0, void 0, void 0, function* () {
                     from: currentUser,
                     chatroomId: roomId,
                 };
-                console.log("Broadcasting data:", dataToSend); // 送信するデータのログ
+                console.log("Broadcasting data:", dataToSend);
                 console.log("Before broadcasting data");
                 broadcastData(dataToSend);
                 console.log(`${currentUser} has joined the room.`);
@@ -139,10 +152,10 @@ const handleJoinSession = () => __awaiter(void 0, void 0, void 0, function* () {
                         return;
                 }
             }, disconnected: () => {
-                console.error("Disconnected from the session channel."); // 切断時のエラーログ
+                console.error("Disconnected from the session channel.");
             },
             rejected: () => {
-                console.error("Failed to connect to the session channel."); // 接続失敗時のエラーログ
+                console.error("Failed to connect to the session channel.");
             }
         });
     }
@@ -152,7 +165,6 @@ const handleJoinSession = () => __awaiter(void 0, void 0, void 0, function* () {
             alert("Error accessing local video and audio stream: " + error.message);
         }
         else {
-            // errorがError型でない場合の処理
             console.error("Unknown error:", error);
             alert("An unknown error occurred while accessing the local video and audio stream.");
         }
@@ -214,26 +226,25 @@ const createPC = (userId, isOffer) => {
         }
     };
     pc.ontrack = (event) => __awaiter(void 0, void 0, void 0, function* () {
-        const stream = event.streams[0]; // 受信したストリームを取得
-        const videoTracks = stream.getVideoTracks(); // ビデオトラックを取得
-        const audioTracks = stream.getAudioTracks(); // オーディオトラックを取得
+        const stream = event.streams[0];
+        const videoTracks = stream.getVideoTracks();
+        const audioTracks = stream.getAudioTracks();
         console.log("videoTracks:", videoTracks);
         let existingVideo = document.getElementById(`remoteVideoContainer+${userId}`);
         let remoteUserIconContainer = document.getElementById("remote-user-icon-container");
         const remoteUserId = pcPeers[userId].userId;
         console.log("Remote User ID:", remoteUserId);
-        // アイコンを表示する関数
         const showremoteUserIcon = () => __awaiter(void 0, void 0, void 0, function* () {
             try {
-                const remoteUser = yield fetch(`/users/${remoteUserId}/icon`) // ユーザーアイコン情報を取得
+                const remoteUser = yield fetch(`/users/${remoteUserId}/icon`)
                     .then(response => response.json());
                 if (remoteUserIconContainer) {
-                    remoteUserIconContainer.style.display = "block"; // アイコンを表示
+                    remoteUserIconContainer.style.display = "block";
                     const remoteUserIcon = document.createElement("img");
-                    remoteUserIcon.src = remoteUser.url; // APIから返されるURLを使ってアイコンを設定
+                    remoteUserIcon.src = remoteUser.url;
                     remoteUserIcon.alt = "User Icon";
                     remoteUserIcon.classList.add("user-icon-voice-chat");
-                    remoteUserIconContainer.appendChild(remoteUserIcon); // アイコンをコンテナに追加
+                    remoteUserIconContainer.appendChild(remoteUserIcon);
                 }
             }
             catch (error) {
@@ -251,7 +262,6 @@ const createPC = (userId, isOffer) => {
             }
         }
         else {
-            // ビデオトラックがある場合
             if (!existingVideo) {
                 const element = document.createElement("video");
                 element.id = `remoteVideoContainer+${userId}`;
@@ -263,7 +273,6 @@ const createPC = (userId, isOffer) => {
                     remoteVideoContainer.appendChild(element);
                 }
                 console.log("Remote video element created and added.");
-                // アイコンを非表示に
                 if (remoteUserIconContainer) {
                     remoteUserIconContainer.style.display = "none";
                 }
@@ -273,7 +282,6 @@ const createPC = (userId, isOffer) => {
                 existingVideo.srcObject = stream;
                 existingVideo.style.display = "block"; // ビデオを表示
                 console.log("Existing video element updated.");
-                // アイコンを非表示に
                 if (remoteUserIconContainer) {
                     remoteUserIconContainer.style.display = "none";
                 }
@@ -282,8 +290,8 @@ const createPC = (userId, isOffer) => {
         if (audioTracks.length > 0) {
             const audioElement = document.createElement("audio");
             audioElement.srcObject = stream;
-            audioElement.autoplay = true; // 自動再生
-            document.body.appendChild(audioElement); // DOMに追加
+            audioElement.autoplay = true;
+            document.body.appendChild(audioElement);
             console.log("Audio element created and added.");
         }
     });
@@ -350,7 +358,7 @@ const broadcastData = (data) => {
     }
     else {
         console.error("Room ID element not found");
-        return; // もしroomIdが見つからない場合は処理を中断
+        return;
     }
     fetch("/sessions", {
         method: "POST",
@@ -358,19 +366,19 @@ const broadcastData = (data) => {
         headers,
     })
         .then(response => {
-        console.log("Response status:", response.status); // ステータスコードをログ出力
+        console.log("Response status:", response.status);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return response.text(); // サーバーからのレスポンスをJSONとして解析
+        return response.text();
     })
         .then(text => {
-        console.log("Raw response text:", text); // レスポンスをテキストとしてログに出力
-        if (text.trim() === "") { // 空のレスポンスをチェック
+        console.log("Raw response text:", text);
+        if (text.trim() === "") {
             throw new Error("相手が参加すると通話が開始されます");
         }
         try {
-            const jsonResponse = JSON.parse(text); // 必要に応じてパース
+            const jsonResponse = JSON.parse(text);
             console.log("Parsed JSON:", jsonResponse);
         }
         catch (parseError) {

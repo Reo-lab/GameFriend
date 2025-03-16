@@ -19,7 +19,7 @@
   </div>
   <div class="GameFriend_box">
     <%= link_to "GameFriend", "/", class: "GameFriend" %>
-    <i id="openModal", class="bi bi-question-circle"></i>
+    <i id="openModal", class="bi bi-question-circle" header-data-tooltip="クリックすると、サイトの使い方が表示されます"></i>
   </div>
   <% if current_user && current_user.boards_requests.present? %>
     <div class = "board_request_hader_box">

@@ -94,7 +94,12 @@
     <label for="audio-select">Select Audio Device:</label>
     <select class = "audio-select" id="audio-select"></select>
   </div>
-  <button id="startButton">カメラとマイクを許可</button>
+  <div class = "video-audio-permit">
+    <button id="startButton">カメラとマイクを許可</button>
+    <div class="tooltip-wrapper">
+      <i class="bi bi-question-circle" data-tooltip="ブラウザの許可をしてもデバイスが表示されない場合は、ページを再読み込みしてください"></i>
+    </div>
+  </div>
   <hr />
   
   <button id="join-button">
